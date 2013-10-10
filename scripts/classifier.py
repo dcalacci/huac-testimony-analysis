@@ -13,9 +13,6 @@ def match(liwc, word):
     else:
         return word == liwc
 
-# THIS DOESN'T WORK
-# Words have several different categories.
-# jesus christ dan.
 def classify_sentence(sen):
     "returns a classification vector for a particular sentence"
     class_vector = defaultdict(lambda: 0)
