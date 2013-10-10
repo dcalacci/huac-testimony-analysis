@@ -24,10 +24,6 @@ class LiwcDict:
                     else:
                         self.wordmap[word] = [category]
 
-    def getWordmap(self):
-        print self.wordmap
-
-    
     def __matchesLiwcWord(self, liwc, word):
         "returns true if the given word matches the given liwc word"
         if liwc[-1] == "*":
@@ -48,6 +44,24 @@ class LiwcDict:
             if self.__matchesLiwcWord(liwcWord, word):
                 return self.wordmap[liwcWord]
         return None
+
+    def positiveWords(self):
+        "returns a list of positive-associated words from liwc"
+        pos = ["Posemeo"]
+        poswords = []
+        for word, categories in self.wordmap:
+            if any(p in categories for p in pos):
+                poswords.append(word)
+        return poswords
+
+    def negativeWords(self):
+        "returns a list of negative-associated words from liwc"
+        neg = ["Negemo", "Anx", "Anger", "Sad"]
+        negwords = []
+        for word, categories in self.wordmap:
+            if any(n in categories for n in neg):
+                negwords.append(word)
+        return negwords
 
     def isNegation(self, word):
         "returns true if the given word is a negation word"
