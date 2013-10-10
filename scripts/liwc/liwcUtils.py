@@ -1,8 +1,8 @@
 #/usr/bin/env python
+from liwc.config import liwc_dir
 import os
-liwc_folder = os.path.join(os.path.abspath("."), "liwcdict")
-catfile = os.path.join(liwc_folder, "catgories.txt")
-featurefile = os.path.join(liwc_folder, "features.txt")
+catfile = os.path.join(liwc_dir, "catgories.txt")
+featurefile = os.path.join(liwc_dir, "features.txt")
 class LiwcDict:
     def __init__(self, filepath=featurefile):
         """

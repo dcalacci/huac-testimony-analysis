@@ -18,9 +18,8 @@ def match(liwc, word):
 # jesus christ dan.
 def classify_sentence(sen):
     "returns a classification vector for a particular sentence"
-    class_vector = defaultdict(lambda x: 0)
-    class_vector = {}
-    sen = sen.split()
+    class_vector = defaultdict(lambda: 0)
+    sen = sen.lower().split()
     for word in sen:
         if liwc.exists(word):
             categories = liwc.getCategories(word)
