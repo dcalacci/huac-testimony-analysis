@@ -30,7 +30,7 @@ class LiwcDict:
     
     def __matchesLiwcWord(self, liwc, word):
         "returns true if the given word matches the given liwc word"
-        if word[-1] == "*":
+        if liwc[-1] == "*":
             return word.startswith(liwc[:-1])
         else:
             return word == liwc

@@ -5,14 +5,6 @@ import liwc.liwcUtils as liwcUtils
 
 liwc = liwcUtils.LiwcDict()
 
-
-def match(liwc, word):
-    "returns true if the given word matches a liwc word"
-    if word[-1] == "*":
-        return word.startswith(liwc[:-1])
-    else:
-        return word == liwc
-
 def classify_sentence(sen):
     "returns a classification vector for a particular sentence"
     class_vector = defaultdict(lambda: 0)
@@ -24,7 +16,7 @@ def classify_sentence(sen):
                 class_vector[category] += 1
     return class_vector
 
-def classify_speechacts(speechacts):
+def __classify_speechacts(speechacts):
     "converts a list of speech acts to a list of classification vectors"
     classifications = {}
     for speechact in speechacts:
@@ -39,5 +31,5 @@ def classify_speech(filepath):
     classifications = {}
     for name in sa.keys():
         speechacts = sa[name]
-        classifications[name] = classify_speechacts(speechacts)
+        classifications[name] = __classify_speechacts(speechacts)
     return classifications
