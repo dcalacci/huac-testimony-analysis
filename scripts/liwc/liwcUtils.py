@@ -11,6 +11,8 @@ class LiwcDict:
         self.filepath = filepath
         self.wordmap = {}
         self.__parseFeatureFile()
+        self.pos = ["Posemo"]
+        self.neg = ["Negemo", "Anx", "Anger", "Sad"]
         
     def __parseFeatureFile(self):
         "parses the feature file, populating the wordmap"
@@ -45,24 +47,42 @@ class LiwcDict:
                 return self.wordmap[liwcWord]
         return None
 
+
+    def isPosNegWord(self, word):
+        "returns true if the word is a positive or negative word"
+        posNegCats = self.pos + self.neg
+        categories = self.getCategories(word)
+        if posNegCats:
+            return any(c in posNegCats for c in categories)
+        else:
+            return []
+        
+
     def positiveWords(self):
         "returns a list of positive-associated words from liwc"
-        pos = ["Posemeo"]
         poswords = []
         for word, categories in self.wordmap:
-            if any(p in categories for p in pos):
+            if any(p in categories for p in self.pos):
                 poswords.append(word)
         return poswords
 
     def negativeWords(self):
         "returns a list of negative-associated words from liwc"
-        neg = ["Negemo", "Anx", "Anger", "Sad"]
         negwords = []
         for word, categories in self.wordmap:
-            if any(n in categories for n in neg):
+            if any(n in categories for n in self.neg):
                 negwords.append(word)
         return negwords
 
+    def getOppositeCategory(self, category):
+        "returns the 'negated' or 'opposite' category of the given category"
+        opps = {}
+        opps["Posemo"] = "Negemo"
+        if opps.has_key(category):
+            return opps[category]
+        else:
+            return None
+        
     def isNegation(self, word):
         "returns true if the given word is a negation word"
-        return 'Negate' in self.getLiwcCategories(word)
+        return 'Negate' in self.getCategories(word)
