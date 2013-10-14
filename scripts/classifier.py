@@ -49,6 +49,10 @@ def __getCategoriesForWord(sen, word):
 def classify_sentence(sen):
     "returns a classification vector for a particular sentence"
     feature_vector = defaultdict(lambda: 0)
+    # remove certain types of punctuation so we can match
+    # words in liwc
+    sen = sen.replace(".", "")
+    sen = sen.replace(",", "")
     sen = sen.lower().split()
 
     word_count = len(sen)
@@ -73,6 +77,7 @@ def __classify_speechacts(speechacts):
         feature_vector = classify_sentence(speechact)
         classifications[speechact] = feature_vector
     return classifications
+
 
 def classify_speech(filepath):
     sa = testimonyUtils.get_speech_acts(filepath)

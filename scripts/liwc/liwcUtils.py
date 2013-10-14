@@ -78,6 +78,9 @@ class LiwcDict:
         "returns the 'negated' or 'opposite' category of the given category"
         opps = {}
         opps["Posemo"] = "Negemo"
+        opps["Negemo"] = "Posemo"
+
+        
         if opps.has_key(category):
             return opps[category]
         else:
@@ -85,4 +88,7 @@ class LiwcDict:
         
     def isNegation(self, word):
         "returns true if the given word is a negation word"
-        return 'Negate' in self.getCategories(word)
+        cats = self.getCategories(word)
+        if cats:
+            return 'Negate' in cats
+        return None
