@@ -10,20 +10,25 @@ def classify_phrase(phrase):
     print "not implemented!"
 
 def __getPreviousWords(sen, word):
-#    sen.split() 
+    """
+    Returns a list of length <= 3 of words that appear before
+    'word' in 'sen', where 'sen' is an array of words, and 'word'
+    is a string.
+    """
     index = sen.index(word)
     prevWords = sen[:index]
     if len(prevWords) > 3:
-        prevWords = prevWords[2:]
+        prevWords = prevWords[1:]
     return prevWords
 
 def __isNegated(sen, word):
-    "returns true if there's a negation word before this word"
+    "returns true if there's a negation word before this word in sen"
     prevWords = __getPreviousWords(sen, word)
     negations = (map(lambda w: liwc.isNegation(w), prevWords))
     return any(negations)
 
 def __isNegWord(sen, word):
+    "Returns true if 'word' should be counted as negative in sen"
     categories = __getCategoriesForWord(sen, word)
     if categories:
         return any(map(liwc.isNegCat, categories))
@@ -31,6 +36,7 @@ def __isNegWord(sen, word):
         return False
 
 def __isPosWord(sen, word):
+    "Returns true if 'word' should be counted as negative in sen"
     categories = __getCategoriesForWord(sen, word)
     if categories:
         return any(map(liwc.isPosCat, categories))
@@ -70,8 +76,10 @@ def __prep_sentence(sen):
     sen = sen.lower().split()
     return sen
 
-
-
+def __normalize(feature_vector, word_count):
+    for feature, score in feature_vector.items():
+        feature_vector[feature] = score/float(word_count)
+    return feature_vector
 
 def classify_sentence(sen):
     "returns a classification vector for a particular sentence"
@@ -89,11 +97,9 @@ def classify_sentence(sen):
 
             for category in categories:
                 feature_vector[category] +=1
-    # # normalize feature vector
-    # for feature, score in feature_vector.iteritems():
-    #     feature_vector[feature] = score./word_count
 
-    return feature_vector
+    # simple normalizing based on length of sentence
+    return __normalize(feature_vector, word_count)
 
 def pos_neg_classify_sentence(sen):
     "returns a pos/neg feature vector"
@@ -103,21 +109,14 @@ def pos_neg_classify_sentence(sen):
     posNegVector["pos"] = 0
     posNegVector["neg"] = 0
 
+    word_count = len(sen)
     for word in sen:
         if __isPosWord(sen, word):
             posNegVector["pos"] += 1
         elif __isNegWord(sen, word):
             posNegVector["neg"] += 1
-    return posNegVector
-
-    # features = classify_sentence(sen)
-    # for f in features:
-    #     if liwc.isPosCat(f):
-    #         posNegVector["pos"] += 1
-    #     elif liwc.isNegCat(f):
-    #         posNegVector["neg"] += 1
-
-    # return posNegVector
+#    return posNegVector
+    return __normalize(posNegVector, word_count)
 
 def classify_speech(filepath):
     sa = testimonyUtils.get_speech_acts(filepath)
