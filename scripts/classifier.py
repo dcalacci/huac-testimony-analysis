@@ -10,19 +10,38 @@ def classify_phrase(phrase):
     print "not implemented!"
 
 def __getPreviousWords(sen, word):
-#    sen.split() 
+    """
+    Returns a list of length <= 3 of words that appear before
+    'word' in 'sen', where 'sen' is an array of words, and 'word'
+    is a string.
+    """
     index = sen.index(word)
     prevWords = sen[:index]
     if len(prevWords) > 3:
-        prevWords = prevWords[2:]
+        prevWords = prevWords[1:]
     return prevWords
 
 def __isNegated(sen, word):
+    "returns true if there's a negation word before this word in sen"
     prevWords = __getPreviousWords(sen, word)
-    print "previous words: ", prevWords
     negations = (map(lambda w: liwc.isNegation(w), prevWords))
-    print "negations? ", negations
     return any(negations)
+
+def __isNegWord(sen, word):
+    "Returns true if 'word' should be counted as negative in sen"
+    categories = __getCategoriesForWord(sen, word)
+    if categories:
+        return any(map(liwc.isNegCat, categories))
+    else:
+        return False
+
+def __isPosWord(sen, word):
+    "Returns true if 'word' should be counted as negative in sen"
+    categories = __getCategoriesForWord(sen, word)
+    if categories:
+        return any(map(liwc.isPosCat, categories))
+    else:
+        return False
 
 def __getCategoriesForWord(sen, word):
     "get the categories this word belongs to"
@@ -31,9 +50,7 @@ def __getCategoriesForWord(sen, word):
 
         # if the word is negated and has + or - sentiment, replace
         # any categories that have opposites
-        if liwc.isPosNegWord(word) and __isNegated(sen, word):
-            print "it's positive or negative and it's negated"
-
+        if (liwc.isPosWord(word) or liwc.isNegWord(word)) and __isNegated(sen, word):
             def replaceCategory(c):
                 opposite = liwc.getOppositeCategory(c)
                 if opposite:
@@ -45,15 +62,31 @@ def __getCategoriesForWord(sen, word):
         return categories
     return None
 
+def __classify_speechacts(speechacts):
+    "converts a list of speech acts to a list of classification vectors"
+    classifications = {}
+    for speechact in speechacts:
+        feature_vector = classify_sentence(speechact)
+        classifications[speechact] = feature_vector
+    return classifications
+
+def __prep_sentence(sen):
+    sen = sen.replace(".", "")
+    sen = sen.replace(",", "")
+    sen = sen.lower().split()
+    return sen
+
+def __normalize(feature_vector, word_count):
+    for feature, score in feature_vector.items():
+        feature_vector[feature] = score/float(word_count)
+    return feature_vector
 
 def classify_sentence(sen):
     "returns a classification vector for a particular sentence"
     feature_vector = defaultdict(lambda: 0)
     # remove certain types of punctuation so we can match
     # words in liwc
-    sen = sen.replace(".", "")
-    sen = sen.replace(",", "")
-    sen = sen.lower().split()
+    sen = __prep_sentence(sen)
 
     word_count = len(sen)
     for word in sen:
@@ -64,20 +97,26 @@ def classify_sentence(sen):
 
             for category in categories:
                 feature_vector[category] +=1
-    # # normalize feature vector
-    # for feature, score in feature_vector.iteritems():
-    #     feature_vector[feature] = score./word_count
 
-    return feature_vector
+    # simple normalizing based on length of sentence
+    return __normalize(feature_vector, word_count)
 
-def __classify_speechacts(speechacts):
-    "converts a list of speech acts to a list of classification vectors"
-    classifications = {}
-    for speechact in speechacts:
-        feature_vector = classify_sentence(speechact)
-        classifications[speechact] = feature_vector
-    return classifications
+def pos_neg_classify_sentence(sen):
+    "returns a pos/neg feature vector"
+    sen = __prep_sentence(sen)
 
+    posNegVector = {}
+    posNegVector["pos"] = 0
+    posNegVector["neg"] = 0
+
+    word_count = len(sen)
+    for word in sen:
+        if __isPosWord(sen, word):
+            posNegVector["pos"] += 1
+        elif __isNegWord(sen, word):
+            posNegVector["neg"] += 1
+#    return posNegVector
+    return __normalize(posNegVector, word_count)
 
 def classify_speech(filepath):
     sa = testimonyUtils.get_speech_acts(filepath)

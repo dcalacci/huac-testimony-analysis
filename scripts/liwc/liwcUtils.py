@@ -11,7 +11,8 @@ class LiwcDict:
         self.filepath = filepath
         self.wordmap = {}
         self.__parseFeatureFile()
-        self.pos = ["Posemo"]
+        # Friends, Job included. May indicate collaboration.
+        self.pos = ["Posemo", "Friends", "Job"]
         self.neg = ["Negemo", "Anx", "Anger", "Sad"]
         
     def __parseFeatureFile(self):
@@ -46,14 +47,30 @@ class LiwcDict:
             if self.__matchesLiwcWord(liwcWord, word):
                 return self.wordmap[liwcWord]
         return None
+    
 
+    def isPosCat(self, cat):
+        "returns true if the category is in self.pos"
+        return cat in self.pos
 
-    def isPosNegWord(self, word):
-        "returns true if the word is a positive or negative word"
-        posNegCats = self.pos + self.neg
+    def isNegCat(self, cat):
+        "returns true if the category is in self.neg"
+        return cat in self.neg
+
+        
+    def isPosWord(self, word):
+        "returns true if the word is deemed to be positive "
         categories = self.getCategories(word)
-        if posNegCats:
-            return any(c in posNegCats for c in categories)
+        if categories:
+            return any(map(self.isPosCat, categories))
+        else:
+            return []
+
+    def isNegWord(self, word):
+        "returns true if the word deemed to be negative"
+        categories = self.getCategories(word)
+        if categories:
+            return any(map(self.isNegCat, categories))
         else:
             return []
         
