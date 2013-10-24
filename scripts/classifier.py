@@ -82,7 +82,12 @@ def __normalize(feature_vector, word_count):
     return feature_vector
 
 def classify_sentence(sen):
-    "returns a classification vector for a particular sentence"
+    """
+    creates a classification vector for a particular sentence, 
+    using all features from liwc.
+    The value for each feature is normalized by the size of the
+    sentence itself. Ignores entities.
+    """
     feature_vector = defaultdict(lambda: 0)
     # remove certain types of punctuation so we can match
     # words in liwc
@@ -102,7 +107,12 @@ def classify_sentence(sen):
     return __normalize(feature_vector, word_count)
 
 def pos_neg_classify_sentence(sen):
-    "returns a pos/neg feature vector"
+    """
+    creates a classification vector for a particular sentence,
+    using positive and negative categories as features.
+    The value for each feature is normalized by the size of the
+    sentence itself. Ignores entities.
+    """
     sen = __prep_sentence(sen)
 
     posNegVector = {}
@@ -117,6 +127,30 @@ def pos_neg_classify_sentence(sen):
             posNegVector["neg"] += 1
 #    return posNegVector
     return __normalize(posNegVector, word_count)
+
+# def __start_ner_server():
+#     import os
+#     from subprocess import call
+    
+#     externals = os.path.join(os.getcwd(), 'external')
+#     sner = os.path.join(externals, "stanford-ner")
+# #    externals = os.path.join(os.path.dirname(__file__), 'externals')
+# #    current_folder_path, current_folder_name = os.path.split(os.getcwd())
+
+#     os.chdir(sner)
+
+#     call('ner', '-mx1000m', '-cp', 'stanford-ner.jar', 'edu.stanford.nlp.ie.NERServer', '-loadClassifier', 'classifiers/english.muc.7class.distsim.crf.ser.gz', '-port', '8080', '-outputFormat', 'inlineXML')
+
+def __get_entities(sen):
+    "produces a dict of entities in sen from the Stanford NER parser. sen must be a string."
+    import ner
+    tagger = ner.SocketNER(host='localhost', port=8080)
+    return tagger.get_entities(sen)
+
+def __pos_neg_classify_sen_by_entity(sen):
+    "not implemented"
+    #entities = __get_entities(sen)
+
 
 def classify_speech(filepath):
     sa = testimonyUtils.get_speech_acts(filepath)
