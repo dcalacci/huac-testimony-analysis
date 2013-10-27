@@ -5,24 +5,53 @@ import liwc.liwcUtils as liwcUtils
 
 liwc = liwcUtils.LiwcDict()
 
+class Sentence:
+    def __init__(self, sen=""):
+        self.text = sen
+        self.sen = self.__prep_text()
+        self.entities = self.__get_entities()
 
-def classify_phrase(phrase):
-    print "not implemented!"
+    def __prep_text(self):
+        sen = self.text.replace(".", "")
+        sen = self.text.replace(",", "")
+        sen = self.text.lower().split()
+        return sen
 
-def __getPreviousWords(sen, word):
-    """
-    Returns a list of length <= 3 of words that appear before
-    'word' in 'sen', where 'sen' is an array of words, and 'word'
-    is a string.
-    """
-    index = sen.index(word)
-    prevWords = sen[:index]
-    if len(prevWords) > 3:
-        prevWords = prevWords[1:]
-    return prevWords
+    def get_entities(self):
+        "produces a dict of entities in this sentence"
+        import ner
+        tagger = ner.SocketNER(host='localhost', port=8080)
+        return tagger.get_entities(self.text)
+
+    # sentence utils
+    def __split_with_entities(self, sen):
+        entities = self.get_entities()
+        for entity in entities:
+            beg_index = sen.find(entity)
+            end_index = sen.find(entity) + len(entity)
+
+            a = sen[:beg_index].split()
+            b = sen[end_index:].split()
+
+            a.append(entity)
+            newsen = a + b
+
 
 def __isNegated(sen, word):
     "returns true if there's a negation word before this word in sen"
+
+    def __getPreviousWords(sen, word):
+        """
+        Returns a list of length <= 3 of words that appear before
+        'word' in 'sen', where 'sen' is an array of words, and 'word'
+        is a string.
+        """
+        index = sen.index(word)
+        prevWords = sen[:index]
+        if len(prevWords) > 3:
+            prevWords = prevWords[1:]
+        return prevWords
+
     prevWords = __getPreviousWords(sen, word)
     negations = (map(lambda w: liwc.isNegation(w), prevWords))
     return any(negations)
@@ -70,11 +99,7 @@ def __classify_speechacts(speechacts):
         classifications[speechact] = feature_vector
     return classifications
 
-def __prep_sentence(sen):
-    sen = sen.replace(".", "")
-    sen = sen.replace(",", "")
-    sen = sen.lower().split()
-    return sen
+
 
 def __normalize(feature_vector, word_count):
     for feature, score in feature_vector.items():
@@ -147,9 +172,37 @@ def __get_entities(sen):
     tagger = ner.SocketNER(host='localhost', port=8080)
     return tagger.get_entities(sen)
 
-def __pos_neg_classify_sen_by_entity(sen):
-    "not implemented"
-    #entities = __get_entities(sen)
+def __get_distance_to_entity(sen, word, entity):
+    "computes the distance from 'word' to 'entity' in 'sen'"
+#    sen = sen.split()
+    print "word: ", word
+    dist = abs(sen.index(word) - sen.index(entity))
+    return dist
+
+def score(sen, entity):
+    "computes the sentiment score towards of 'sen' towards 'entity'"
+    
+    def get_sentiment_score(sen, word):
+        if __isPosWord(sen, word):
+           return 1
+        elif __isNegWord(sen, word):
+            return -1
+
+    def get_word_score(sen, word, entity):
+        dist = __get_distance_to_entity(sen, word, entity)
+        return get_sentiment_score(sen, word)/dist
+
+    sen = sen.split()
+
+    score = sum([get_word_score(sen, word, entity) for word in sen if liwc.exists(word)])
+    return score
+
+    # entity_categories = __get_entities(sen) # dict of category -> listof entity
+    # for (cat, entities) in entity_cateogires.items():
+    #     for entity in entities:
+            
+    
+    
 
 
 def classify_speech(filepath):

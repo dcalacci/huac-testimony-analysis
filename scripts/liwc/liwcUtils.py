@@ -70,7 +70,6 @@ class LiwcDict:
             return any(map(self.isNegCat, categories))
         else:
             return []
-        
 
     def positiveWords(self):
         "returns a list of positive-associated words from liwc"
