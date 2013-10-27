@@ -9,7 +9,6 @@ class Sentence:
     def __init__(self, sen=""):
         self.text = sen
         self.sen = self.__prep_text()
-        self.entities = self.__get_entities()
 
     def __prep_text(self):
         sen = self.text.replace(".", "")
@@ -23,18 +22,28 @@ class Sentence:
         tagger = ner.SocketNER(host='localhost', port=8080)
         return tagger.get_entities(self.text)
 
-    # sentence utils
-    def __split_with_entities(self, sen):
-        entities = self.get_entities()
-        for entity in entities:
-            beg_index = sen.find(entity)
-            end_index = sen.find(entity) + len(entity)
+    def parse_entities(self, sen, entities):
+        # if we're done going through the list of entities,
+        # just return the sentence array.
+        if not entities:
+            return sen.split()
+        
+        entity = entities[0]
+        # if it's not in the list, go to the next entity.
+        if sen.find(entity) == -1:
+            return self.parse_entities(sen, entities[1:])
 
-            a = sen[:beg_index].split()
-            b = sen[end_index:].split()
+        beg_index = sen.find(entity)
+        end_index = sen.find(entity) + len(entity)
 
-            a.append(entity)
-            newsen = a + b
+        a = sen[:beg_index] # string up to the entity
+        b = sen[end_index:] # string after the entity
+
+        a = self.parse_entities(a, entities)
+        a.append(entity) # add the entity inbetween the two parts
+        b = self.parse_entities(b, entities)
+
+        return a + b
 
 
 def __isNegated(sen, word):
