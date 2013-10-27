@@ -20,12 +20,19 @@ class Sentence:
         self.orig_text = sen
         self.text = self.__prep_text(self.orig_text)
         self.entities = self.get_entities()
-        self.sen = self.parse_sentence_with_entities(self.entities)
+        self.words = self.parse_sentence_with_entities(self.entities)
+        self.wordcount = len(self.orig_text)
 
     def __prep_text(self, text):
         """
         Removes all periods and commas from a given string,
         and lowercases all the words in the sentence.
+
+        @type  text: string
+        @param text: The string to prep
+
+        @rtype:  string
+        @return: The string text, with all commas and periods removed, lowered.
         """
         sen = text.replace(".", "")
         sen = sen.replace(",", "")
@@ -40,6 +47,9 @@ class Sentence:
         TYPE -> [Listof Entities]
         Also returns a list of all the entities stanford NER recognizes
         in this sentence, as a list of strings.
+
+        @rtype:  list of strings
+        @return: A list of entities that exist in this sentence.
         """
         import ner
         tagger = ner.SocketNER(host='localhost', port=8080)
@@ -62,6 +72,14 @@ class Sentence:
         ['i', 'hate', 'northeastern university', 'but', 'i', 'like', 'john adams']
         this will apply this transformation to multiple references to the same 
         entity, as well.
+
+        @type  sen: list of strings
+        @param sen: A list representation of the string to examine
+        @type  entities: list of strings
+        @param entities: A list of entities to check
+
+        @rtype: list of string
+        @return: a list representation of a sentence
         """
         # if we're done going through the list of entities,
         # just return the sentence array.
@@ -89,11 +107,49 @@ class Sentence:
         "initial call to __parse_entities"
         return self.__parse_entities(self.text, self.entities)
 
+    def distance_from_entity(self, word, entity):
+        """
+        Computes the distance from the given word to the given entity
+        in this sentence.
+        
+        @type  word: string
+        @param word: The word to compute distance for. Must be a word
+                     that already exists in this sentence.
+        @type  entity: string
+        @param entity: The entity to compute the distance from. This must
+                       be an entity that already exists in the sentence, and
+                       can be obtained by getting this sentences' entities.
+        @rtype: number
+        @return: the number of words from word to the given entity in 
+                 this sentence.
+        """
+        dist = abs(self.words.index(word) - self.words.index(entity))
+        return dist
 
+    def liwc_words(self):
+        """
+        Produces a list of all the words in this sentence that exist in liwc.
+
+        @rtype: list
+        @return: The intersection of all words that exist in thise sentence
+                 and words that exist in liwc.
+        """
+        words = [word for word in self.words if len(word.split()) <= 1]
+        return  [word for word in words if liwc.exists(word)]
 
 def __isNegated(sen, word):
-    "returns true if there's a negation word before this word in sen"
+    """
+    returns true if there's a negation word <=3 words before 'word' in 'sen',
+    where 'sen' is a Sentence object.
 
+    @type  sen: sentence
+    @param sen: The sentence that word appears in.
+    @type  word: string
+    @param word: The word to examine
+
+    @rtype:  boolean
+    @return: True if word is negated in sen, False otherwise.
+    """
     def __getPreviousWords(sen, word):
         """
         Returns a list of length <= 3 of words that appear before
@@ -106,28 +162,24 @@ def __isNegated(sen, word):
             prevWords = prevWords[1:]
         return prevWords
 
-    prevWords = __getPreviousWords(sen, word)
+    prevWords = __getPreviousWords(sen.words, word)
     negations = (map(lambda w: liwc.isNegation(w), prevWords))
     return any(negations)
 
-def __isNegWord(sen, word):
-    "Returns true if 'word' should be counted as negative in sen"
-    categories = __getCategoriesForWord(sen, word)
-    if categories:
-        return any(map(liwc.isNegCat, categories))
-    else:
-        return False
-
-def __isPosWord(sen, word):
-    "Returns true if 'word' should be counted as negative in sen"
-    categories = __getCategoriesForWord(sen, word)
-    if categories:
-        return any(map(liwc.isPosCat, categories))
-    else:
-        return False
-
 def __getCategoriesForWord(sen, word):
-    "get the categories this word belongs to"
+    """
+    Returns a list of categories that the given word belongs to
+    given a sentence that contains the given word. If sen doesn't
+    contain word, returns None.
+
+    @type sen: sentence
+    @param sen: The sentence to analyze.
+    @type word: string
+    @param word: The word to produce lwic categories for.
+    
+    @rtype: List of String or None
+    @return: The list of lwic cateogires that word belongs to
+    """
     if liwc.exists(word):
         categories = liwc.getCategories(word)
 
@@ -145,35 +197,87 @@ def __getCategoriesForWord(sen, word):
         return categories
     return None
 
+def __isNegWord(sen, word):
+    """
+    Checks if 'word' should be counted as negative in 'sen'
+
+    @type  sen: sentence
+    @param sen: The sentence to examine
+    @type  word: string
+    @param word: The word to check.
+
+    @rtype: boolean
+    @return: True if word is negative, False otherwise.
+    """
+    categories = __getCategoriesForWord(sen, word)
+    if categories:
+        return any(map(liwc.isNegCat, categories))
+    else:
+        return False
+
+def __isPosWord(sen, word):
+    """
+    Checks if 'word' should be counted as positive in 'sen'
+
+    @type  sen: sentence
+    @param sen: The sentence to examine
+    @type  word: string
+    @param word: The word to check.
+
+    @rtype: boolean
+    @return: True if word is positive, False otherwise.
+    """
+    categories = __getCategoriesForWord(sen, word)
+    if categories:
+        return any(map(liwc.isPosCat, categories))
+    else:
+        return False
+
 def __classify_speechacts(speechacts):
-    "converts a list of speech acts to a list of classification vectors"
+    """
+    Creates a dictionary of [speechact] -> [feature vector]
+    for each speech act in speechacts.
+
+    @type  speechacts: list of strings
+    @param speechacts: The list of speech acts to examine.
+
+    @rtype: dict
+    @return: a dict of [speech act] -> [feature vector], 
+             where speech act is a string, and feature vector
+             is a dict of [feature] -> [value]
+    """
     classifications = {}
     for speechact in speechacts:
-        feature_vector = classify_sentence(speechact)
-        classifications[speechact] = feature_vector
+        speechact = Sentence(speechact)
+        feature_vector = classify_sentence(speechact.words)
+        classifications[speechact.words] = feature_vector
     return classifications
 
-
-
 def __normalize(feature_vector, word_count):
+    """
+    Normalizes the given feature vector's values by word_count.
+    """
     for feature, score in feature_vector.items():
         feature_vector[feature] = score/float(word_count)
     return feature_vector
 
+
 def classify_sentence(sen):
     """
-    creates a classification vector for a particular sentence, 
+    creates a feature vector for a particular sentence, 
     using all features from liwc.
     The value for each feature is normalized by the size of the
     sentence itself. Ignores entities.
+    
+    @type  sen: sentence
+    @param sen: The sentence to analyze
+
+    @rtype: dict
+    @return: a feature vector of [feature] -> [value]
     """
     feature_vector = defaultdict(lambda: 0)
-    # remove certain types of punctuation so we can match
-    # words in liwc
-    sen = __prep_sentence(sen)
 
-    word_count = len(sen)
-    for word in sen:
+    for word in sen.words:
         # get the associated categories in liwc
         categories = []
         if liwc.exists(word):
@@ -181,9 +285,10 @@ def classify_sentence(sen):
 
             for category in categories:
                 feature_vector[category] +=1
-
+    #return feature_vector
     # simple normalizing based on length of sentence
-    return __normalize(feature_vector, word_count)
+    return __normalize(feature_vector, sen.wordcount)
+
 
 def pos_neg_classify_sentence(sen):
     """
@@ -191,21 +296,25 @@ def pos_neg_classify_sentence(sen):
     using positive and negative categories as features.
     The value for each feature is normalized by the size of the
     sentence itself. Ignores entities.
-    """
-    sen = __prep_sentence(sen)
 
+    @type  sen: sentence
+    @param sen: The sentence to analyze
+    
+    @rtype dict
+    @return: a feature vector of [feature] -> [value]
+    """
     posNegVector = {}
     posNegVector["pos"] = 0
     posNegVector["neg"] = 0
 
-    word_count = len(sen)
-    for word in sen:
+    for word in sen.words:
         if __isPosWord(sen, word):
             posNegVector["pos"] += 1
         elif __isNegWord(sen, word):
             posNegVector["neg"] += 1
 #    return posNegVector
-    return __normalize(posNegVector, word_count)
+    return __normalize(posNegVector, sen.wordcount)
+
 
 # def __start_ner_server():
 #     import os
@@ -220,20 +329,19 @@ def pos_neg_classify_sentence(sen):
 
 #     call('ner', '-mx1000m', '-cp', 'stanford-ner.jar', 'edu.stanford.nlp.ie.NERServer', '-loadClassifier', 'classifiers/english.muc.7class.distsim.crf.ser.gz', '-port', '8080', '-outputFormat', 'inlineXML')
 
-def __get_entities(sen):
-    "produces a dict of entities in sen from the Stanford NER parser. sen must be a string."
-    import ner
-    tagger = ner.SocketNER(host='localhost', port=8080)
-    return tagger.get_entities(sen)
-
-def __get_distance_to_entity(sen, word, entity):
-    "computes the distance from 'word' to 'entity' in 'sen'"
-#    sen = sen.split()
-    print "word: ", word
-    dist = abs(sen.index(word) - sen.index(entity))
-    return dist
 
 def score(sen, entity):
+    """
+    Computes the sentiment score of 'sen' towards 'entity'
+
+    @type  sen: sentence
+    @param sen: The sentence to compute sentiment for
+    @type  entity: string
+    @param entity: The entity to compute 'sen's sentiment towards.
+
+    @rtype: number
+    @return: A sentiment score, from -1 to 1.
+    """
     "computes the sentiment score towards of 'sen' towards 'entity'"
     
     def get_sentiment_score(sen, word):
@@ -241,28 +349,24 @@ def score(sen, entity):
            return 1
         elif __isNegWord(sen, word):
             return -1
+        return 0
 
     def get_word_score(sen, word, entity):
-        dist = __get_distance_to_entity(sen, word, entity)
-        return get_sentiment_score(sen, word)/dist
+        dist = sen.distance_from_entity(word, entity)
+        if dist == 0:
+            return 0
+        return get_sentiment_score(sen, word)/float(dist)
 
-    sen = sen.split()
-
-    score = sum([get_word_score(sen, word, entity) for word in sen if liwc.exists(word)])
+    score = sum([get_word_score(sen, word, entity) for word in sen.words if liwc.exists(word)])
     return score
 
-    # entity_categories = __get_entities(sen) # dict of category -> listof entity
-    # for (cat, entities) in entity_cateogires.items():
-    #     for entity in entities:
-            
-    
-    
+def score_all_entities(sen):
+    """
+    Computes the sentiment score of sen towards every entitity
+    in sen.
+    """
+    scores = {}
+    for entity in sen.entities:
+        scores[entity] = score(sen, entity)
 
-
-def classify_speech(filepath):
-    sa = testimonyUtils.get_speech_acts(filepath)
-    classifications = {}
-    for name in sa.keys():
-        speechacts = sa[name]
-        classifications[name] = __classify_speechacts(speechacts)
-    return classifications
+    return scores
