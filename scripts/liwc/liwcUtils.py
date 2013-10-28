@@ -5,9 +5,6 @@ catfile = os.path.join(liwc_dir, "catgories.txt")
 featurefile = os.path.join(liwc_dir, "features.txt")
 class LiwcDict:
     def __init__(self, filepath=featurefile):
-        """
-        l is either '', '*', or the letter this dict corresponds to.
-        """
         self.filepath = filepath
         self.wordmap = {}
         self.__parseFeatureFile()
@@ -73,7 +70,6 @@ class LiwcDict:
             return any(map(self.isNegCat, categories))
         else:
             return []
-        
 
     def positiveWords(self):
         "returns a list of positive-associated words from liwc"
@@ -96,7 +92,6 @@ class LiwcDict:
         opps = {}
         opps["Posemo"] = "Negemo"
         opps["Negemo"] = "Posemo"
-
         
         if opps.has_key(category):
             return opps[category]
