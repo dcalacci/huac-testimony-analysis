@@ -89,6 +89,7 @@ class Sentence:
         entity = entities[0]
         # if it's not in the list, go to the next entity.
         if sen.find(entity) == -1:
+            print "didn't find ", entity,  " in ", sen
             return self.__parse_entities(sen, entities[1:])
 
         beg_index = sen.find(entity)
@@ -119,12 +120,33 @@ class Sentence:
         @param entity: The entity to compute the distance from. This must
                        be an entity that already exists in the sentence, and
                        can be obtained by getting this sentences' entities.
-        @rtype: number
-        @return: the number of words from word to the given entity in 
-                 this sentence.
+        @rtype:  list of number
+        @return: A list of distances from entity to the given word. If entity
+                 only appears once in the sentence, the list will be of length 1.
+                 Otherwise, there will be a distance for each occurrence of entity
+                 in this sentence.
         """
-        dist = abs(self.words.index(word) - self.words.index(entity))
-        return dist
+
+        # if an entity appears multiple times, compute multiple
+        # distances for the same word.  then, compute the sentiment
+        # for each instance of entity, and average it.
+
+        def dist_from_entity_in_sen(sen, word, entity, dists):
+            # print "sen: ", sen
+            # print "word: ", word
+            # print "entity: ", entity
+            # print "dists: ", dists
+            if entity in sen:
+                entityindex = sen.index(entity)
+                newdists = dists + [(abs(sen.index(word) - entityindex))]
+                a, b = sen[:entityindex], sen[entityindex+1:]
+                newsen = a + b
+                #newsen = filter(lambda w: entity not in w, sen)
+                #sen.remove(entity)
+                return dist_from_entity_in_sen(newsen, word, entity, newdists)
+            else: 
+                return dists
+        return dist_from_entity_in_sen(self.words, word, entity, [])
 
     def liwc_words(self):
         """
@@ -315,7 +337,6 @@ def pos_neg_classify_sentence(sen):
 #    return posNegVector
     return __normalize(posNegVector, sen.wordcount)
 
-
 # def __start_ner_server():
 #     import os
 #     from subprocess import call
@@ -328,7 +349,6 @@ def pos_neg_classify_sentence(sen):
 #     os.chdir(sner)
 
 #     call('ner', '-mx1000m', '-cp', 'stanford-ner.jar', 'edu.stanford.nlp.ie.NERServer', '-loadClassifier', 'classifiers/english.muc.7class.distsim.crf.ser.gz', '-port', '8080', '-outputFormat', 'inlineXML')
-
 
 def score(sen, entity):
     """
@@ -352,12 +372,19 @@ def score(sen, entity):
         return 0
 
     def get_word_score(sen, word, entity):
-        dist = sen.distance_from_entity(word, entity)
-        if dist == 0:
-            return 0
-        return get_sentiment_score(sen, word)/float(dist)
+        dists = sen.distance_from_entity(word, entity)
+        # create list of sentiment scores for each occurrence of entity
+        def normalize_by_dist(dist):
+            if dist == 0: return 0
+            return get_sentiment_score(sen, word)/float(dist)
 
-    score = sum([get_word_score(sen, word, entity) for word in sen.words if liwc.exists(word)])
+        scores = map(normalize_by_dist, dists)
+        # average the sentiment scores
+        return sum(scores)/len(scores)
+        
+    scores = [get_word_score(sen, word, entity) for word in sen.words if __isPosWord(sen, word) or __isNegWord(sen, word)]
+    # should it just be the sum, or should it be the average?
+    score = sum(scores)
     return score
 
 def score_all_entities(sen):
@@ -368,5 +395,4 @@ def score_all_entities(sen):
     scores = {}
     for entity in sen.entities:
         scores[entity] = score(sen, entity)
-
     return scores
