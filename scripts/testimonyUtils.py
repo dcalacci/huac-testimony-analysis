@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import re, sys, os, fileinput, tempfile
+import re, os, fileinput
 
 def cleanFile(filepath):
     "removes unwanted lines from the given file"
@@ -44,10 +44,9 @@ def splitFileByTestimony(filepath):
             if r: # if we found anything
                 # if the name is already there and this line number is after
                 # the one we found previously, we shouldn't change the hash.
-                if not (persons.has_key(r[0]) and i+1 > persons[r[0]]):
-                    name = r[0].replace(' ', '-').lower()
+                name = r[0].replace(' ', '-').lower()
+                if not persons.has_key(name) or not i+1 > persons[name]:
                     persons[name] = i+1# make the hash: name -> line number
-                    
         f.close()
         return persons
 
@@ -63,6 +62,7 @@ def splitFileByTestimony(filepath):
         sections = []
         for index, person in enumerate(persons): 
             t = (person[0], person[1])
+            print t
             if index+1 == len(persons):
                 t = t + ("-1",)
             else:
@@ -84,7 +84,7 @@ def splitFileByTestimony(filepath):
         if not os.path.exists(newPath):
             os.makedirs(newPath)
         outfile = open(os.path.join(newPath, 
-                                    '{}{}'.format(name, ext)), 'w')
+                                    '{}{}'.format(name, ext)), 'a')
         with open(origFile, 'r') as f:
             for i, line in enumerate(f):
                 if i == end:
@@ -99,8 +99,22 @@ def splitFileByTestimony(filepath):
         the tuple is of the same form that findPageRanges returns. Each sub-file
         has a suffix that corresponds to the speaker ('person') in the tuple.
         """
+        
+        def get_file_name(person, persons):
+            "gets the file name for this person. handles extension variants."
+            names = []
+            for p in persons:
+                if p[0] in person[0].lower():
+                    names.append(p[0])
+            # shortest name variant in the list
+            return min(names, key=len)
+            
+                
         for person in persons:
-            makeSubFile(filepath, person[1], person[2], person[0].lower())
+            name = get_file_name(person, persons)
+            #if same_file_name(person, persons):
+            makeSubFile(filepath, person[1], person[2], name)
+            
     persons = findPageRanges(filepath)
     print persons
     separateTranscriptBySpeaker(filepath, persons)

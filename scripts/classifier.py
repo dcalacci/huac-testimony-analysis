@@ -362,8 +362,6 @@ def score(sen, entity):
     @rtype: number
     @return: A sentiment score, from -1 to 1.
     """
-    "computes the sentiment score towards of 'sen' towards 'entity'"
-    
     def get_sentiment_score(sen, word):
         if __isPosWord(sen, word):
            return 1
