@@ -112,11 +112,9 @@ def splitFileByTestimony(filepath):
                 
         for person in persons:
             name = get_file_name(person, persons)
-            #if same_file_name(person, persons):
             makeSubFile(filepath, person[1], person[2], name)
             
     persons = findPageRanges(filepath)
-    print persons
     separateTranscriptBySpeaker(filepath, persons)
 
 
