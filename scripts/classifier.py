@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 from collections import defaultdict
-import sentiment.sentimentUtils as sentimentUtils
+import lexicons.lexiconUtils as sentimentUtils
 
-sen_dict = sentimentUtils.SentimentDict()
+sen_dict = sentimentUtils.LiwcDict()
 
 class Sentence:
     """
@@ -88,7 +88,6 @@ class Sentence:
         entity = entities[0]
         # if it's not in the list, go to the next entity.
         if sen.find(entity) == -1:
-            print "didn't find ", entity,  " in ", sen
             return self.__parse_entities(sen, entities[1:])
 
         beg_index = sen.find(entity)
