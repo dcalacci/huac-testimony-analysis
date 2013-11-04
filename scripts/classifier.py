@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 from collections import defaultdict
-import testimonyUtils
-import liwc.liwcUtils as liwcUtils
+import sentiment.sentimentUtils as sentimentUtils
 
-liwc = liwcUtils.LiwcDict()
+sen_dict = sentimentUtils.SentimentDict()
 
 class Sentence:
     """
@@ -148,16 +147,16 @@ class Sentence:
                 return dists
         return dist_from_entity_in_sen(self.words, word, entity, [])
 
-    def liwc_words(self):
+    def sen_dict_words(self):
         """
-        Produces a list of all the words in this sentence that exist in liwc.
+        Produces a list of all the words in this sentence that exist in sen_dict.
 
         @rtype: list
         @return: The intersection of all words that exist in thise sentence
-                 and words that exist in liwc.
+                 and words that exist in sen_dict.
         """
         words = [word for word in self.words if len(word.split()) <= 1]
-        return  [word for word in words if liwc.exists(word)]
+        return  [word for word in words if sen_dict.exists(word)]
 
 def __isNegated(sen, word):
     """
@@ -185,7 +184,7 @@ def __isNegated(sen, word):
         return prevWords
 
     prevWords = __getPreviousWords(sen.words, word)
-    negations = (map(lambda w: liwc.isNegation(w), prevWords))
+    negations = (map(lambda w: sen_dict.isNegation(w), prevWords))
     return any(negations)
 
 def __getCategoriesForWord(sen, word):
@@ -202,14 +201,14 @@ def __getCategoriesForWord(sen, word):
     @rtype: List of String or None
     @return: The list of lwic cateogires that word belongs to
     """
-    if liwc.exists(word):
-        categories = liwc.getCategories(word)
+    if sen_dict.exists(word):
+        categories = sen_dict.getCategories(word)
 
         # if the word is negated and has + or - sentiment, replace
         # any categories that have opposites
-        if (liwc.isPosWord(word) or liwc.isNegWord(word)) and __isNegated(sen, word):
+        if (sen_dict.isPosWord(word) or sen_dict.isNegWord(word)) and __isNegated(sen, word):
             def replaceCategory(c):
-                opposite = liwc.getOppositeCategory(c)
+                opposite = sen_dict.getOppositeCategory(c)
                 if opposite:
                     return opposite
                 else: 
@@ -233,7 +232,7 @@ def __isNegWord(sen, word):
     """
     categories = __getCategoriesForWord(sen, word)
     if categories:
-        return any(map(liwc.isNegCat, categories))
+        return any(map(sen_dict.isNegCat, categories))
     else:
         return False
 
@@ -251,7 +250,7 @@ def __isPosWord(sen, word):
     """
     categories = __getCategoriesForWord(sen, word)
     if categories:
-        return any(map(liwc.isPosCat, categories))
+        return any(map(sen_dict.isPosCat, categories))
     else:
         return False
 
@@ -287,7 +286,7 @@ def __normalize(feature_vector, word_count):
 def classify_sentence(sen):
     """
     creates a feature vector for a particular sentence, 
-    using all features from liwc.
+    using all features from sen_dict.
     The value for each feature is normalized by the size of the
     sentence itself. Ignores entities.
     
@@ -300,9 +299,9 @@ def classify_sentence(sen):
     feature_vector = defaultdict(lambda: 0)
 
     for word in sen.words:
-        # get the associated categories in liwc
+        # get the associated categories in sen_dict
         categories = []
-        if liwc.exists(word):
+        if sen_dict.exists(word):
             categories = __getCategoriesForWord(sen, word)
 
             for category in categories:

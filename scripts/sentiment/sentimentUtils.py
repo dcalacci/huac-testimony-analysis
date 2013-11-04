@@ -1,21 +1,24 @@
 #/usr/bin/env python
-from liwc.config import liwc_dir
+from sentiment.config import liwc_dir, pitt_dir, liu_dir
 import os
-catfile = os.path.join(liwc_dir, "catgories.txt")
-featurefile = os.path.join(liwc_dir, "features.txt")
-class LiwcDict:
-    def __init__(self, filepath=featurefile):
+
+liwcfile = os.path.join(liwc_dir, "features.txt")
+pittfile = os.path.join(pitt_dir, "data.txt")
+liufile = os.path.join(liu_dir, "data.txt")
+
+class SentimentDict:
+    def __init__(self, filepath=liwcfile):
         self.filepath = filepath
         self.wordmap = {}
         self.__parseFeatureFile()
-        # Friends, Job included. May indicate collaboration.
+        # Friends, Job included for liwc. May indicate collaboration.
         self.pos = ["Posemo", "Friends", "Job"]
         self.neg = ["Negemo", "Anx", "Anger", "Sad"]
         
     def __parseFeatureFile(self):
         "parses the feature file, populating the wordmap"
-        with open(self.filepath) as featurefile:
-            for line in featurefile.readlines():
+        with open(self.filepath) as f:
+            for line in f.readlines():
                 line = line.split(", ")
                 category, words = line[0], line[1:]
                 for word in words:
