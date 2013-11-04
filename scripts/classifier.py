@@ -337,19 +337,6 @@ def pos_neg_classify_sentence(sen):
 #    return posNegVector
     return __normalize(posNegVector, sen.wordcount)
 
-# def __start_ner_server():
-#     import os
-#     from subprocess import call
-    
-#     externals = os.path.join(os.getcwd(), 'external')
-#     sner = os.path.join(externals, "stanford-ner")
-# #    externals = os.path.join(os.path.dirname(__file__), 'externals')
-# #    current_folder_path, current_folder_name = os.path.split(os.getcwd())
-
-#     os.chdir(sner)
-
-#     call('ner', '-mx1000m', '-cp', 'stanford-ner.jar', 'edu.stanford.nlp.ie.NERServer', '-loadClassifier', 'classifiers/english.muc.7class.distsim.crf.ser.gz', '-port', '8080', '-outputFormat', 'inlineXML')
-
 def score(sen, entity):
     """
     Computes the sentiment score of 'sen' towards 'entity'
