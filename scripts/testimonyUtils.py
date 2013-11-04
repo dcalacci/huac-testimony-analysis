@@ -1,28 +1,52 @@
 #!/usr/bin/env python
-import re, os, fileinput
+import re, os
 
 def cleanFile(filepath):
-    "removes unwanted lines from the given file"
+    "removes unwanted text from the given file"
+    def regex_replace(filepath, regexes):
+        """
+        regexes is a list of (regex, replace)
+        regex_replace replaces all the regexes with their 
+        respective replace strings
+        """
+        import mmap
+        str = ""
+        with open(filepath, 'r+') as f:
 
-    badlines = []
-    badlines.append('^\d+')
-    badlines.append('^COMMUNISM')
-    badlines.append('^INDUSTRY')
+            data = mmap.mmap(f.fileno(), 0)
+            for regex, replace in regexes:
+                data = re.sub(regex, replace, data)
+            str = data
+        f.close()
+        os.remove(filepath)
+        with open(filepath, 'w') as f:
+            f.write(str)
+        f.close()
 
-    def isBadLine(line):
-        "returns true if the line is a 'bad line'"
-        for regex in badlines:
-            if bool(re.findall(regex, line)):
-                return True
-        return False
+    r = []
+    r.append(('COMMUNISM IN MOTION-PICTURE INDUSTRY', ''))
+    r.append(('COMMUNISM IN MOTION-PICTURE', ''))
+    r.append(('\n+(?!Mr|Miss\.?)', ' '))
+    regex_replace(filepath, r)
 
-    # remove lines that are "bad"
-    for line in fileinput.input(filepath, inplace=1):
-        if not isBadLine(line): print line,
+def get_speech_acts(filepath):
+    "returns a hash of name -> list of speech acts"
+    cleanFile(filepath)
+    str = ""
+    with open(filepath, 'r+') as f:
+        import mmap
+        str = mmap.mmap(f.fileno(), 0)
+    f.close()
 
-    # remove blank lines
-    for line in fileinput.input(filepath, inplace=1):
-        if line.rstrip(): print line
+    regex = re.compile("^(?:Mrs|Miss|Mr)(?:\.?)(?:\s?)(\w*?)[\.\s](.*?)\n",re.MULTILINE)
+    matches = regex.findall(str)
+    speechacts = {}
+    for match in matches:
+        if speechacts.has_key(match[0].lower()):
+            speechacts[match[0].lower()].append(match[1])
+        else:
+            speechacts[match[0].lower()] = [match[1]]
+    return speechacts
 
 def splitFileByTestimony(filepath):
     """
@@ -30,6 +54,7 @@ def splitFileByTestimony(filepath):
     Produces a directory that mirrors the given file's name that contains
     files whose names correspond to individual's names
     """
+    cleanFile(filepath)
 
     def findPersonDelimiters(filepath):
         """
@@ -62,7 +87,6 @@ def splitFileByTestimony(filepath):
         sections = []
         for index, person in enumerate(persons): 
             t = (person[0], person[1])
-            print t
             if index+1 == len(persons):
                 t = t + ("-1",)
             else:
@@ -112,37 +136,8 @@ def splitFileByTestimony(filepath):
                 
         for person in persons:
             name = get_file_name(person, persons)
+            print "Adding testmony to:", name.strip()+".txt"
             makeSubFile(filepath, person[1], person[2], name)
             
     persons = findPageRanges(filepath)
     separateTranscriptBySpeaker(filepath, persons)
-
-
-def clean_newlines(filepath):
-    """
-    Cleans up unwanted newlines in the given file.
-    """
-    import mmap
-    
-    path, filename = os.path.split(filepath)
-    str = ""
-    with open(filepath, 'r+') as f:
-        data = mmap.mmap(f.fileno(), 0)
-        data = re.sub("\n+(?!Mr\.)", " ", data) #any newline not followed by a 'Mr'
-        str = data
-    f.close()
-    return str
-    
-
-def get_speech_acts(filepath):
-    "returns a hash of name -> list of speech acts"
-    str = clean_newlines(filepath)
-    regex = re.compile("^Mr\.\s(\w*?)[\.\s](.*?)\n",re.MULTILINE)
-    matches = regex.findall(str)
-    speechacts = {}
-    for match in matches:
-        if speechacts.has_key(match[0].lower()):
-            speechacts[match[0].lower()].append(match[1])
-        else:
-            speechacts[match[0].lower()] = [match[1]]
-    return speechacts
