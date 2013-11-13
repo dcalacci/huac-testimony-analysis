@@ -68,21 +68,13 @@ class Lexicons:
 
     def getOppositeCategory(self, category):
         "returns the 'negated' or 'opposite' category of the given category"
-        opps = {}
-        opps["Posemo"] = "Negemo"
-        opps["Negemo"] = "Posemo"
-        
-        if opps.has_key(category):
-            return opps[category]
-        else:
-            return None
+        return self.liwcDict.getOppositeCategory(category)
+
         
     def isNegation(self, word):
         "returns true if the given word is a negation word"
-        cats = self.getCategories(word)
-        if cats:
-            return 'Negate' in cats
-        return None        
+        return self.liwcDict.isNegation(word)
+
 
 class LiwcDict:
     def __init__(self, filepath=liwcfile):

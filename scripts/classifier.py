@@ -379,3 +379,26 @@ def score_all_entities(sen):
     for entity in sen.entities:
         scores[entity] = score(sen, entity)
     return scores
+
+def score_all_entities_in_speechact(speechact):
+    """
+    computes the sentiment score of each sen towards every entity
+    in that sentence.
+    then, averages the sentiment score for each entity across all sentences.
+    """
+    import nltk.data
+    tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
+    sens = map(Sentence, tokenizer.tokenize(speechact))
+    # coreference resolution within speechacts here.
+    scores = (score_all_entities(sen) for sen in sens)
+    
+    combined = defaultdict(lambda: [])
+    for s in scores:
+        for k in s:
+            combined[k].append(s.get(k))
+
+    for entity, scores in combined.items():
+        score = sum(scores)/len(scores)
+        combined[entity] = score
+
+    return combined
