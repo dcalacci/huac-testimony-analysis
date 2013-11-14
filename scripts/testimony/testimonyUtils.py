@@ -30,7 +30,7 @@ def cleanFile(filepath):
     regex_replace(filepath, r)
 
 def get_speech_acts(filepath):
-    "returns a hash of name -> list of speech acts"
+    "returns a hash of name -> list of speech acts for a particular file."
 
     # some functions to guess likely names from mispellings. works OK
     def are_close(a, b):
@@ -84,10 +84,12 @@ def get_speech_acts(filepath):
     speechacts = {}
     for match in matches:
         likely_name = find_likely_name(match[0], dist).lower()
-        if speechacts.has_key(likely_name):
-            speechacts[likely_name].append(match[1])
-        else:
-            speechacts[likely_name] = [match[1]]
+        # if the likely name has a low occurrence rate:
+        if not dist[likely_name] < .03:
+            if speechacts.has_key(likely_name):
+                speechacts[likely_name].append(match[1])
+            else:
+                speechacts[likely_name] = [match[1]]
     return speechacts
 
 def splitFileByTestimony(filepath):

@@ -111,6 +111,14 @@ class LiwcDict:
             if self.__matchesLiwcWord(liwcWord, word):
                 return True
         return False
+        
+    def getWordsInCategory(self, category):
+        "returns the list of words that correspond to the given category"
+        words = []
+        for liwcWord, cat in self.wordmap.items():
+            if cat == category:
+                words.append(liwcWord)
+        return set(words)
 
     def getCategories(self, word):
         "returns the list of liwc categories the given word is in"
