@@ -4,4 +4,7 @@ tmp/
 scripts/external/stanford-ner*
 scripts/external/pitt*
 scripts/external/liu*
+scripts/testimony/separate
+scripts/testimony/tmp
 *DS_Store
+testimony/
