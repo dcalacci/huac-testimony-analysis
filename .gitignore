@@ -1,5 +1,6 @@
 .ropeproject/
 *.pyc
+transcripts/*
 tmp/
 scripts/external/stanford-ner*
 scripts/external/pitt*
