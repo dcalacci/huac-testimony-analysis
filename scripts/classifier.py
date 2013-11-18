@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 from collections import defaultdict
-import sentiment.sentimentUtils as sentimentUtils
+import lexicons.lexiconUtils as sentimentUtils
 
-sen_dict = sentimentUtils.SentimentDict()
+sen_dict = sentimentUtils.LiwcDict()
 
 class Sentence:
     """
@@ -88,7 +88,6 @@ class Sentence:
         entity = entities[0]
         # if it's not in the list, go to the next entity.
         if sen.find(entity) == -1:
-            print "didn't find ", entity,  " in ", sen
             return self.__parse_entities(sen, entities[1:])
 
         beg_index = sen.find(entity)
@@ -380,3 +379,26 @@ def score_all_entities(sen):
     for entity in sen.entities:
         scores[entity] = score(sen, entity)
     return scores
+
+def score_all_entities_in_speechact(speechact):
+    """
+    computes the sentiment score of each sen towards every entity
+    in that sentence.
+    then, averages the sentiment score for each entity across all sentences.
+    """
+    import nltk.data
+    tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
+    sens = map(Sentence, tokenizer.tokenize(speechact))
+    # coreference resolution within speechacts here.
+    scores = (score_all_entities(sen) for sen in sens)
+    
+    combined = defaultdict(lambda: [])
+    for s in scores:
+        for k in s:
+            combined[k].append(s.get(k))
+
+    for entity, scores in combined.items():
+        score = sum(scores)/len(scores)
+        combined[entity] = score
+
+    return combined

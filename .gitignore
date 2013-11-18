@@ -1,3 +1,11 @@
 .ropeproject/
 *.pyc
+transcripts/*
 tmp/
+scripts/external/stanford-ner*
+scripts/external/pitt*
+scripts/external/liu*
+scripts/testimony/text/separate/*
+scripts/testimony/text/tmp/*
+*DS_Store
+ 
