@@ -2,16 +2,52 @@
 import re
 import os
 import namedist
+from collections import defaultdict
 from preprocessing import cleanFile
 from config import transcript_dir
+
+
 
 class Transcripts:
     def __init__(self):
         self.names = [f.replace(".txt", "") for f in os.listdir(transcript_dir)]
+        self.speechacts = self.get_all_speech_acts()
 
     def get_all_speech_acts(self):
-        for t in transcript_dir:
-            speechacts = self.get_speech_acts_from_file(os.path.join(transcript_dir, t))
+        """
+        produces a dict of name -> list of speech acts for every speaker
+        in all testimonies
+        """
+        def merge(dicts):
+            "merges every dict in dicts. assumes that vals are lists"
+            print "Merging..."
+            result = defaultdict(lambda: [])
+            for d in dicts:
+                for (k,v) in d.items():
+                    result[k] += v
+            return result
+                            
+        dicts = []
+        print "Getting speech acts..."
+        for name in self.names:
+            dicts.append(self.get_speech_acts_from_testimony(name))
+
+        # remove bum keys
+        speechacts =  merge(dicts)
+        for key in speechacts.keys():
+            if len(key) < 3:
+                del speechacts[key]
+
+        dist = namedist.name_distribution_from_dict(speechacts)
+
+        for (k, v) in speechacts.items():
+            likely_name = namedist.find_likely_name(k, dist)
+            if not dist[likely_name] < .00001:
+                speechacts[likely_name] += v
+            if not likely_name == k:
+                del speechacts[k]
+
+        return speechacts
 
     def get_speech_acts_from_testimony(self, name):
         "gets all the speech acts from the given actor's testimony."
@@ -27,12 +63,12 @@ class Transcripts:
             str = mmap.mmap(f.fileno(), 0)
         f.close()
 
-        regex = re.compile("^(?:Mrs|Miss|Mr)(?:\.?)(?:\s?)(\w*?)[\.\s](.*?)\n",re.MULTILINE)
+        regex = re.compile("^(?:Mrs|Miss|Mr)(?:\.?)(?:\s?)(\w*?)[\.\s](.*?)\n",
+                           re.MULTILINE)
         matches = regex.findall(str)
 
         # name distribution to guess likely names from mispellings
-        dist = namedist.name_distribution(matches)
-        print dist
+        dist = namedist.name_distribution_from_matches(matches)
         speechacts = {}
         for match in matches:
             likely_name = namedist.find_likely_name(match[0], dist).lower()
