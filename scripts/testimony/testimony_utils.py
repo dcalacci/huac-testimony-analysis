@@ -2,16 +2,19 @@
 import re
 import os
 import namedist
+import ner
 from collections import defaultdict
 from preprocessing import cleanFile
 from config import transcript_dir
-
 
 
 class Transcripts:
     def __init__(self):
         self.names = [f.replace(".txt", "") for f in os.listdir(transcript_dir)]
         self.speechacts = self.get_all_speech_acts()
+        self.tagger = ner.SocketNER(host='localhost', port=8080)
+        #self.names = dict((k, self.get_entities(v)) for k, v in self.speechacts.items())
+
 
     def get_all_speech_acts(self):
         """
@@ -32,7 +35,8 @@ class Transcripts:
         for name in self.names:
             dicts.append(self.get_speech_acts_from_testimony(name))
 
-        # remove bum keys
+        # remove bum keys, maybe later find appropriate
+        # good keys to merge with.
         speechacts =  merge(dicts)
         for key in speechacts.keys():
             if len(key) < 3:
@@ -48,6 +52,21 @@ class Transcripts:
                 del speechacts[k]
 
         return speechacts
+
+    def get_entities(self, speechacts):
+        print "Getting entities..."
+        def get_entities_from_string(text):
+            print text
+            orig_ents = self.tagger.get_entities(text)
+
+            # just a simple list of all the entities
+            entities = [v[0] for k, v in orig_ents.items()]
+            return entities
+
+        entities = []
+        for speechact in speechacts:
+            entities += get_entities_from_string(speechact)
+        return entities
 
     def get_speech_acts_from_testimony(self, name):
         "gets all the speech acts from the given actor's testimony."
