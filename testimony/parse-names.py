@@ -9,6 +9,7 @@ def who_named_whom(filepath):
     named_regex = re.compile("(^(\s)?[A-Z]\w+[,|\.]\s*[A-Z]\w+(?:\.)?([\s+]\w+)?)", 
                              re.MULTILINE)
     not_all_caps_regex = re.compile("([a-z])")
+    testimony_identifying_regex = re.compile("Testimony identifying")
     tagger = ner.SocketNER(host='localhost', port=8080)
 
     f = open(filepath, "r")
@@ -23,6 +24,19 @@ def who_named_whom(filepath):
         if not matches:
             continue
         current_name = matches[0][0]
+
+        # sometimes the regex confused locations for people
+        # the name is separated by a comma/period. NER works well for names
+        # in normal order (not with commas/periods)
+        name = current_name.split(",")
+        if len(name) < 2:
+            name = current_name.split(".")
+#        last, first = current_name.split(",")
+        last, first = name[0], name[1]
+        current_name = first + " " + last
+        entities = tagger.get_entities(current_name)
+        if entities.has_key('LOCATION'):
+            continue
 
         print "named: ", current_name
 
