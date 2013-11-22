@@ -2,9 +2,11 @@
 *.pyc
 transcripts/*
 tmp/
-scripts/external/stanford-ner*
-scripts/external/pitt*
-scripts/external/liu*
-scripts/testimony/text/*
+lexicons/liu/*
+lexicons/pitt/*
+lexicons/liwc/*
+external/stanford-ner*
+external/pitt*
+external/liu*
 *DS_Store
  
