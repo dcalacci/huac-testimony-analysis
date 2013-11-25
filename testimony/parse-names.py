@@ -1,9 +1,17 @@
 #!/usr/bin/env python
 import re
+import os
 import time
 import ner
+import subprocess
+
 
 def who_named_whom(filepath):
+#    os.chdir('../external/')
+#    print os.getcwd()
+#    ner_server_process = subprocess.Popen('./ner.sh')
+ #   os.chdir('../testimony/')
+#    ner_server_process = subprocess.Popen('../external/ner.sh')
     counter = 0
     namedict = {}
     named_regex = re.compile("(^(\s)?[A-Z]\w+[,|\.]\s*[A-Z]\w+(?:\.)?([\s+]\w+)?)", 
@@ -25,18 +33,18 @@ def who_named_whom(filepath):
             continue
         current_name = matches[0][0]
 
-        # sometimes the regex confused locations for people
-        # the name is separated by a comma/period. NER works well for names
-        # in normal order (not with commas/periods)
-        name = current_name.split(",")
-        if len(name) < 2:
-            name = current_name.split(".")
+        # # sometimes the regex confused locations for people
+        # # the name is separated by a comma/period. NER works well for names
+        # # in normal order (not with commas/periods)
+        # name = current_name.split(",")
+        # if len(name) < 2:
+        #     name = current_name.split(".")
 
-        last, first = name[0], name[1]
-        current_name = first + " " + last
-        entities = tagger.get_entities(current_name)
-        if entities.has_key('LOCATION'):
-            continue
+        # last, first = name[0], name[1]
+        # current_name = first + " " + last
+        # entities = tagger.get_entities(current_name)
+        # if entities.has_key('LOCATION'):
+        #     continue
 
         print "named: ", current_name
 
@@ -55,8 +63,22 @@ def who_named_whom(filepath):
             named_lines += lines[j]
 
         named_lines = current_line + named_lines# add the rest of the first line
-        entities = tagger.get_entities(named_lines)
-#        time.sleep(5)
+        got_result = None
+        while got_result == None:
+            try:
+                entities = tagger.get_entities(named_lines)
+                got_result = True
+            except:
+ #                os.kill(ner_server_process.pid, 0)
+#                ner_server_process.kill()
+ #               time.sleep(0.5)
+#                os.chdir('../external/')
+#                print os.getcwd()
+#                ner_server_process = subprocess.Popen('./ner.sh')
+#                os.chdir('../testimony/')
+#                time.sleep(3)
+                pass
+            
         counter += 1
         print "Server calls: ", counter
         if not entities.has_key('PERSON'):
