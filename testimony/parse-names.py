@@ -31,7 +31,7 @@ def who_named_whom(filepath):
         name = current_name.split(",")
         if len(name) < 2:
             name = current_name.split(".")
-#        last, first = current_name.split(",")
+
         last, first = name[0], name[1]
         current_name = first + " " + last
         entities = tagger.get_entities(current_name)
@@ -49,6 +49,8 @@ def who_named_whom(filepath):
             if named_regex.findall(lines[j]): 
                 break
             if not not_all_caps_regex.findall(lines[j]):
+                break
+            if testimony_identifying_regex.findall(lines[j]):
                 break
             named_lines += lines[j]
 
