@@ -105,7 +105,6 @@ def who_named_whom(filepath):
         if not names:
             continue
 
-
         print "names extracted: ", names
         print "----------------------------"
 
@@ -137,10 +136,12 @@ def name_distribution_with_tokens(names):
 
 def most_likely_name(name, dist):
     def close(n1, n2):
-        return namedist.fuzzy_substring(n1.lower(), n2.lower()) < 4
+        return (namedist.fuzzy_substring(n1.lower(), n2.lower()) < 3) or \
+            (namedist.fuzzy_substring(n2.lower(), n1.lower()) < 3)
     maybes = dict((k, v) for k, v in dist.items() if close(name, k))
     best = max(maybes.items(), key=lambda p: p[1])
     return best[0]
+
 
 def test_ner():
     a = range(1, 30)
