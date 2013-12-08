@@ -1,5590 +1,6335 @@
 (dp0
-S'Mary Morrell'
+S'john issacs'
 p1
-(lp2
-VThomas Delaney
-p3
-aVMrs. Robert Morrell
+c__builtin__
+set
+p2
+((lp3
+Vwayne b. salisbury
 p4
-aVSamuel DiMaria
+aVrichard f. o'hair
 p5
-asS'Russell Kitto'
-p6
-(lp7
-VBereniece Baldwin
+atp6
+Rp7
+sS'mary m maraniss'
 p8
-asS'Joe Bentzenhoffer'
-p9
-(lp10
-VJoseph Bezen
-p11
-asS'Henry Meihs'
-p12
-(lp13
-VLee Lundgren
-p14
-asS'Nora Hallgren'
+g2
+((lp9
+Vmary morrison
+p10
+atp11
+Rp12
+sVmarjorie manoff
+p13
+g2
+((lp14
+Velizabeth wilson
 p15
-(lp16
-VMrs. George Hall
+aS'marjorie. potts'
+p16
+aVmrs. arnold manoff
 p17
-aVRichard Collins
+aVleo townsend
 p18
-aVFrank Tuttle
-p19
-aVIsobel Lennart
-p20
-asS'Madelaine Ruthven'
+atp19
+Rp20
+sS'dorothy. connelly'
 p21
-(lp22
-VRichard Collins
+g2
+((lp22
+Vdorothy healy
 p23
-aVMeta Reis Rosenberg
-p24
-aVFrank Tuttle
-p25
-aVDavid Raksin
+atp24
+Rp25
+sS'loretta adam'
 p26
-aVElizaltetb Wilson
-p27
-aVIsobel Lennart
+g2
+((lp27
+Vharold ashe
 p28
-asS'Bess Taffel'
-p29
-(lp30
-VLeo Townsend
+atp29
+Rp30
+sS'jack tenner'
 p31
-asS'Perry Dunson'
-p32
-(lp33
-VRoy Thompson
+g2
+((lp32
+Vmarburg yerkes
+p33
+aVmilton s. tyre
 p34
-asS'Dave Moore'
+aVdavid aaron
 p35
-(lp36
-VBereniece Baldwin
-p37
-asS'Alice Buchmah'
+atp36
+Rp37
+sS'paul cline'
 p38
-(lp39
-VMorris L. Appelman
+g2
+((lp39
+Valice bennett
 p40
-aVMorris L. Appelman
+ag28
+aVurcel daniel
 p41
-asS'Malcolm Wright'
+aVmildred ashe
 p42
-(lp43
-VBereniece Baldwin
-p44
-asS'Helen Tenney'
-p45
-(lp46
-VLouis F. Budenz
-p47
-asS'Tiba Willner'
+aVcharles judson
+p43
+atp44
+Rp45
+sS'patricia lewis'
+p46
+g2
+((lp47
+Vroy thompson
 p48
-(lp49
-VIsobel Lennart
-p50
-asS'Clarence Hathaway'
+atp49
+Rp50
+sS'george pepper'
 p51
-(lp52
-VCharles Judson
+g2
+((lp52
+Vedward dmytryk
 p53
-asS'Albert Maltz'
-p54
-(lp55
-VRichard Collins
+atp54
+Rp55
+sS'james walker'
 p56
-aVReis Rosenberg
-p57
-aVEdward Dmytryk
+g2
+((lp57
+Vbereniece baldwin
 p58
-aVFrank Tuttle
-p59
-aVAnne Rav Frank
-p60
-aVIsobel Lennart
+atp59
+Rp60
+sS'john leech'
 p61
-aVBernard Schoenfeld
-p62
-asS'Ken Pettus'
-p63
-(lp64
-VOwen Vinson
+g2
+((lp62
+g28
+ag42
+atp63
+Rp64
+sS'lydia mates'
 p65
-asS'Van Brook'
-p66
-(lp67
-VBereniece Baldwin
-p68
-asS'Nat Praeger'
-p69
-(lp70
-VHarold Ashe
-p71
-aVMildred Ashe
-p72
-asS'Arthur Lishner'
-p73
-(lp74
-VMr. Lishner
-p75
-asS'Phillis McRay'
+g2
+((lp66
+Vmrs. dave mates
+p67
+ag58
+atp68
+Rp69
+sS'larry blyth'
+p70
+g2
+((lp71
+g4
+atp72
+Rp73
+sS'celeste strack'
+p74
+g2
+((lp75
+Vroy huggins
 p76
-(lp77
-VMrs. Otis McRay
-p78
-asS'Ida Terkel'
+atp77
+Rp78
+sS'miriam bonner'
 p79
-(lp80
-VOwen Vinson
-p81
-asS'John Berry'
-p82
-(lp83
-VFrank Tuttle
-p84
-aVStanley Roberts
+g2
+((lp80
+g28
+atp81
+Rp82
+sS'meta r writer'
+p83
+g2
+((lp84
+Vstanley roberts
 p85
-aVBernard Schoenfeld
+ag15
+aVisobel lennart
 p86
-asS'Jack White'
+ag18
+aVbernard schoenfeld
 p87
-(lp88
-VRichard F. O'Hair
+aVdavid raksin
+p88
+aVanne ray frank
 p89
-aVWayne B. Salisbury
+aVbudd schulberg
 p90
-aVBereniece Baldwin
+aVfrank tuttle
 p91
-asS'Art Braunlich'
+ag28
+aVwilliam blowitz
 p92
-(lp93
-VWayne B. Salisbury
-p94
-asS'Leo Cefkin'
+ag53
+atp93
+Rp94
+sS'ben kocel'
 p95
-(lp96
-VDr. Mendell M. Krieger
+g2
+((lp96
+Vglos ludowy
 p97
-asS'Jules Abercauph'
-p98
-(lp99
-VSamuel DiMaria
+ag58
+atp98
+Rp99
+sS'sidney davenport'
 p100
-asS'Ann Delancey'
-p101
-(lp102
-VRichard F. O'Hair
-p103
-asS'Pat Amato'
+g2
+((lp101
+g48
+atp102
+Rp103
+sS'billie mogill'
 p104
-(lp105
-VLee Lundgren
+g2
+((lp105
+Vmrs. george mogill
 p106
-aVIrving Krane
-p107
-asS'Otis Revis'
-p108
-(lp109
-VBereniece Baldwin
+ag58
+atp107
+Rp108
+sg15
+g2
+((lp109
+Vmrs. richard criley
 p110
-asS'Gladys Liefchild'
-p111
-(lp112
-VMrs. Gerald Lief
+atp111
+Rp112
+sS'charles katz'
 p113
-aVAlice Bennett
-p114
-asS'Fred Gebelle'
+g2
+((lp114
+Valbert herzig
 p115
-(lp116
-VBereniece Baldwin
-p117
-asS'Gus Jurist'
-p118
-(lp119
-VBereniece Baldwin
-p120
-asS'Alexander Trachtenberg'
+ag34
+ag35
+aVwilliam g. israel
+p116
+atp117
+Rp118
+sS'bob klonsky'
+p119
+g2
+((lp120
+Vthomas delaney
 p121
-(lp122
-VLouis F. Budenz
-p123
-asS'Robert Scott'
+atp122
+Rp123
+sS'pete kowal'
 p124
-(lp125
-VLee Lundgren
-p126
-asS'Olga Zenchuck'
-p127
-(lp128
-VBereniece Baldwin
-p129
-asS'Pasco Soso'
-p130
-(lp131
-VLee Lundgren
+g2
+((lp125
+g58
+atp126
+Rp127
+sS'thomas wood'
+p128
+g2
+((lp129
+g48
+atp130
+Rp131
+sVmrs. harold franklin
 p132
-asS'Joe Dougher'
-p133
-(lp134
-VSamuel DiMaria
-p135
-asS'Merle Work'
+g2
+((lp133
+g58
+atp134
+Rp135
+sS'al bigford'
 p136
-(lp137
-VWayne B. Salisbury
-p138
-aVBereniece Baldwin
-p139
-asS'Ben Margolis'
+g2
+((lp137
+g4
+atp138
+Rp139
+sS'charles killinger'
 p140
-(lp141
-VMilton Tyre
+g2
+((lp141
+Valcide t. kratz
 p142
-asS'Cliff Bollin'
-p143
-(lp144
-VBereniece Baldwin
+atp143
+Rp144
+sS'elmer hanoff'
 p145
-asS'Ben Terry'
-p146
-(lp147
-VRoy Thompson
-p148
-asS'Martha Schkurman'
+g2
+((lp146
+g28
+ag42
+atp147
+Rp148
+sS'jerry mchale'
 p149
-(lp150
-VBereniece Baldwin
+g2
+((lp150
+Vdonald o. spencer
 p151
-asS'Joseph Starobin'
-p152
-(lp153
-VLee Lundgren
+atp152
+Rp153
+sS'julius sorbonya'
 p154
-asS'Mildred Pearlstein'
-p155
-(lp156
-VBereniece Baldwin
-p157
-aVMildred Pierce
+g2
+((lp155
+g58
+atp156
+Rp157
+sS'agnes grigg'
 p158
-asS'Dr Hittleman'
-p159
-(lp160
-VJoseph Louise Light Silver
-p161
-aVSam Reznick
+g2
+((lp159
+g58
+atp160
+Rp161
+sS'art braunlich'
 p162
-asS'Georgia Backus'
-p163
-(lp164
-VPaul Marion
-p165
-aVOwen Vinson
+g2
+((lp163
+g4
+atp164
+Rp165
+sS'charles mcclaughlan'
 p166
-asS'Rose Most'
-p167
-(lp168
-VAlice Bennett
-p169
-asS'William Wolff'
+g2
+((lp167
+g115
+atp168
+Rp169
+sS'andy lancey'
 p170
-(lp171
-VPaul Marion
+g2
+((lp171
+Vwalter scott dunn
 p172
-aVOwen Vinson
-p173
-asS'James Jones'
-p174
-(lp175
-VShelton Tappes
-p176
-asS'Verne Piazza'
-p177
-(lp178
-VBereniece Baldwin
+atp173
+Rp174
+sS'hope smith'
+p175
+g2
+((lp176
+g58
+atp177
+Rp178
+sS'boleslaw gebert'
 p179
-asS'Stanley Waxman'
-p180
-(lp181
-VPaul Marion
-p182
-aVOwen Vinson
-p183
-asS'Sis Cunningham'
+g2
+((lp180
+Vcasimir rataj
+p181
+atp182
+Rp183
+sS'pressley green'
 p184
-(lp185
-VRichard F. O'Hair
-p186
-aVMrs. Gordon Friesen
-p187
-aVMrs. Milton Freeman
+g2
+((lp185
+g4
+atp186
+Rp187
+sS'fred fine'
 p188
-asS'Leola Cones'
-p189
-(lp190
-VWayne B. Salisbury
+g2
+((lp189
+Virving krane
+p190
+ag15
+ag18
+aVdave averill
 p191
-asS'Bob Cummins'
+ag91
+aVlee lundgren
 p192
-(lp193
-VBereniece Baldwin
-p194
-asS'Mr Black'
+ag4
+ag58
+atp193
+Rp194
+sS'verna mcallister'
 p195
-(lp196
-VWayne B. Salisbury
-p197
-asS'Jay Gorney'
-p198
-(lp199
-VLeo Townsend
-p200
-aVCharles Daggett
+g2
+((lp196
+g58
+atp197
+Rp198
+sS'ralph glick'
+p199
+g2
+((lp200
+Vsamuel dimaria
 p201
-asS'Helen Winter'
-p202
-(lp203
-VMrs. Carl Richard F. O'Hair
+ag121
+atp202
+Rp203
+sS'bob washington'
 p204
-aVWalter Scott Dunn
-p205
-aVWayne B. Salisbury
-p206
-aVBereniece Baldwin
-p207
-asS'Julius Sorbonya'
+g2
+((lp205
+g4
+atp206
+Rp207
+sS'anthony matusek'
 p208
-(lp209
-VBereniece Baldwin
+g2
+((lp209
+Vjohn edward cooke
 p210
-asS'Frank Allen'
-p211
-(lp212
-VLee Lundgren
+atp211
+Rp212
+sS'harold smith'
 p213
-aVRoy Thompson
-p214
-asS'Yal Burton'
-p215
-(lp216
-VRoy Huggins
+g2
+((lp214
+g58
+atp215
+Rp216
+sS'morris feder'
 p217
-asS'Mortimer Offner'
-p218
-(lp219
-VLeo Townsend
-p220
-aVElizabeth Wilson
-p221
-aVMelvin Levy
+g2
+((lp218
+Vsam reznick
+p219
+atp220
+Rp221
+sVwilliam l.patterson
 p222
-aVCatherine Martin
-p223
-aVMrs. Bob Roberts
-p224
-asS'Marjorie MacGregor'
-p225
-(lp226
-VMarjorie Manoff
-p227
-asS'Philip Abraham Bart'
-p228
-(lp229
-VThomas Delaney
+g2
+((lp223
+g210
+ag48
+ag192
+atp224
+Rp225
+sS'simson marcus'
+p226
+g2
+((lp227
+g219
+atp228
+Rp229
+sS'jack mondress'
 p230
-aVSamuel DiMaria
-p231
-asS'Victor Kaplan'
-p232
-(lp233
-VDavid Aaron
+g2
+((lp231
+g201
+atp232
+Rp233
+sS'mitchell lindeman'
 p234
-aVAlbert Herzig
-p235
-aVWilliam G. Israel
+g2
+((lp235
+Vpaul marion
 p236
-aVMilton S. Tyre
+aVowen vinson
 p237
-asS'Tersil T. Obriot'
-p238
-(lp239
-VBereniece Baldwin
+atp238
+Rp239
+sS'julius dassin'
 p240
-aVShelton Tappes
-p241
-asS'Lee Pressman'
-p242
-(lp243
-VLouis F. Budenz
+g2
+((lp241
+g91
+ag53
+atp242
+Rp243
+sS'nat praeger'
 p244
-aVLouis F. Budenz
-p245
-asS'Herbert Biberman'
-p246
-(lp247
-VReis Rosenberg
+g2
+((lp245
+g28
+ag42
+atp246
+Rp247
+sS'joseph schlicht'
 p248
-aVEdward Dmytryk
-p249
-aVBudd Schulberg
-p250
-aVFrank Tuttle
-p251
-aVDavid Raksin
+g2
+((lp249
+g58
+atp250
+Rp251
+sS'melva cook'
 p252
-aVElizabeth Wilson
-p253
-aVIsobel Lennart
+g2
+((lp253
+g5
+aS'george cook'
 p254
-aVStanley Roberts
-p255
-aVBernard Schoenfeld
-p256
-asS'Percy Llewelyn'
+ag58
+atp255
+Rp256
+sS'harmon alexander'
 p257
-(lp258
-VWalter Scott Dunn
-p259
-aVBereniece Baldwin
-p260
-asS'Gale Sondergaard'
+g2
+((lp258
+g236
+ag237
+atp259
+Rp260
+sS'kurt davis'
 p261
-(lp262
-VEdith Holm Sond
-p263
-aVMrs. Herbert Biberman
-p264
-asS'Bob Washington'
+g2
+((lp262
+g58
+atp263
+Rp264
+sS'daniel trees'
 p265
-(lp266
-VWayne B. Salisbury
-p267
-asS'Walter Lowenfels'
-p268
-(lp269
-VSamuel DiMaria
-p270
-asS'Lib Hilberman'
-p271
-(lp272
-VMrs. David Hilber
+g2
+((lp266
+g58
+atp267
+Rp268
+sS'raynal lofgren'
+p269
+g2
+((lp270
+g190
+ag192
+atp271
+Rp272
+sS'bob morrell'
 p273
-aVEugene Fleury
-p274
-asS'Clarence Stoecker'
-p275
-(lp276
-VJohn Edward Cooke
+g2
+((lp274
+g121
+atp275
+Rp276
+sS'walter dorosh'
 p277
-asS'Bob Cohn'
-p278
-(lp279
-VAlice Bennett
-p280
-asS'Tom DeFazio'
-p281
-(lp282
-VThomas Delaney
-p283
-aVDan Samuel DiMaria
+g2
+((lp278
+Vshelton tappes
+p279
+ag58
+atp280
+Rp281
+sS'blaehevherbert'
+p282
+g2
+((lp283
+Vrichard collins
 p284
-asS'Ernie Sorenson'
-p285
-(lp286
-VBereniece Baldwin
+atp285
+Rp286
+sS'ida whipple'
 p287
-aVBarbara Richard F. O'Hair
-p288
-asS'Michael Gordon'
-p289
-(lp290
-VFrank Tuttle
-p291
-asS'James Anderson'
-p292
-(lp293
-VRichard F. O'Hair
+g2
+((lp288
+g4
+atp289
+Rp290
+sg23
+g2
+((lp291
+g151
+ag40
+ag115
+ag41
+ag43
+atp292
+Rp293
+sS'paul endicott'
 p294
-aVWalter Scott Dunn
-p295
-asS'Norma Barzman'
-p296
-(lp297
-VLeo Townsend
+g2
+((lp295
+g4
+ag58
+atp296
+Rp297
+sS'philip saba'
 p298
-aVRoy Huggins
-p299
-asS'Guy Endore'
-p300
-(lp301
-VRoy Huggins
+g2
+((lp299
+g121
+ag201
+atp300
+Rp301
+sS'byron edwards'
 p302
-asS'Sondra Gorney'
-p303
-(lp304
-VLeo Townsend
-p305
-aVCharles Daggett
+g2
+((lp303
+g279
+ag4
+atp304
+Rp305
+sS'malcolm wright'
 p306
-asS'Jerry Bond'
-p307
-(lp308
-VWayne B. Salisbury
-p309
-asS'Paula Miller'
+g2
+((lp307
+g58
+atp308
+Rp309
+sS'florence covey'
 p310
-(lp311
-VElia Kazan
-p312
-aVMrs. Lee Strasberg
-p313
-aVMr. Kazan
+g2
+((lp311
+g40
+atp312
+Rp313
+sS'selma bachelis'
 p314
-aVPaula Miller
-p315
-asS'Raynal Lofgren'
-p316
-(lp317
-VLee Lundgren
+g2
+((lp315
+g115
+ag34
+ag35
+ag116
+atp316
+Rp317
+sS'mary robinson'
 p318
-aVIrving Krane
-p319
-asS'Tillie Lerner'
-p320
-(lp321
-VBudd Schulberg
+g2
+((lp319
+g236
+ag237
+atp320
+Rp321
+sS'levi johnson'
 p322
-asS'Mike Karpa'
-p323
-(lp324
-VLee Lundgren
-p325
-asS'Jessie Obitz'
+g2
+((lp323
+g48
+atp324
+Rp325
+sS'herbert march'
 p326
-(lp327
-VRoy Thompson
-p328
-asS'Mrs Juris'
-p329
-(lp330
-VGus Bereniece Baldwin
-p331
-asS'Fred Rinaldo'
+g2
+((lp327
+g48
+ag192
+atp328
+Rp329
+sS'henry meyers'
+p330
+g2
+((lp331
+Vcharles daggett
 p332
-(lp333
-VFrank Tuttle
-p334
-aVLeo Townsend
+ag18
+atp333
+Rp334
+sS'mildred pollock'
 p335
-aVElizabeth Wilson
-p336
-asS'Paul Endicott'
-p337
-(lp338
-VWayne B. Salisbury
+g2
+((lp336
+g58
+atp337
+Rp338
+sS'beatrice huff'
 p339
-aVChrysler Bereniece Baldwin
-p340
-asS'Vida Drown'
-p341
-(lp342
-VWayne B. Salisbury
+g2
+((lp340
+g210
+atp341
+Rp342
+sS'ann v boatin'
 p343
-asS'Matilda Mcintosh'
-p344
-(lp345
-VWayne B. Salisbury
-p346
-aVMrs. Ronald Mcintosh
-p347
-asS'Simon Moskalik'
+g2
+((lp344
+S'paul boatin'
+p345
+ag58
+atp346
+Rp347
+sS'rose segure'
 p348
-(lp349
-VDave Averill
-p350
-asS'Philip Edward Stevenson'
-p351
-(lp352
-VRoy Huggins
-p353
-asS'Paul Trivers'
-p354
-(lp355
-VEdward Dmytryk
+g2
+((lp349
+g40
+atp350
+Rp351
+sVmrs. joseph losey
+p352
+g2
+((lp353
+g18
+atp354
+Rp355
+sS'karen morley'
 p356
-aVFrank Tuttle
-p357
-aVStanley Roberts
+g2
+((lp357
+g236
+ag332
+ag85
+ag18
+aVmarc lawrence
 p358
-aVBernard Schoenfeld
-p359
-asS'Yield Kramer'
-p360
-(lp361
-VJohn Edward Cooke
-p362
-asS'Levi Johnson'
-p363
-(lp364
-VRoy Thompson
+atp359
+Rp360
+sS'leonard lauderdale'
+p361
+g2
+((lp362
+g58
+atp363
+Rp364
+sS'john sobczak'
 p365
-asS'Hy Gordon'
-p366
-(lp367
-VBereniece Baldwin
-p368
-asS'John Schmies'
+g2
+((lp366
+g58
+atp367
+Rp368
+sS'miriam solomon'
 p369
-(lp370
-VT. Kratz
-p371
-aVDonald O. Spencer
-p372
-asS'Dr Roberts'
+g2
+((lp370
+g40
+atp371
+Rp372
+sS'nemmy sparks'
 p373
-(lp374
-VBertram L. Louise Light Silver
-p375
-asS'Miss Susan Wells'
-p376
-(lp377
-VMrs. Arnaud D'Us
-p378
-asS'Esther Shandler'
-p379
-(lp380
-VWilliam G. Israel
-p381
-aVMilton S. Tyre
-p382
-asS'Phil Hommer'
-p383
-(lp384
-VBereniece Baldwin
-p385
-asS'Mr McAllister'
-p386
-(lp387
-VWayne B. Salisbury
+g2
+((lp374
+g91
+ag284
+ag18
+atp375
+Rp376
+sS'oscar barnes'
+p377
+g2
+((lp378
+g172
+atp379
+Rp380
+sg219
+g2
+((lp381
+g40
+atp382
+Rp383
+sS'john saari'
+p384
+g2
+((lp385
+g191
+atp386
+Rp387
+sS'floyd mcdonnell'
 p388
-asS'Paul Brooks'
-p389
-(lp390
-VRichard F. O'Hair
-p391
-aVBereniece Baldwin
+g2
+((lp389
+g4
+atp390
+Rp391
+sS'jacob druckman'
 p392
-asS'Nancy Reeves'
-p393
-(lp394
-VDavid Aaron
-p395
-asS'Lou Amster'
+g2
+((lp393
+g219
+atp394
+Rp395
+sS'saul wellman'
 p396
-(lp397
-VUrcel Daniel
-p398
-asS'Tom Chapman'
-p399
-(lp400
-VElizabeth Wilson
-p401
-asS'Jessie Burns'
-p402
-(lp403
-VElizabeth Wilson
+g2
+((lp397
+g58
+atp398
+Rp399
+sS'dave moore'
+p400
+g2
+((lp401
+g58
+atp402
+Rp403
+sS'richard l. rykoff'
 p404
-aVIsobel Lennart
-p405
-asS'Gurley Walker'
-p406
-(lp407
-VBereniece Baldwin
+g2
+((lp405
+g35
+atp406
+Rp407
+sS'victor shapiro'
 p408
-asS'Dr Reznick'
-p409
-(lp410
-VDr. Reznick
-p411
-asS'Jules Yanover'
-p412
-(lp413
-VRichard O'Hair
-p414
-asS'John Nowak'
+g2
+((lp409
+Vgeorge bassman
+p410
+atp411
+Rp412
+sS'florence criley'
+p413
+g2
+((lp414
+g110
+aS'flo atkinson'
 p415
-(lp416
-VBereniece Baldwin
-p417
-asS'Julian Shapiro'
+atp416
+Rp417
+sS'merle work'
 p418
-(lp419
-VJohn Sanford
-p420
-aVDavid Aaron
-p421
-asS'Willie Gale'
+g2
+((lp419
+g4
+ag58
+atp420
+Rp421
+sS'carneller foreman'
 p422
-(lp423
-VRichard F. O'Hair
-p424
-asS'Irving J. White'
-p425
-(lp426
-VPaul Marion
-p427
-asS'Mildred Pierce'
-p428
-(lp429
-VMildred Perl
+g2
+((lp423
+g58
+ag5
+atp424
+Rp425
+sS'jess whipple'
+p426
+g2
+((lp427
+g4
+atp428
+Rp429
+sS'frank martin'
 p430
-asS'George Green'
-p431
-(lp432
-VRoy Thompson
-p433
-asS'William Schneiderman'
+g2
+((lp431
+g58
+atp432
+Rp433
+sS'john anderson'
 p434
-(lp435
-VRichard Collins
-p436
-asS'Jerry Fielde'
-p437
-(lp438
-VDonald O. Spencer
-p439
-asS'Norris Wood'
-p440
-(lp441
-VThomas Delaney
+g2
+((lp435
+g4
+ag5
+atp436
+Rp437
+sS'eli jacobson'
+p438
+g2
+((lp439
+g410
+atp440
+Rp441
+sS'joseph hittleman'
 p442
-a(lp443
-VSamuel DiMaria
-p444
-aasS'William Holther'
-p445
-(lp446
-VMildred Ashe
-p447
-asS'Herbert Blache'
-p448
-(lp449
-VRichard Collins
+g2
+((lp443
+g219
+atp444
+Rp445
+sS'joseph pentacost'
+p446
+g2
+((lp447
+g210
+atp448
+Rp449
+sS'katherine ripken'
 p450
-asS'Anthony Matusek'
-p451
-(lp452
-VJohn Edward Cooke
-p453
-asS'Pat Callahan'
+g2
+((lp451
+g172
+atp452
+Rp453
+sS'arthur lishner'
 p454
-(lp455
-VHarold Ashe
-p456
-asS'Louise Koczyalka'
-p457
-(lp458
-VThomas Delaney
-p459
-aVLouise Koszalka
+g2
+((lp455
+g454
+atp456
+Rp457
+sS'nettie rubenstein'
+p458
+g2
+((lp459
+Vrobert louis stevenson school
 p460
-asS'Charley Hayes'
-p461
-(lp462
-VRoy Thompson
+atp461
+Rp462
+sS'john mcternan'
 p463
-asS'Carl Dorfman'
-p464
-(lp465
-VWilliam Z. Foster
-p466
-asS'Davida Franchi'
+g2
+((lp464
+g34
+ag35
+ag116
+atp465
+Rp466
+sS'casper kennedy'
 p467
-(lp468
-VCharles Judson
-p469
-aVAlice Bennett
-p470
-asS'Barbara Springer'
+g2
+((lp468
+g4
+atp469
+Rp470
+sS'james m. simmons'
 p471
-(lp472
-VRichard F. O'Hair
-p473
-asS'Walter Barry'
-p474
-(lp475
-VThomas Delaney
-p476
-asS'Alvin Hammer'
-p477
-(lp478
-VIrving Paul Marion
+g2
+((lp472
+g279
+ag5
+atp473
+Rp474
+sS'stanley nowak'
+p475
+g2
+((lp476
+g181
+atp477
+Rp478
+sS'pfc. searles'
 p479
-asS'Sam Darcy'
-p480
-(lp481
-VHarold Ashe
-p482
-aVMildred Ashe
+g2
+((lp480
+g4
+atp481
+Rp482
+sS'nora hallgren'
 p483
-asS'Mrs Campbell'
-p484
-(lp485
-VDorothy Parker
-p486
-asS'Cliff Lechrome'
-p487
-(lp488
-VHarold Ashe
-p489
-asS'Jeannie Kudlik'
-p490
-(lp491
-VBereniece Baldwin
+g2
+((lp484
+g91
+aVmrs. george hall
+p485
+ag284
+ag86
+atp486
+Rp487
+sS'sam h allen'
+p488
+g2
+((lp489
+g35
+ag116
+atp490
+Rp491
+sS'gil green'
 p492
-asS'Pauline Lauber'
-p493
-(lp494
-VPauline Lauber Finn
-p495
-asS'Herta Uerkvitz'
+g2
+((lp493
+g190
+ag210
+ag48
+ag192
+atp494
+Rp495
+sS'walter stempel'
 p496
-(lp497
-VElizabeth Wilson
-p498
-asS'John Wexley'
-p499
-(lp500
-VEdward Dmytryk
-p501
-aVLeo Townsend
+g2
+((lp497
+g192
+atp498
+Rp499
+sS'gordon kahn'
+p500
+g2
+((lp501
+g86
+ag332
+ag90
+ag89
+ag85
+ag358
+ag284
+aVreis rosenberg
 p502
-asS'Matt Richman'
-p503
-(lp504
-VDavid Aaron
+ag53
+atp503
+Rp504
+sS'margaret gruen'
 p505
-aVMarburg Yerkes
-p506
-asS'Walter Dorosh'
-p507
-(lp508
-VBereniece Baldwin
+g2
+((lp506
+g15
+ag236
+atp507
+Rp508
+sS'marjorie. macgregor'
 p509
-aVShelton Tappes
-p510
-asS'Hugo Butler'
-p511
-(lp512
-VFrank Tuttle
+g2
+((lp510
+g13
+atp511
+Rp512
+sS'leo t physician'
 p513
-aVStanley Roberts
-p514
-aVBernard Schoenfeld
-p515
-asS'Henry Jansen'
-p516
-(lp517
-VBereniece Baldwin
-p518
-asS'Harold Wells'
-p519
-(lp520
-VBereniece Baldwin
+g2
+((lp514
+g15
+ag88
+atp515
+Rp516
+sS'leroy tribbite'
+p517
+g2
+((lp518
+g142
+atp519
+Rp520
+sS'goldie bromberg'
 p521
-asS'Leon Katzen'
-p522
-(lp523
-VLee Lundgren
-p524
-asS'Tania Tuttle'
-p525
-(lp526
-VReis Rosenberg
-p527
-aVBudd Schulberg
-p528
-aVBernard Schoenfeld
-p529
-asS'Gay Bailey'
+g2
+((lp522
+g91
+aVmrs. george martin
+p523
+atp524
+Rp525
+sS'ben terry'
+p526
+g2
+((lp527
+g48
+atp528
+Rp529
+sS'elizabeth grant'
 p530
-(lp531
-VRichard F. O'Hair
-p532
-asS'Jerry McHale'
-p533
-(lp534
-VDonald O. Spencer
-p535
-asS'Sam Adams Darcy'
-p536
-(lp537
-VThomas Delaney
+g2
+((lp531
+g15
+atp532
+Rp533
+sS'eric dearnley'
+p534
+g2
+((lp535
+g58
+atp536
+Rp537
+sS'william mckie'
 p538
-asS'Peter Hassen'
-p539
-(lp540
-VAlcide T. Kratz
-p541
-asS'Will Geer'
+g2
+((lp539
+g279
+ag4
+atp540
+Rp541
+sS'ernie sorenson'
 p542
-(lp543
-VHarold Ashe
-p544
-asS'Emil Freed'
-p545
-(lp546
-VHarold Ashe
-p547
-aVGeorge Glass
-p548
-aVM. E. Harold Ashe
-p549
-asS'George Sklar'
+g2
+((lp543
+g5
+ag58
+atp544
+Rp545
+sS'nicholas bela'
+p546
+g2
+((lp547
+g18
+atp548
+Rp549
+sS'clara ward'
 p550
-(lp551
-VIsobel Lennart
-p552
-aVRoy Huggins
-p553
-asS'Celia Edwards'
+g2
+((lp551
+g28
+ag42
+atp552
+Rp553
+sS'betty gannett'
 p554
-(lp555
-VBereniece Baldwin
-p556
-asS'Ann Roth'
-p557
-(lp558
-VAnn Roth Morgan Richards
-p559
-asS'Rose Rosenberg'
+g2
+((lp555
+g28
+ag42
+ag5
+atp556
+Rp557
+sS'milton lester'
+p558
+g2
+((lp559
+Vdr. lester
 p560
-(lp561
-VMilton S. Tyre
-p562
-asS'Mrs Moore'
+atp561
+Rp562
+sS'wilford sherrington'
 p563
-(lp564
-VJack Harold Ashe
-p565
-asS'Mollie Penkovosky'
-p566
-(lp567
-VRoy Thompson
-p568
-asS'Sam Hammersmark'
+g2
+((lp564
+g121
+atp565
+Rp566
+sS'howland chamberlin'
+p567
+g2
+((lp568
+Vmrs. charles glenn
 p569
-(lp570
-VLee Lundgren
-p571
-asS'David Engelstein'
+atp570
+Rp571
+sS'ann r morgan'
 p572
-(lp573
-VLee Lundgren
+g2
+((lp573
+Vann roth morgan richards
 p574
-asS'Felix Miller'
-p575
-(lp576
-VRichard F. O'Hair
+atp575
+Rp576
+sS'gordon rosenblum'
 p577
-aVWalter Scott Dunn
-p578
-asS'William Connors'
+g2
+((lp578
+Vdr. mendell m. krieger
 p579
-(lp580
-VRichard F. O'Hair
-p581
-asS'Melva Cook'
+atp580
+Rp581
+sVmrs. hugo beiswenger
 p582
-(lp583
-VBereniece Baldwin
-p584
-aVMrs. George Cook
-p585
-aVJ. Will Richard F. O'Hair
+g2
+((lp583
+g172
+ag4
+ag5
+atp584
+Rp585
+sS'ben bengal'
 p586
-asS'Jack Moore'
-p587
-(lp588
-VHarold Ashe
-p589
-asS'Mrs Davis'
+g2
+((lp587
+g18
+atp588
+Rp589
+sS'julia gudinas'
 p590
-(lp591
-VEdwin Howard
-p592
-aVDr. Mendell Krieger
-p593
-aVRoy Huggins
+g2
+((lp591
+g190
+ag192
+atp592
+Rp593
+sS'lottie glicker'
 p594
-asS'Bill Oliver'
-p595
-(lp596
-VAlice Bennett
-p597
-aVUrcel Daniel
+g2
+((lp595
+g192
+atp596
+Rp597
+sS'gale. biberman'
 p598
-asS'Mrs Hunter'
-p599
-(lp600
-VIan Martin
-p601
-asS'During your Congress'
-p602
-(lp603
-VWilliam L.Patterson
-p604
-asS'Carl Winter'
-p605
-(lp606
-VRichard F. O'Hair
+g2
+((lp599
+S'gale sondergaard'
+p600
+atp601
+Rp602
+sS'ring lardner'
+p603
+g2
+((lp604
+g15
+ag332
+ag90
+ag603
+ag89
+ag91
+ag284
+atp605
+Rp606
+sS'joseph mccann'
 p607
-aVWayne B. Salisbury
-p608
-aVBereniece Baldwin
-p609
-a(lp610
-VRichard Collins
+g2
+((lp608
+g121
+atp609
+Rp610
+sS'bruno bartnick'
 p611
-aVReis Rosenberg
-p612
-aVFrank Tuttle
-p613
-aVLeo Townsend
-p614
-aasS'Ed Robbins'
+g2
+((lp612
+g210
+atp613
+Rp614
+sS'jessie sehneiderinan'
 p615
-(lp616
-VCharles Daggett
-p617
-aVCharles Judson
-p618
-aVAlice Bennett
+g2
+((lp616
+g201
+atp617
+Rp618
+sS'elizabeth l glenn'
 p619
-aVUrcel Daniel
-p620
-asS'Ring Lardner'
+g2
+((lp620
+Velizabeth leech
 p621
-(lp622
-VRichard Collins
-p623
-aVBudd Schulberg
+ag569
+atp622
+Rp623
+sS'bill daley'
 p624
-aVFrank Tuttle
-p625
-aVCharles Daggett
-p626
-aVAnne Ray Frank
-p627
-aVElizabeth Wilson
+g2
+((lp625
+g4
+atp626
+Rp627
+sVmrs. cliff bollin
 p628
-aVElizabeth Wilson
-p629
-aVRing Lardner
-p630
-asS'Freda Marcus'
-p631
-(lp632
-VAlice Bennett
-p633
-asS'Roland Kibbee'
-p634
-(lp635
-VIsobel Lennart
+g2
+((lp629
+g58
+atp630
+Rp631
+sS'donnie baron'
+p632
+g2
+((lp633
+g58
+atp634
+Rp635
+sS'miss campbell'
 p636
-asS'Gil Green'
-p637
-(lp638
-VLee Lundgren
-p639
-aVIrving Krane
+g2
+((lp637
+g4
+atp638
+Rp639
+sS'martha schkurman'
 p640
-aVJohn Edward Cooke
-p641
-aVRoy Thompson
-p642
-asS'William Ingham'
-p643
-(lp644
-VHarold Ashe
-p645
-aVJ. E. Alice Bennett
-p646
-asS'Maureen Ryan'
-p647
-(lp648
-VAlice Bennett
-p649
-asS'Aaron Bindman'
-p650
-(lp651
-VLee Lundgren
+g2
+((lp641
+g58
+atp642
+Rp643
+sS'louise todd'
+p644
+g2
+((lp645
+g28
+ag42
+atp646
+Rp647
+sS'grace zarniack'
+p648
+g2
+((lp649
+g142
+atp650
+Rp651
+sS'mike gates'
 p652
-asS'Clara Ward'
-p653
-(lp654
-VHarold Ashe
-p655
-aVMildred Ashe
+g2
+((lp653
+g201
+atp654
+Rp655
+sS'donald tiegland'
 p656
-asS'Kathleen Goldman'
-p657
-(lp658
-VMrs. Harold Gold
-p659
-asS'Max Helfand'
+g2
+((lp657
+g151
+atp658
+Rp659
+sS'russell coppock'
 p660
-(lp661
-VMac Thomas Delaney
-p662
-asS'Lucy Stander'
-p663
-(lp664
-VHarold Ashe
-p665
-aVMildred Ashe
-p666
-aVCharles Daggett
-p667
-asS'Carl Rogers'
+g2
+((lp661
+g4
+atp662
+Rp663
+sS'lee barrie'
+p664
+g2
+((lp665
+g237
+atp666
+Rp667
+sS'minna klein'
 p668
-(lp669
-VWalter Scott Dunn
-p670
-asS'Miss Campbell'
-p671
-(lp672
-VWayne B. Salisbury
-p673
-asS'Milton Schleicher'
+g2
+((lp669
+g41
+ag332
+ag43
+ag40
+ag28
+ag42
+atp670
+Rp671
+sS'gladys liefchild'
+p672
+g2
+((lp673
+g40
+aVmrs. gerald lief
 p674
-(lp675
-VBereniece Baldwin
-p676
-asS'Rachael Carter'
+atp675
+Rp676
+sS'bill lifsee'
 p677
-(lp678
-VEdward Cooke
-p679
-aVJohn Alcide T. Kratz
-p680
-asS'Barbara Stern'
+g2
+((lp678
+g5
+atp679
+Rp680
+sS'robert lieberman'
 p681
-(lp682
-VRichard F. O'Hair
-p683
-aVNick Bereniece Baldwin
-p684
-asS'Elizabeth Grant'
+g2
+((lp682
+g91
+ag18
+ag191
+atp683
+Rp684
+sVmr. cham
 p685
-(lp686
-VElizabeth Wilson
+g2
+((lp686
+Vben davis club
 p687
-asS'Otty Heller'
-p688
-(lp689
-VSamuel DiMaria
+ag4
+atp688
+Rp689
+sS'dewey garrett'
 p690
-asS'Dr Decker'
-p691
-(lp692
-VS. Harold Ashe
-p693
-asS'Michael Wilson'
+g2
+((lp691
+g5
+atp692
+Rp693
+sS'joe. bentzenhoffer'
 p694
-(lp695
-VBernard Schoenfeld
+g2
+((lp695
+S'joseph bezenhoffer'
 p696
-asS'Janette Scofield'
-p697
-(lp698
-VOwen Vinson
+atp697
+Rp698
+sS'clem dalton'
 p699
-asS'John Howard Lawson'
-p700
-(lp701
-VRichard Collins
-p702
-asS'Robert Lieberman'
+g2
+((lp700
+g58
+atp701
+Rp702
+sS'leroy krawford'
 p703
-(lp704
-VDave Averill
-p705
-asS'Leo Gallagher'
-p706
-(lp707
-VDavid Aaron
-p708
-asS'Omar Kidwell'
+g2
+((lp704
+g279
+ag5
+atp705
+Rp706
+sS'matt pellman'
+p707
+g2
+((lp708
+Vmike martin
 p709
-(lp710
-VWayne B. Salisbury
+aVmax appleinan
+p710
+aVmax silver
 p711
-asS'Herman Waldman'
-p712
-(lp713
-VPaul Marion
+atp712
+Rp713
+sS'aldo sandretto'
 p714
-aVOwen Vinson
-p715
-asS'Matilda Maxwell'
-p716
-(lp717
-VRichard F. O'Hair
+g2
+((lp715
+g58
+atp716
+Rp717
+sS'dr. perry'
 p718
-aVMrs. Jesse Parrish
-p719
-asS'Clarence Sanders'
+g2
+((lp719
+Vthomas l. louise light silver
 p720
-(lp721
-VBereniece Baldwin
-p722
-asS'Howland Chamberlin'
+atp721
+Rp722
+sS'ann delancey'
 p723
-(lp724
-VMr. Cham
-p725
-asS'Leonard Cohen'
-p726
-(lp727
-VBereniece Baldwin
-p728
-asS'James Dawkins'
-p729
-(lp730
-VLee Lundgren
+g2
+((lp724
+g5
+atp725
+Rp726
+sS'fred davey'
+p727
+g2
+((lp728
+g4
+atp729
+Rp730
+sS'bridget poison'
 p731
-aVIrving Krane
-p732
-asS'Sid Levy'
-p733
-(lp734
-VThomas Delaney
+g2
+((lp732
+g58
+atp733
+Rp734
+sS'sidney benson'
 p735
-asS'Sally Davis'
-p736
-(lp737
-VBereniece Baldwin
+g2
+((lp736
+Velia kazan
+p737
+aVclifford odets
 p738
-asS'Ida Whipple'
-p739
-(lp740
-VWayne B. Salisbury
+ag18
+atp739
+Rp740
+sS'vida drown'
 p741
-asS'George Siskin'
-p742
-(lp743
-VThomas Delaney
-p744
-aVN. Y.
+g2
+((lp742
+g4
+atp743
+Rp744
+sVt. kratz
 p745
-asS'Melvin Krantzler'
-p746
-(lp747
-VLee Lundgren
-p748
-asS'Seymour Mandell'
+g2
+((lp746
+g190
+ag579
+atp747
+Rp748
+sS'paul trivers'
 p749
-(lp750
-VDavid Aaron
-p751
-aVWilliam G. Israel
-p752
-aVMilton S. Tyre
-p753
-asS'Jean Johnson'
+g2
+((lp750
+g91
+ag87
+ag85
+ag53
+atp751
+Rp752
+sg600
+g2
+((lp753
+Vedith holm sond
 p754
-(lp755
-VRichard F. O'Hair
-p756
-asS'Lauren Taylor'
-p757
-(lp758
-VThomas Delaney
-p759
-aVBaldwin Locomotive
-p760
-asS'Charles Lindouf'
-p761
-(lp762
-VBereniece Baldwin
+aVmrs. herbert biberman
+p755
+atp756
+Rp757
+sS'ellen davidson'
+p758
+g2
+((lp759
+g236
+atp760
+Rp761
+sg10
+g2
+((lp762
+S'elliot maraniss'
 p763
-asS'Bay Teeple'
-p764
-(lp765
-VDonald O. Spencer
+ag58
+atp764
+Rp765
+sS'gus gustofson'
 p766
-asS'Katie Lee'
-p767
-(lp768
-VRichard F. O'Hair
-p769
-aVImogene Williams Brantley Bereniece Baldwin
+g2
+((lp767
+g151
+atp768
+Rp769
+sVcatherine hall
 p770
-asS'Ginny Lee'
-p771
-(lp772
-VWayne B. Salisbury
-p773
-asS'John Williamson'
+g2
+((lp771
+g151
+atp772
+Rp773
+sS'anthony koss'
 p774
-(lp775
-VWayne B. Salisbury
-p776
-a(lp777
-VSamuel DiMaria
+g2
+((lp775
+g190
+atp776
+Rp777
+sS'james jones'
 p778
-aasS'Coleman Young'
-p779
-(lp780
-VBereniece Baldwin
-p781
-asS'Edwin Schoenfeld'
+g2
+((lp779
+g279
+atp780
+Rp781
+sS'tersil t. obriot'
 p782
-(lp783
-VJohn Edward Cooke
-p784
-asS'Prokop Jack Prokop'
-p785
-(lp786
-VMr. Prokop
-p787
-asS'Pete Kowal'
-p788
-(lp789
-VBereniece Baldwin
+g2
+((lp783
+g279
+ag58
+atp784
+Rp785
+sS'kenneth roach'
+p786
+g2
+((lp787
+g58
+atp788
+Rp789
+sS'rose banks'
 p790
-asS'Elizabeth Wilson'
-p791
-(lp792
-VMrs. Richard Wil
-p793
-asS'Russell Coppock'
+g2
+((lp791
+g4
+atp792
+Rp793
+sS'paul brooks'
 p794
-(lp795
-VWayne B. Salisbury
-p796
-asS'Louis Seofield'
-p797
-(lp798
-VOwen Vinson
-p799
-aVMr. Vinson
-p800
-aVMr. Seofield
-p801
-asS'Felix Maise'
+g2
+((lp795
+g58
+ag5
+atp796
+Rp797
+sS'sam donchin'
+p798
+g2
+((lp799
+g201
+atp800
+Rp801
+sS'mortimer offner'
 p802
-(lp803
-VBereniece Baldwin
+g2
+((lp803
+g15
+ag709
+aVmrs. bob roberts
 p804
-asS'Saul Grossman'
+aVmelvin levy
 p805
-(lp806
-VBereniece Baldwin
-p807
-asS'William A. Rodgers'
+ag18
+atp806
+Rp807
+sS'leo ploetchl'
 p808
-(lp809
-VRichard F. O'Hair
-p810
-asS'Alice Smith'
-p811
-(lp812
-VLee Lundgren
-p813
-aVIrving Krane
-p814
-asS'Eva Shafran'
-p815
-(lp816
-VFrank Tuttle
-p817
-aVHarold Ashe
-p818
-asS'Bob Reed'
-p819
-(lp820
-VRichard F. O'Hair
-p821
-aVWayne B. Salisbury
-p822
-asS'Ray Blossom'
-p823
-(lp824
-VWayne B. Salisbury
-p825
-aVBereniece Baldwin
-p826
-asS'Joe Bernstein'
-p827
-(lp828
-VRichard F. O'Hair
-p829
-aVWalter Scott Dunn
-p830
-aVBereniece Baldwin
-p831
-asS'Milton Freeman'
+g2
+((lp809
+g58
+atp810
+Rp811
+sS'eleanor price'
+p812
+g2
+((lp813
+g121
+atp814
+Rp815
+sS'david engelstein'
+p816
+g2
+((lp817
+g192
+atp818
+Rp819
+sS'rose elfman'
+p820
+g2
+((lp821
+g42
+atp822
+Rp823
+sS'james keller'
+p824
+g2
+((lp825
+g4
+ag5
+atp826
+Rp827
+sS'andrew overgaard'
+p828
+g2
+((lp829
+g737
+ag738
+atp830
+Rp831
+sS'warren batterson'
 p832
-(lp833
-VRichard F. O'Hair
-p834
-asS'Sam McGhee'
-p835
-(lp836
-VRichard F. O'Hair
-p837
-asS'Ruth Levitova'
-p838
-(lp839
-VLee Lundgren
+g2
+((lp833
+g151
+atp834
+Rp835
+sS'randolph luke'
+p836
+g2
+((lp837
+g48
+atp838
+Rp839
+sS'charles spencer'
 p840
-asS'James Ford'
-p841
-(lp842
-VWayne B. Salisbury
-p843
-asS'Francis Faragoh'
+g2
+((lp841
+g201
+atp842
+Rp843
+sS'allen matthews'
 p844
-(lp845
-VReis Rosenberg
-p846
-aVEdward Dmytryk
-p847
-asS'Robert Travis'
+g2
+((lp845
+g15
+atp846
+Rp847
+sS'tom nabried'
 p848
-(lp849
-VDonald O. Spencer
-p850
-asS'Jack Stachel'
-p851
-(lp852
-VThomas Delaney
-p853
-aVN. Y.
+g2
+((lp849
+g121
+ag201
+atp850
+Rp851
+sS'stephanie allan'
+p852
+g2
+((lp853
+Vmrs. william
 p854
-a(lp855
-VElizabeth Bentley
-p856
-aasS'Charles Judson Newspaperman'
+ag58
+atp855
+Rp856
+sS'jan jeffries'
 p857
-(lp858
-VAlice Bennett
+g2
+((lp858
+g737
+aVn. y.
 p859
-aVUrcel Daniel
+ag90
+ag738
+ag91
+ag28
+ag284
+aS'henry blankfort'
 p860
-asS'Ike Greenberg'
-p861
-(lp862
-VWayne B. Salisbury
+atp861
+Rp862
+sS'albert maltz'
 p863
-asS'Paul Cline'
-p864
-(lp865
-VHarold Ashe
-p866
-aVMildred Ashe
+g2
+((lp864
+g86
+ag87
+ag89
+ag91
+ag284
+ag502
+ag53
+atp865
+Rp866
+sS'charles j newspaperman'
 p867
-aVCharles Judson
-p868
-aVAlice Bennett
-p869
-aVUrcel Daniel
-p870
-asS'Rex Wheelock'
+g2
+((lp868
+g40
+ag41
+atp869
+Rp870
+sS'george sklar'
 p871
-(lp872
-VDonald O. Spencer
-p873
-asS'Selma Bachelis'
-p874
-(lp875
-VMilton S. Tyre
-p876
-aVDavid Aaron
-p877
-aVAlbert Herzig
-p878
-aVWilliam G. Israel
+g2
+((lp872
+g86
+ag76
+atp873
+Rp874
+sS'helen gardner'
+p875
+g2
+((lp876
+g41
+ag43
+atp877
+Rp878
+sS'barbara springer'
 p879
-asS'George Newsorne'
-p880
-(lp881
-VRichard F. O'Hair
-p882
-aVFrank Novak
-p883
-aVWayne B. Salisbury
-p884
-aVMr. Novak
-p885
-asS'Herbert March'
+g2
+((lp880
+g5
+atp881
+Rp882
+sg621
+g2
+((lp883
+g237
+ag15
+ag86
+ag18
+ag91
+ag284
+ag92
+atp884
+Rp885
+sS'tania tuttle'
 p886
-(lp887
-VLee Lundgren
-p888
-aVRoy Thompson
-p889
-asS'Jimmy Allen'
+g2
+((lp887
+g90
+ag502
+ag87
+atp888
+Rp889
+sS'louis sciverras'
 p890
-(lp891
-VHarold Ashe
-p892
-aVMildred Ashe
-p893
-asS'Jack Palmquist'
+g2
+((lp891
+g5
+atp892
+Rp893
+sS'sam kushner'
 p894
-(lp895
-VCarl Palm
-p896
-aVBereniece Baldwin
-p897
-asS'Mercier Reese'
+g2
+((lp895
+g190
+ag192
+atp896
+Rp897
+sS'samuel sillen'
 p898
-(lp899
-VAlice Bennett
-p900
-asS'Pauline Lauber Finn'
-p901
-(lp902
-VRichard Collins
-p903
-aVPauline Lauber
-p904
-asS'Ruth Webb'
-p905
-(lp906
-VRichard F. O'Hair
-p907
-aVCasimir Rataj
-p908
-asS'Jane Trivers'
-p909
-(lp910
-VStanley Roberts
-p911
-aVBernard Schoenfeld
+g2
+((lp899
+g236
+atp900
+Rp901
+sS'mary bray'
+p902
+g2
+((lp903
+g172
+ag58
+atp904
+Rp905
+sS'alice ferris'
+p906
+g2
+((lp907
+g5
+atp908
+Rp909
+sVmildred perl
+p910
+g2
+((lp911
+S'mildred. pierce'
 p912
-asS'Maurice Cook'
-p913
-(lp914
-VRichard F. O'Hair
+ag58
+atp913
+Rp914
+sS'walter lowenfels'
 p915
-aVElinor Lafferty Walter Scott Dunn
-p916
-aVWayne B. Salisbury
-p917
-aVBereniece Baldwin
-p918
-asS'Morton Grant'
+g2
+((lp916
+g201
+atp917
+Rp918
+sVmrs. carl palmquist
 p919
-(lp920
-VWilliam Blowitz
-p921
-aVElizabeth Wilson
-p922
-asS'Ronald Mcintosh'
+g2
+((lp920
+g58
+atp921
+Rp922
+sS'jean pestana'
 p923
-(lp924
-VWayne B. Salisbury
-p925
-asS'Philip Frankfeld'
-p926
-(lp927
-VThomas Delaney
-p928
-asS'Hazel Jones'
-p929
-(lp930
-VDonald O. Spencer
+g2
+((lp924
+g35
+atp925
+Rp926
+sVmrs. irving riskin
+p927
+g2
+((lp928
+g172
+ag927
+ag5
+atp929
+Rp930
+sS'jack nedelman'
 p931
-asS'Delaney repeated Mr'
-p932
-(lp933
-VMr. Delaney
-p934
-asS'Midge Asslin'
-p935
-(lp936
-VRichard F. O'Hair
-p937
-aVWalter Scott Dunn
-p938
-asS'Daniel Lewis James'
-p939
-(lp940
-VLeo Townsend
-p941
-asS'Dan Slinger'
-p942
-(lp943
-VSamuel DiMaria
+g2
+((lp932
+g40
+aVdr. nedelman
+p933
+ag41
+ag42
+ag43
+atp934
+Rp935
+sS'ina lamaux'
+p936
+g2
+((lp937
+g192
+atp938
+Rp939
+sS'robert scott'
+p940
+g2
+((lp941
+g192
+atp942
+Rp943
+sS'ralph smith'
 p944
-asS'Nick Baltic'
-p945
-(lp946
-VBereniece Baldwin
-p947
-asS'Fred Jones'
+g2
+((lp945
+g28
+atp946
+Rp947
+sS'oleta o yates'
 p948
-(lp949
-VBereniece Baldwin
+g2
+((lp949
+Voleta o'connor
 p950
-aVDave Averill
-p951
-asS'Dorothy Pezinan'
-p952
-(lp953
-VAlice Bennett
-p954
-asS'Sue Lawson'
-p955
-(lp956
-VMrs. John Howard Law
+atp951
+Rp952
+sS'lewis leverett'
+p953
+g2
+((lp954
+g737
+ag738
+atp955
+Rp956
+sS'louise koczyalka'
 p957
-aVWilliam Blowitz
-p958
-aVElizabeth Wilson
-p959
-asS'Tom Miller'
-p960
-(lp961
-VHarold Ashe
-p962
-asS'Dave Silverberg'
-p963
-(lp964
-VRichard F. O'Hair
+g2
+((lp958
+g957
+ag121
+atp959
+Rp960
+sS'ben polin'
+p961
+g2
+((lp962
+g236
+atp963
+Rp964
+sS'fred steinmetz'
 p965
-asS'Timothy Shay'
-p966
-(lp967
-VRichard F. O'Hair
-p968
-aVTim Potter
+g2
+((lp966
+g115
+ag711
+ag34
+ag35
+ag116
+atp967
+Rp968
+sS'annie alexander'
 p969
-aVWalter Scott Dunn
-p970
-asS'Nat Ganley'
-p971
-(lp972
-VWalter Scott Dunn
+g2
+((lp970
+g48
+atp971
+Rp972
+sS'lionel stander'
 p973
-aVUnited Wayne B. Salisbury
-p974
-aVBereniece Baldwin
-p975
-asS'Bruno Bartnick'
-p976
-(lp977
-VJohn Edward Cooke
-p978
-asS'Robert L. Richards'
-p979
-(lp980
-VRoy Huggins
+g2
+((lp974
+g28
+ag42
+ag358
+atp975
+Rp976
+sS'archie acciacca'
+p977
+g2
+((lp978
+g58
+ag191
+atp979
+Rp980
+sS'harry boskey'
 p981
-asS'John Gustafson'
-p982
-(lp983
-VBereniece Baldwin
-p984
-asS'Samuel Ornitz'
+g2
+((lp982
+g4
+ag58
+atp983
+Rp984
+sS'jerry bond'
 p985
-(lp986
-VRichard Collins
-p987
-aVReis Rosenberg
-p988
-aVElizabeth Wilson
+g2
+((lp986
+g4
+atp987
+Rp988
+sS'vera harris'
 p989
-asS'Ned Gorgolinski'
-p990
-(lp991
-VLee Lundgren
-p992
-aVIrving Krane
+g2
+((lp990
+g15
+ag28
+ag42
+atp991
+Rp992
+sS'charlotte hull'
 p993
-asS'Mrs Lewis'
-p994
-(lp995
-VPatricia Roy Thompson
-p996
-asS'Dr Lester'
+g2
+((lp994
+g28
+ag42
+atp995
+Rp996
+sS'william sheehan'
 p997
-(lp998
-VDr. Lester
-p999
-asS'Lester Cole'
-p1000
-(lp1001
-VRichard Collins
-p1002
-aVReis Rosenberg
-p1003
-aVMarc Lawrence
-p1004
-aVEdward Dmytryk
+g2
+((lp998
+g192
+atp999
+Rp1000
+sS'omar kidwell'
+p1001
+g2
+((lp1002
+g4
+atp1003
+Rp1004
+sS'herman burt'
 p1005
-aVBudd Schulberg
-p1006
-aVFrank Tuttle
-p1007
-aVWilliam Blowitz
-p1008
-aVElizabeth Wilson
+g2
+((lp1006
+g58
+atp1007
+Rp1008
+sS'murray abowitz'
 p1009
-aVMelvin Levy
-p1010
-aVIsobel Lennart
-p1011
-asS'Lydia Mates'
-p1012
-(lp1013
-VBereniece Baldwin
-p1014
-aVMrs. Dave Mates
-p1015
-asS'Donnie Baron'
-p1016
-(lp1017
-VBereniece Baldwin
-p1018
-asS'Dr Masee'
-p1019
-(lp1020
-VJ. Richard F. O'Hair
+g2
+((lp1010
+g76
+ag579
+atp1011
+Rp1012
+sS'wilma persley'
+p1013
+g2
+((lp1014
+g142
+atp1015
+Rp1016
+sS'nancy reeves'
+p1017
+g2
+((lp1018
+g35
+atp1019
+Rp1020
+sS'tom chapman'
 p1021
-asS'George Altman'
-p1022
-(lp1023
-VDavid Aaron
-p1024
-aVWilliam G. Israel
+g2
+((lp1022
+g15
+atp1023
+Rp1024
+sS'mr. black'
 p1025
-asS'Patricia Miller'
-p1026
-(lp1027
-VMrs. John Miller
-p1028
-asS'Henrietta Pally'
+g2
+((lp1026
+g4
+atp1027
+Rp1028
+sS'john wexley'
 p1029
-(lp1030
-VAlice Bennett
-p1031
-asS'Theo Kruse'
-p1032
-(lp1033
-VDonald O. Spencer
-p1034
-asS'Ed Strong'
-p1035
-(lp1036
-VThomas Delaney
+g2
+((lp1030
+g4
+ag18
+ag53
+atp1031
+Rp1032
+sS'jessie burns'
+p1033
+g2
+((lp1034
+g15
+ag86
+atp1035
+Rp1036
+sS'sam a darcy'
 p1037
-asS'Elizabeth Leech'
-p1038
-(lp1039
-VRichard Collins
-p1040
-aVFrank Tuttle
+g2
+((lp1038
+g28
+ag42
+ag121
+atp1039
+Rp1040
+sS'mabel mitchell'
 p1041
-aVLeo Townsend
-p1042
-aVWilliam Blowitz
-p1043
-aVElizabeth Wilson
-p1044
-aVIsobel Lennart
-p1045
-aVOwen Vinson
-p1046
-asS'Bernyce Polifka Fleury'
-p1047
-(lp1048
-VMrs. Eugene
-p1049
-asS'Leo Simon'
-p1050
-(lp1051
-VAlice Bennett
+g2
+((lp1042
+g5
+atp1043
+Rp1044
+sg755
+g2
+((lp1045
+g15
+ag86
+ag90
+ag87
+ag88
+ag85
+ag91
+ag502
+ag53
+atp1046
+Rp1047
+sS'edwin schoenfeld'
+p1048
+g2
+((lp1049
+g210
+atp1050
+Rp1051
+sS'maurice murphy'
 p1052
-aVUrcel Daniel
-p1053
-aVCharles Daggett
-p1054
-asS'Mrs Watkins'
-p1055
-(lp1056
-VCatherine Hall
-p1057
-asS'Imogene Brantley'
-p1058
-(lp1059
-VImogene Brantley
+g2
+((lp1053
+g15
+ag86
+atp1054
+Rp1055
+sS'milt kashner'
+p1056
+g2
+((lp1057
+g40
+atp1058
+Rp1059
+sS'william holther'
 p1060
-asS'Leslie Dolman'
-p1061
-(lp1062
-VWayne B. Salisbury
-p1063
-asS'Mrs Strasberg'
+g2
+((lp1061
+g42
+atp1062
+Rp1063
+sS'charles lindouf'
 p1064
-(lp1065
-VPaula Miller
-p1066
-asS'Adeline Cole'
-p1067
-(lp1068
-VWayne B. Salisbury
-p1069
-asS'Arnold Manoff'
-p1070
-(lp1071
-VEdward Dmytryk
+g2
+((lp1065
+g58
+atp1066
+Rp1067
+sS'claude lightfoot'
+p1068
+g2
+((lp1069
+g192
+atp1070
+Rp1071
+sS'norman smith'
 p1072
-aVMildred Ashe
-p1073
-aVLeo Townsend
-p1074
-aVElizabeth Wilson
-p1075
-asS'Gus Gustofson'
+g2
+((lp1073
+g121
+atp1074
+Rp1075
+sS'j masee'
 p1076
-(lp1077
-VDonald O. Spencer
-p1078
-asS'Saul Wellman'
-p1079
-(lp1080
-VBereniece Baldwin
-p1081
-asS'Dewey McGee'
-p1082
-(lp1083
-VDave Averill
+g2
+((lp1077
+g5
+atp1078
+Rp1079
+sS'alfred levitt'
+p1080
+g2
+((lp1081
+g805
+atp1082
+Rp1083
+sS'jane trivers'
 p1084
-asS'Harold Smith'
-p1085
-(lp1086
-VBereniece Baldwin
-p1087
-asS'Alex Greenherg'
+g2
+((lp1085
+g85
+ag87
+atp1086
+Rp1087
+sS'george willner'
 p1088
-(lp1089
-VStanley Roberts
-p1090
-asS'Bettv Verri'
-p1091
-(lp1092
-VLee Lundgren
-p1093
-asS'Helen Gardner'
-p1094
-(lp1095
-VC. H. Charles Judson
+g2
+((lp1089
+g86
+ag805
+ag502
+atp1090
+Rp1091
+sS'maurice cook'
+p1092
+g2
+((lp1093
+g172
+ag4
+ag58
+ag5
+atp1094
+Rp1095
+sS'barbara stern'
 p1096
-aVUrcel Daniel
-p1097
-asS'Foss Baker'
-p1098
-(lp1099
-VWayne B. Salisbury
+g2
+((lp1097
+g58
+ag5
+atp1098
+Rp1099
+sS'alexander riskin'
 p1100
-asS'Reuben Ship'
-p1101
-(lp1102
-VPaul Marion
-p1103
-asS'Sonja Dahl'
+g2
+((lp1101
+g219
+atp1102
+Rp1103
+sS'alan campbell'
 p1104
-(lp1105
-VFrank Tuttle
+g2
+((lp1105
+S'dorothy parker'
 p1106
-aVElizabeth Wilson
-p1107
-aVStanley Roberts
-p1108
-aVBob Martin
+atp1107
+Rp1108
+sS'dan slinger'
 p1109
-aVLeona Martin
-p1110
-asS'Dr Koppelman'
-p1111
-(lp1112
-VDr. Koppel
+g2
+((lp1110
+g201
+atp1111
+Rp1112
+sS'ruth yanover'
 p1113
-asS'Florence Covey'
-p1114
-(lp1115
-VAlice Bennett
-p1116
-asS'Sam Donchin'
+g2
+((lp1114
+g5
+atp1115
+Rp1116
+sVtim potter
 p1117
-(lp1118
-VSam Samuel DiMaria
-p1119
-asS'Mr Campbell'
-p1120
-(lp1121
-VWayne B. Salisbury
-p1122
-aVBen Davis Club
-p1123
-asS'Art Shapiro'
-p1124
-(lp1125
-VPaul Marion
-p1126
-asS'Charles McClaughlan'
-p1127
-(lp1128
-VAlbert Herzig
+g2
+((lp1118
+g28
+atp1119
+Rp1120
+sS'joe balsis'
+p1121
+g2
+((lp1122
+g142
+atp1123
+Rp1124
+sS'edward brown'
+p1125
+g2
+((lp1126
+g210
+ag192
+atp1127
+Rp1128
+sS'marie rinaldo'
 p1129
-asS'George Corey'
-p1130
-(lp1131
-VEdward Dmytryk
-p1132
-asS'Mrs Adam'
+g2
+((lp1130
+g859
+ag18
+atp1131
+Rp1132
+sS'annette harper'
 p1133
-(lp1134
-VLoretta Harold Ashe
-p1135
-asS'William Chandler'
-p1136
-(lp1137
-VBereniece Baldwin
-p1138
-asS'Louis Sciverras'
-p1139
-(lp1140
-VRichard F. OHair
-p1141
-asS'Dr Nedelman'
-p1142
-(lp1143
-VDr. Nedelman
+g2
+((lp1134
+g236
+ag142
+ag237
+atp1135
+Rp1136
+sg805
+g2
+((lp1137
+g121
+atp1138
+Rp1139
+sS'arthur hendle'
+p1140
+g2
+((lp1141
+g151
+atp1142
+Rp1143
+sS'alice buchmah'
 p1144
-aVOleta O'Connor Mildred Ashe
-p1145
-aVTom Charles Judson
+g2
+((lp1145
+Vmorris l. appelman
 p1146
-aVAlice Bennett
-p1147
-aVUrcel Daniel
-p1148
-asS'Eddie Pietrowski'
+atp1147
+Rp1148
+sS'dave davis'
 p1149
-(lp1150
-VBereniece Baldwin
-p1151
-asS'Chris Alston'
-p1152
-(lp1153
-VRichard F. O'Hair
-p1154
-aVBereniece Baldwin
+g2
+((lp1150
+g121
+ag201
+atp1151
+Rp1152
+sVsonja dahl
+p1153
+g2
+((lp1154
+g91
+ag15
+aVleona martin
 p1155
-asS'Richard Criley'
+aVf. martin
 p1156
-(lp1157
-VLee Lundgren
-p1158
-asS'Wilma Persley'
+ag85
+atp1157
+Rp1158
+sS'andy barrigan'
 p1159
-(lp1160
-VT. Kratz
-p1161
-aVPeterson Alcide T. Kratz
-p1162
-asS'Daniel Trees'
+g2
+((lp1160
+g41
+atp1161
+Rp1162
+sS'leo t. orsage'
 p1163
-(lp1164
-VBereniece Baldwin
-p1165
-asS'Lottie Glicker'
-p1166
-(lp1167
-VLee Lundgren
-p1168
-asS'John Sanford'
-p1169
-(lp1170
-VElizabeth Wilson
+g2
+((lp1164
+g279
+ag58
+atp1165
+Rp1166
+sS'bob cohn'
+p1167
+g2
+((lp1168
+g40
+atp1169
+Rp1170
+sS'emily gordon'
 p1171
-asS'Bob Morrell'
-p1172
-(lp1173
-VThomas Delaney
-p1174
-asS'Raphael Konigsburg'
-p1175
-(lp1176
-VAlice Bennett
-p1177
-asS'Aldo Sandretto'
-p1178
-(lp1179
-VBereniece Baldwin
+g2
+((lp1172
+g1171
+aVmrs. julian gordon
+p1173
+ag58
+atp1174
+Rp1175
+sS'yal burton'
+p1176
+g2
+((lp1177
+g76
+atp1178
+Rp1179
+sS'ginny lee'
 p1180
-asS'Dalton Trumbo'
-p1181
-(lp1182
-VAnne Ray Frank
-p1183
-aVFrank Tuttle
+g2
+((lp1181
+g4
+atp1182
+Rp1183
+sS'these organizations communists'
 p1184
-aVCharles Daggett
-p1185
-aVStanley Roberts
+g2
+((lp1185
+S'william r. hood'
 p1186
-aVBernard Schoenfeld
-p1187
-asS'Jack Tenner'
-p1188
-(lp1189
-VDavid Aaron
-p1190
-aVMarburg Yerkes
-p1191
-aVMilton S. Tyre
-p1192
-asS'Faye McDonnell'
+ag859
+atp1187
+Rp1188
+sS'allen l ryan'
+p1189
+g2
+((lp1190
+g711
+atp1191
+Rp1192
+sS'murray borad'
 p1193
-(lp1194
-VWayne B. Salisbury
-p1195
-aVMrs. Floyd McDonnell
-p1196
-asS'Esther Shapiro'
+g2
+((lp1194
+g58
+atp1195
+Rp1196
+sS'dewey mcgee'
 p1197
-(lp1198
-VBereniece Baldwin
-p1199
-aVMrs. Harold Shapiro
-p1200
-asS'Louise Seidel'
-p1201
-(lp1202
-VElizabeth Wilson
-p1203
-asS'Sylvia Marrow Polonsky'
-p1204
-(lp1205
-VLeo Townsend
-p1206
-aVMrs. Abraham Polonsky
-p1207
-asS'Mrs Aidlin'
-p1208
-(lp1209
-VJoseph Harold Ashe
-p1210
-asS'Katherine Lynch'
-p1211
-(lp1212
-VRichard F. O'Hair
-p1213
-asS'Arthur Hendle'
-p1214
-(lp1215
-VDonald O. Spencer
+g2
+((lp1198
+g191
+atp1199
+Rp1200
+sg16
+g2
+((lp1201
+Vgregor manoff
+p1202
+atp1203
+Rp1204
+sS'betty arden'
+p1205
+g2
+((lp1206
+g42
+atp1207
+Rp1208
+sg415
+g2
+((lp1209
+g110
+atp1210
+Rp1211
+sS'sondra gorney'
+p1212
+g2
+((lp1213
+g332
+ag18
+atp1214
+Rp1215
+sS'fred moore'
 p1216
-asS'Ambur Salt'
-p1217
-(lp1218
-VRichard Collins
-p1219
-asS'Noum Light'
+g2
+((lp1217
+g210
+atp1218
+Rp1219
+sS'lauren taylor'
 p1220
-(lp1221
-VDavid Aaron
+g2
+((lp1221
+g121
+aVbaldwin locomotive
 p1222
-asS'Sam Rizzo'
-p1223
-(lp1224
-VShelton Tappes
+atp1223
+Rp1224
+sS'william connors'
 p1225
-asS'Henderson Gates'
-p1226
-(lp1227
-VRichard F. O'Hair
-p1228
-asS'Jack Sanberg'
+g2
+((lp1226
+g5
+atp1227
+Rp1228
+sS'isaac folkoff'
 p1229
-(lp1230
-VRichard F. OHair
+g2
+((lp1230
+Vsterling hayden
 p1231
-asS'Marguerite Sanford'
-p1232
-(lp1233
-VMarguerite Roberts
+atp1232
+Rp1233
+sS'bob reed'
 p1234
-asS'Jesse Perez'
-p1235
-(lp1236
-VRoy Thompson
-p1237
-asS'Sadie Ornitz'
+g2
+((lp1235
+g4
+ag5
+atp1236
+Rp1237
+sS'sidney druckman'
 p1238
-(lp1239
-VMrs. Sam Ornitz
+g2
+((lp1239
+S'dr. decker'
 p1240
-aVElizabeth Wilson
-p1241
-asS'James Cutno'
-p1242
-(lp1243
-VRoy Thompson
-p1244
-asS'Alfred Levitt'
-p1245
-(lp1246
-VMelvin Levy
+atp1241
+Rp1242
+sS'helen allison'
+p1243
+g2
+((lp1244
+g1243
+atp1245
+Rp1246
+sS'bernard lucas'
 p1247
-asS'Pressley Green'
-p1248
-(lp1249
-VWayne B. Salisbury
-p1250
-asS'Rose Segure'
+g2
+((lp1248
+g192
+atp1249
+Rp1250
+sS'alex greenherg'
 p1251
-(lp1252
-VAlice Bennett
-p1253
-asS'Joe Dennis'
-p1254
-(lp1255
-VRoy Thompson
-p1256
-asS'William Allan'
-p1257
-(lp1258
-VRichard F. O'Hair
+g2
+((lp1252
+g85
+atp1253
+Rp1254
+sS'jack j pompquist'
+p1255
+g2
+((lp1256
+g58
+atp1257
+Rp1258
+sS'jim frazier'
 p1259
-aVWalter Scott Dunn
-p1260
-aVWayne B. Salisbury
-p1261
-aVBereniece Baldwin
-p1262
-aVShelton Tappes
+g2
+((lp1260
+g4
+atp1261
+Rp1262
+sS'willie newman'
 p1263
-asS'George Manning'
-p1264
-(lp1265
-VRoy Thompson
-p1266
-asS'Hilliard Chamblis'
+g2
+((lp1264
+g5
+atp1265
+Rp1266
+sVjanet stephenson
 p1267
-(lp1268
-VBereniece Baldwin
+g2
+((lp1268
+Vjanet george glass
 p1269
-asS'Joseph McCann'
+ag1267
+ag76
+aVmrs. philip steven
 p1270
-(lp1271
-VThomas Delaney
-p1272
-asS'Esther Bigford'
+atp1271
+Rp1272
+sS'harold wells'
 p1273
-(lp1274
-VWayne B. Salisbury
-p1275
-asS'Oleta O Yates'
-p1276
-(lp1277
-VOleta O'Connor
-p1278
-asS'George Kristalsky'
-p1279
-(lp1280
-VWayne B. Salisbury
+g2
+((lp1274
+g58
+atp1275
+Rp1276
+sS'perry dunson'
+p1277
+g2
+((lp1278
+g48
+atp1279
+Rp1280
+sS'robert travis'
 p1281
-aVCasimir Rataj
-p1282
-asS'Ethel Spiller'
-p1283
-(lp1284
-VThomas Delaney
+g2
+((lp1282
+g151
+atp1283
+Rp1284
+sS'hodges mason'
 p1285
-asS'Rude Lambert'
-p1286
-(lp1287
-VMildred Ashe
-p1288
-asS'Bridget Poison'
+g2
+((lp1286
+g58
+atp1287
+Rp1288
+sS'howard fast'
 p1289
-(lp1290
-VBereniece Baldwin
-p1291
-asS'William R. Hood'
-p1292
-(lp1293
-VShelton Tappes
-p1294
-asS'Dr Schoen'
+g2
+((lp1290
+g121
+atp1291
+Rp1292
+sS'mary mclntyre'
+p1293
+g2
+((lp1294
+Vann arbor
 p1295
-(lp1296
-VMax Louise Light Silver
-p1297
-asS'Rose Elfman'
+ag132
+ag58
+atp1296
+Rp1297
+sS'eva pitcher'
 p1298
-(lp1299
-VMildred Ashe
-p1300
-asS'Mabel Wilson'
-p1301
-(lp1302
-VDonald O. Spencer
-p1303
-asS'Darr Smith'
-p1304
-(lp1305
-VCharles Judson
+g2
+((lp1299
+g4
+atp1300
+Rp1301
+sS'alfred wagenknecht'
+p1302
+g2
+((lp1303
+g192
+atp1304
+Rp1305
+sS'arthur mcphaul'
 p1306
-aVAlice Bennett
-p1307
-aVUrcel Daniel
-p1308
-asS'Gerald Jerry Boyd'
-p1309
-(lp1310
-VRichard F. O'Hair
-p1311
-aVWayne B. Salisbury
+g2
+((lp1307
+g172
+ag279
+ag4
+ag58
+ag5
+atp1308
+Rp1309
+sS'ben margolis'
+p1310
+g2
+((lp1311
+Vmrs. milton freeman
 p1312
-asS'Capt Tompkins'
-p1313
-(lp1314
-VMrs. Lee Leo Townsend
+atp1313
+Rp1314
+sS'louis l. kaplan'
 p1315
-aVMr. Townsend
-p1316
-aVMrs. Townsend
-p1317
-asS'Elliot Maraniss'
-p1318
-(lp1319
-VBereniece Baldwin
-p1320
-asS'Helen Sanberg'
-p1321
-(lp1322
-VRichard F. OHair
+g2
+((lp1316
+g121
+atp1317
+Rp1318
+sS'max ireland'
+p1319
+g2
+((lp1320
+g172
+atp1321
+Rp1322
+sS'mischa altman'
 p1323
-aVMrs. Jack Sanberg
-p1324
-asS'Frank Pestana'
-p1325
-(lp1326
-VDavid Aaron
+g2
+((lp1324
+g88
+atp1325
+Rp1326
+sS'abner berry'
 p1327
-aVWilliam G. Israel
-p1328
-aVMilton S. Tyre
-p1329
-asS'Leo Townsend Physician'
-p1330
-(lp1331
-VDavid Raksin
-p1332
-aVElizabeth Wilson
-p1333
-asS'Pope Huff'
-p1334
-(lp1335
-VJohn Edward Cooke
-p1336
-asS'Mrs Solotoy'
-p1337
-(lp1338
-VHarold Ashe
+g2
+((lp1328
+g4
+ag5
+atp1329
+Rp1330
+sS'betty ireland'
+p1331
+g2
+((lp1332
+g172
+ag5
+atp1333
+Rp1334
+sS'james widmark'
+p1335
+g2
+((lp1336
+g4
+atp1337
+Rp1338
+sS'elizabeth clark'
 p1339
-aVMildred Ashe
-p1340
-aVAlice Bennett
-p1341
-asS'Mabel Mitchell'
-p1342
-(lp1343
-VRichard F. O'Hair
-p1344
-asS'Betty Gannett'
+g2
+((lp1340
+g5
+atp1341
+Rp1342
+sS'alexander trachtenberg'
+p1343
+g2
+((lp1344
+Vlouis f. budenz
 p1345
-(lp1346
-VRichard F. O'Hair
-p1347
-a(lp1348
-VSamuel DiMaria
-p1349
-aasS'Dr Riskin'
-p1350
-(lp1351
-VSam Reznick
+atp1346
+Rp1347
+sS'clarence hathaway'
+p1348
+g2
+((lp1349
+g43
+atp1350
+Rp1351
+sS'louis perry'
 p1352
-asS'Charles Young'
-p1353
-(lp1354
-VMildred Ashe
-p1355
-asS'Peggy Wellman'
+g2
+((lp1353
+g5
+atp1354
+Rp1355
+sS'james dawkins'
 p1356
-(lp1357
-VBereniece Baldwin
-p1358
-asS'Sidney Barclay'
-p1359
-(lp1360
-VBereniece Baldwin
-p1361
-asS'Beatrice Buchman'
-p1362
-(lp1363
-VMrs. Sidney Buch
+g2
+((lp1357
+g190
+ag192
+atp1358
+Rp1359
+sS'ruth levitova'
+p1360
+g2
+((lp1361
+g192
+atp1362
+Rp1363
+sS'dick jones'
 p1364
-asS'John McTernan'
-p1365
-(lp1366
-VDavid Aaron
-p1367
-aVWilliam G. Israel
+g2
+((lp1365
+g4
+atp1366
+Rp1367
+sS'jessie obitz'
 p1368
-aVMilton S. Tyre
-p1369
-asS'Charlotte Hull'
-p1370
-(lp1371
-VMildred Ashe
+g2
+((lp1369
+g48
+atp1370
+Rp1371
+sS'sven falk'
 p1372
-aVHarold Ashe
-p1373
-asS'Ceorge Shanta'
-p1374
-(lp1375
-VAlcide T. Kratz
+g2
+((lp1373
+g4
+ag58
+atp1374
+Rp1375
+sS'otis revis'
 p1376
-asS'Frank Stepanchenko'
-p1377
-(lp1378
-VDave Averill
-p1379
-asS'Harry Freed'
+g2
+((lp1377
+g58
+atp1378
+Rp1379
+sS'joe dougher'
 p1380
-(lp1381
-VLee Lundgren
-p1382
-asS'Sylvia Jarrico'
-p1383
-(lp1384
-VLeo Townsend
-p1385
-aVElizabeth Wilson
-p1386
-aVElizabeth Wilson
-p1387
-aVSylvia Jarrico
+g2
+((lp1381
+g201
+atp1382
+Rp1383
+sS'radio electrical'
+p1384
+g2
+((lp1385
+g210
+ag190
+ag151
+ag192
+ag48
+ag142
+atp1386
+Rp1387
+sS'edward goodlaw'
 p1388
-asS'Charles Lassiter'
-p1389
-(lp1390
-VJohn Edward Cooke
-p1391
-asS'Jack Robinson'
-p1392
-(lp1393
-VPaul Marion
-p1394
-asS'Sven Falk'
-p1395
-(lp1396
-VBereniece Baldwin
+g2
+((lp1389
+Vdr. goodlaw optometrist
+p1390
+atp1391
+Rp1392
+sS'jane grodzins'
+p1393
+g2
+((lp1394
+g35
+atp1395
+Rp1396
+sS'lester cole'
 p1397
-aVWayne B. Salisbury
-p1398
-asS'Boleslaw Gebert'
-p1399
-(lp1400
-VCasimir Rataj
+g2
+((lp1398
+g15
+ag86
+ag90
+ag92
+ag805
+ag91
+ag358
+ag284
+ag502
+ag53
+atp1399
+Rp1400
+sS'pauline epstein'
 p1401
-asS'Mrs Cole'
-p1402
-(lp1403
-VLester William Blowitz
-p1404
-asS'Radio Electrical'
+g2
+((lp1402
+g33
+ag35
+ag116
+atp1403
+Rp1404
+sS'robert rossen'
 p1405
-(lp1406
-VIrving Krane
-p1407
-aVLee Lundgren
-p1408
-aVRoy Thompson
+g2
+((lp1406
+g89
+ag284
+ag18
+ag502
+atp1407
+Rp1408
+sS'herbert klein'
 p1409
-aVAlcide T. Kratz
-p1410
-aVJohn Edward Cooke
-p1411
-aVDonald O. Spencer
-p1412
-asS'Gerald Liefchild'
+g2
+((lp1410
+g28
+atp1411
+Rp1412
+sS'oscar elkins'
 p1413
-(lp1414
-VAlice Bennett
-p1415
-asS'Jack Raskin'
-p1416
-(lp1417
-VWayne B. Salisbury
-p1418
-aVBereniece Baldwin
+g2
+((lp1414
+g219
+atp1415
+Rp1416
+sS'carl dorfman'
+p1417
+g2
+((lp1418
+g805
+ag85
+aVwilliam z. foster
 p1419
-asS'Alvah Bessie'
-p1420
-(lp1421
-VEdward Dmytryk
+atp1420
+Rp1421
+sS'ruth webb'
 p1422
-aVFrank Tuttle
-p1423
-aVLeo Townsend
-p1424
-aVWilliam Blowitz
-p1425
-aVIsobel Lennart
+g2
+((lp1423
+g181
+ag5
+atp1424
+Rp1425
+sS'george corey'
 p1426
-asS'Sam Witczak'
-p1427
-(lp1428
-VDr. Mendell M. Krieger
-p1429
-asS'Mrs Dillard'
+g2
+((lp1427
+g58
+ag53
+atp1428
+Rp1429
+sS'louis seofield'
 p1430
-(lp1431
-VRichard F. O'Hair
+g2
+((lp1431
+Vmr. vinson
 p1432
-asS'Billie Mogill'
+aVmr. seofield
 p1433
-(lp1434
-VBereniece Baldwin
-p1435
-aVMrs. George Mogill
+ag237
+atp1434
+Rp1435
+sS'joe brandt'
 p1436
-asS'Virginia Kibre'
-p1437
-(lp1438
-VHarold Ashe
-p1439
-aVMildred Ashe
+g2
+((lp1437
+g4
+ag58
+atp1438
+Rp1439
+sS'mollie penkovosky'
 p1440
-asS'Mr Dillard'
-p1441
-(lp1442
-VRichard F. O'Hair
-p1443
-asS'Lee York'
-p1444
-(lp1445
-VSee Lee
-p1446
-asS'Irving Herman'
+g2
+((lp1441
+g48
+atp1442
+Rp1443
+sg17
+g2
+((lp1444
+g15
+ag42
+ag18
+ag53
+atp1445
+Rp1446
+sS'herta uerkvitz'
 p1447
-(lp1448
-VLee Lundgren
-p1449
-asS'Anthony Koss'
-p1450
-(lp1451
-VIrving Krane
-p1452
-asS'Karen Morley'
-p1453
-(lp1454
-VMarc Lawrence
+g2
+((lp1448
+g15
+atp1449
+Rp1450
+sS'john berry'
+p1451
+g2
+((lp1452
+g91
+ag18
+ag85
+ag87
+atp1453
+Rp1454
+sS'aubrey finn'
 p1455
-aVLeo Townsend
-p1456
-aVCharles Daggett
-p1457
-aVStanley Roberts
-p1458
-aVPaul Marion
+g2
+((lp1456
+g34
+ag35
+atp1457
+Rp1458
+sS'frank sykes'
 p1459
-asS'Stanley Adamski'
-p1460
-(lp1461
-VBereniece Baldwin
-p1462
-aVG. Wayne B. Salisbury
-p1463
-aVJeorge Wayne B. Salisbury
-p1464
-asS'Elizabeth Clark'
-p1465
-(lp1466
-VRichard F. O'Hair
-p1467
-asS'Nemmy Sparks'
+g2
+((lp1460
+g4
+ag58
+atp1461
+Rp1462
+sg912
+g2
+((lp1463
+g335
+atp1464
+Rp1465
+sS'edwin davis'
+p1466
+g2
+((lp1467
+Vhoward dr. mendell krieger
 p1468
-(lp1469
-VRichard Collins
-p1470
-aVFrank Tuttle
+ag76
+atp1469
+Rp1470
+sS'george siskin'
 p1471
-aVLeo Townsend
-p1472
-asS'Ann Beiswenger'
-p1473
-(lp1474
-VRichard F. O'Hair
+g2
+((lp1472
+g121
+ag4
+atp1473
+Rp1474
+sS'carleton moss'
 p1475
-aVMrs. Hugo Beiswenger
-p1476
-aVWalter Scott Dunn
-p1477
-aVWayne B. Salisbury
-p1478
-aVDave Averill
+g2
+((lp1476
+g502
+atp1477
+Rp1478
+sS'mortimer w pomerance'
 p1479
-asS'Dr Lieberman'
-p1480
-(lp1481
-VDr. Lieber
-p1482
-asS'Arthur Storey'
-p1483
-(lp1484
-VThomas Delaney
-p1485
-asS'Thomas Wood'
-p1486
-(lp1487
-VRoy Thompson
+g2
+((lp1480
+Veugene fleury
+p1481
+atp1482
+Rp1483
+sS'robert brown'
+p1484
+g2
+((lp1485
+g58
+atp1486
+Rp1487
+sS'cea geiselman'
 p1488
-asS'Willie Howell'
-p1489
-(lp1490
-VRoy Thompson
-p1491
-asS'Charles Walters'
-p1492
-(lp1493
-VBereniece Baldwin
-p1494
-asS'Jake Jacobowitz'
-p1495
-(lp1496
-VBereniece Baldwin
+g2
+((lp1489
+g201
+aVmrs. joe kres
+p1490
+atp1491
+Rp1492
+sS'hank ripken'
+p1493
+g2
+((lp1494
+g58
+atp1495
+Rp1496
+sS'jane. wallace'
 p1497
-asS'Eugene R. Stone'
-p1498
-(lp1499
-VPaul Marion
-p1500
-aVOwen Vinson
+g2
+((lp1498
+g28
+atp1499
+Rp1500
+sS'emil freed'
 p1501
-asS'As a Condon'
-p1502
-(lp1503
-VDr. Condon
-p1504
-aVDr. Condon
+g2
+((lp1502
+g28
+ag410
+atp1503
+Rp1504
+sS'ken pettus'
 p1505
-aVDr. Condon
-p1506
-aVDr. Condon
-p1507
-asS'Phil Raymond'
-p1508
-(lp1509
-VWayne B. Salisbury
-p1510
-aVBereniece Baldwin
-p1511
-asS'Elinor Lafferty Cook'
-p1512
-(lp1513
-VRichard F. O'Hair
-p1514
-aVMrs. Elinor Maki
-p1515
-aVWalter Scott Dunn
-p1516
-asS'Dr Davis'
+g2
+((lp1506
+g237
+atp1507
+Rp1508
+sS'irving herman'
+p1509
+g2
+((lp1510
+g192
+atp1511
+Rp1512
+sS'norma barzman'
+p1513
+g2
+((lp1514
+g76
+ag18
+atp1515
+Rp1516
+sS'janette scofield'
 p1517
-(lp1518
-VEdwin Howard Dr. Mendell Krieger
-p1519
-aVRoy Huggins
-p1520
-asS'Norman Smith'
+g2
+((lp1518
+g237
+atp1519
+Rp1520
+sS'leo cottrell'
 p1521
-(lp1522
-VThomas Delaney
-p1523
-asS'William Esterman'
-p1524
-(lp1525
-VDavid Aaron
-p1526
-aVWilliam G. Israel
-p1527
-aVMilton S. Tyre
+g2
+((lp1522
+g58
+atp1523
+Rp1524
+sg860
+g2
+((lp1525
+g53
+atp1526
+Rp1527
+sVmrs. abraham polonsky
 p1528
-asS'Samuel Meyer Kaplan'
-p1529
-(lp1530
-VThomas Delaney
-p1531
-asS'Max Chait'
+g2
+((lp1529
+g85
+ag332
+ag284
+ag18
+ag502
+atp1530
+Rp1531
+sS'abe feinglass'
 p1532
-(lp1533
-VBereniece Baldwin
-p1534
-aVShelton Tappes
-p1535
-asS'Janet Stevenson'
+g2
+((lp1533
+g192
+atp1534
+Rp1535
+sS'alvin frisbie'
 p1536
-(lp1537
-VMrs. Philip Steven
-p1538
-aVRoy Huggins
-p1539
-aVJanet Stephenson
+g2
+((lp1537
+g210
+atp1538
+Rp1539
+sS'russell kitto'
 p1540
-asS'Catherine Hall'
-p1541
-(lp1542
-VMrs. John Donald O. Spencer
-p1543
-asS'Lloyd Gough'
+g2
+((lp1541
+g58
+atp1542
+Rp1543
+sS'emma williams'
 p1544
-(lp1545
-VStanley Roberts
-p1546
-aVPaul Marion
-p1547
-asS'Jeff Kibre'
+g2
+((lp1545
+g58
+atp1546
+Rp1547
+sS'ceorge shanta'
 p1548
-(lp1549
-VBarry Harold Ashe
-p1550
-aVMildred Ashe
-p1551
-asS'Mattie Lee Woodson'
+g2
+((lp1549
+g142
+atp1550
+Rp1551
+sS'elliott grennard'
 p1552
-(lp1553
-VRichard F. O'Hair
-p1554
-aVWayne B. Salisbury
-p1555
-asS'Dorothy Hillyer'
+g2
+((lp1553
+g76
+atp1554
+Rp1555
+sS'abe sokolov'
 p1556
-(lp1557
-VDonald O. Spencer
-p1558
-asS'Casper Kennedy'
-p1559
-(lp1560
-VWayne B. Salisbury
-p1561
-asS'Branislaus Zukas'
-p1562
-(lp1563
-VAlice Bennett
+g2
+((lp1557
+g201
+atp1558
+Rp1559
+sS'pat killoran'
+p1560
+g2
+((lp1561
+g40
+ag41
+ag43
+atp1562
+Rp1563
+sS'leon turrett'
 p1564
-asS'Bernard Lucas'
-p1565
-(lp1566
-VLee Lundgren
-p1567
-asS'Sylvia Marrow'
+g2
+((lp1565
+g33
+ag35
+atp1566
+Rp1567
+sS'sue showerman'
 p1568
-(lp1569
-VMrs. Abraham Polonsky
-p1570
-asS'Helen Palmquist'
-p1571
-(lp1572
-VBereniece Baldwin
-p1573
-aVMrs. Carl Palmquist
-p1574
-asS'Ruth Beeman'
-p1575
-(lp1576
-VHarold Ashe
-p1577
-aVMildred Ashe
-p1578
-asS'Leon Turrett'
-p1579
-(lp1580
-VDavid Aaron
-p1581
-aVMarburg Yerkes
-p1582
-asS'Hazel Gray'
-p1583
-(lp1584
-VJohn Edward Cooke
-p1585
-asS'Pauline Hopkins'
-p1586
-(lp1587
-VPaul Marion
+g2
+((lp1569
+g58
+atp1570
+Rp1571
+sS'georgia backus'
+p1572
+g2
+((lp1573
+g236
+ag237
+atp1574
+Rp1575
+sS'michael uris'
+p1576
+g2
+((lp1577
+g91
+ag502
+ag53
+atp1578
+Rp1579
+sS'lee pressman'
+p1580
+g2
+((lp1581
+g1345
+atp1582
+Rp1583
+sS'edward turner'
+p1584
+g2
+((lp1585
+g172
+ag859
+ag58
+ag5
+atp1586
+Rp1587
+sS'kathleen goldman'
 p1588
-asS'Jack Jr Pompquist'
-p1589
-(lp1590
-VBereniece Baldwin
-p1591
-aVBereniece Baldwin
-p1592
-asS'Edward Brown'
+g2
+((lp1589
+Vmrs. harold gold
+p1590
+atp1591
+Rp1592
+sS'sam moore'
 p1593
-(lp1594
-VEd Lee Lundgren
-p1595
-aVJohn Edward Cooke
-p1596
-asS'Leslie Edgley'
+g2
+((lp1594
+g237
+atp1595
+Rp1596
+sS'sonora babb'
 p1597
-(lp1598
-VRoy Huggins
-p1599
-asS'David Hilberman'
-p1600
-(lp1601
-VEugene Fleury
-p1602
-asS'Kay Bassman'
-p1603
-(lp1604
-VMrs. George Martin
+g2
+((lp1598
+g410
+atp1599
+Rp1600
+sS'henderson gates'
+p1601
+g2
+((lp1602
+g5
+atp1603
+Rp1604
+sS'frank pestana'
 p1605
-aVGeorge Bassman
-p1606
-asS'Dave Davis'
-p1607
-(lp1608
-VThomas Delaney
+g2
+((lp1606
+g34
+ag35
+ag116
+atp1607
+Rp1608
+sS'mary page'
 p1609
-aVSamuel DiMaria
-p1610
-asS'Dr Elkins'
+g2
+((lp1610
+Vmary reed
 p1611
-(lp1612
-VSam Reznick
-p1613
-asS'Grant Oakes'
-p1614
-(lp1615
-VDonald O. Spencer
-p1616
-asS'Jean Erickson'
-p1617
-(lp1618
-VAlcide T. Kratz
-p1619
-asS'Sonora Babb'
-p1620
-(lp1621
-VGeorge Bassman
+ag58
+ag5
+aVfred elesio
+p1612
+atp1613
+Rp1614
+sS'nelson davis'
+p1615
+g2
+((lp1616
+g172
+ag279
+ag4
+ag58
+atp1617
+Rp1618
+sg569
+g2
+((lp1619
+g91
+ag236
+ag284
+ag18
+atp1620
+Rp1621
+sS'dick fiske'
 p1622
-asS'James M. Simmons'
-p1623
-(lp1624
-VRichard F. O'Hair
-p1625
-aVShelton Tappes
+g2
+((lp1623
+g15
+atp1624
+Rp1625
+sS'lilith james'
 p1626
-asS'Art Smith'
-p1627
-(lp1628
-VElia Kazan
-p1629
-aVClifford Odets
+g2
+((lp1627
+g76
+atp1628
+Rp1629
+sS'peggy wellman'
 p1630
-asS'John Little'
-p1631
-(lp1632
-VWayne B. Salisbury
-p1633
-asS'Ellen Davidson'
+g2
+((lp1631
+g58
+atp1632
+Rp1633
+sS'ann beiswenger'
 p1634
-(lp1635
-VPaul Marion
-p1636
-asS'Wilford Sherrington'
-p1637
-(lp1638
-VThomas Delaney
-p1639
-asS'Jesse Parrish'
-p1640
-(lp1641
-VRichard F. O'Hair
+g2
+((lp1635
+g582
+ag172
+ag4
+ag5
+ag191
+atp1636
+Rp1637
+sS'dorothy uris'
+p1638
+g2
+((lp1639
+g91
+ag58
+ag85
+ag502
+ag87
+atp1640
+Rp1641
+sS'clarence sanders'
 p1642
-aVWayne B. Salisbury
-p1643
-asS'Izzy Berenson'
-p1644
-(lp1645
-VRichard F. O'Hair
+g2
+((lp1643
+g58
+atp1644
+Rp1645
+sS'harold buchman'
 p1646
-aVWalter Scott Dunn
-p1647
-asS'Frank Iglesias'
-p1648
-(lp1649
-VRichard F. O'Hair
-p1650
-asS'Ida Miller'
-p1651
-(lp1652
-VMildred Ashe
+g2
+((lp1647
+g15
+ag89
+ag18
+atp1648
+Rp1649
+sg67
+g2
+((lp1650
+g58
+atp1651
+Rp1652
+sS'lillian jones'
 p1653
-asS'Willie Mae Smith'
-p1654
-(lp1655
-VLee Lundgren
-p1656
-asS'Jesus Gonzales'
+g2
+((lp1654
+g28
+atp1655
+Rp1656
+sS'rude lambert'
 p1657
-(lp1658
-VBereniece Baldwin
-p1659
-asS'Jean Pestana'
-p1660
-(lp1661
-VDavid Aaron
-p1662
-asS'John Lymber'
-p1663
-(lp1664
-VRichard F. O'Hair
-p1665
-asS'Dorothy Uris'
-p1666
-(lp1667
-VMeta Reis Rosenberg
+g2
+((lp1658
+g42
+atp1659
+Rp1660
+sS'dolph winebrenner'
+p1661
+g2
+((lp1662
+g40
+ag332
+ag41
+ag43
+atp1663
+Rp1664
+sg106
+g2
+((lp1665
+g58
+atp1666
+Rp1667
+sS'bess taffel'
 p1668
-aVFrank Tuttle
-p1669
-aVStanley Roberts
-p1670
-aVBernard Schoenfeld
-p1671
-asS'Fred Franchi'
+g2
+((lp1669
+g18
+atp1670
+Rp1671
+sS'helen sanberg'
 p1672
-(lp1673
-VCharles Judson
+g2
+((lp1673
+S'jack sanberg'
 p1674
-aVAlice Bennett
-p1675
-aVJ. Allen Louise Light Silver
-p1676
-aVDavid Aaron
+ag5
+atp1675
+Rp1676
+sS'miss s wells'
 p1677
-aVMarburg Yerkes
-p1678
-aVMilton S. Tyre
+g2
+((lp1678
+Vmrs. arnaud d'us
 p1679
-asS'Sidney Buchman'
-p1680
-(lp1681
-VSidney Buchman
+atp1680
+Rp1681
+sS'paul jarrico'
 p1682
-asS'Annette Harper'
-p1683
-(lp1684
-VPaul Marion
-p1685
-aVOwen Vinson
+g2
+((lp1683
+g15
+ag86
+ag332
+ag90
+ag88
+ag89
+ag1682
+ag236
+ag284
+ag502
+atp1684
+Rp1685
+sS'morris carnovsky'
 p1686
-asS'Paul Jarrico'
-p1687
-(lp1688
-VRichard Collins
-p1689
-aVReis Rosenberg
+g2
+((lp1687
+g737
+ag332
+ag18
+ag358
+atp1688
+Rp1689
+sS'royce kennedy'
 p1690
-aVBudd Schulberg
-p1691
-aVDavid Raksin
-p1692
-aVCharles Daggett
-p1693
-aVIsoBel Lennart
+g2
+((lp1691
+g58
+atp1692
+Rp1693
+sS'capt. ward tompkins'
 p1694
-aVAnne Ray Frank
-p1695
-aVPaul Marion
+g2
+((lp1695
+Vmr. townsend
 p1696
-aVElizabeth Wilson
-p1697
-aVElizabeth Wilson
-p1698
-aVPaul Jarrico
+ag18
+atp1697
+Rp1698
+sS'pat callahan'
 p1699
-asS'Ann Ganley'
-p1700
-(lp1701
-VRichard F. O'Hair
-p1702
-asS'John Weber'
+g2
+((lp1700
+g28
+atp1701
+Rp1702
+sS'bella l reynolds'
 p1703
-(lp1704
-VLeo Townsend
+g2
+((lp1704
+Vmrs. roy thompson
 p1705
-asS'Hoke Higdon'
-p1706
-(lp1707
-VWayne B. Salisbury
+atp1706
+Rp1707
+sS'katie lee'
 p1708
-asS'Nelson Davis'
-p1709
-(lp1710
-VWalter Scott Dunn
-p1711
-aVWayne B. Salisbury
+g2
+((lp1709
+g58
+ag5
+atp1710
+Rp1711
+sS'virginia kibre'
 p1712
-aVBereniece Baldwin
-p1713
-aVShelton Tappes
-p1714
-asS'Dave Miller'
-p1715
-(lp1716
-VRichard F. O'Hair
-p1717
-asS'These organizations Communists'
-p1718
-(lp1719
-VWilliam K. Hood
+g2
+((lp1713
+g28
+ag42
+atp1714
+Rp1715
+sS'daniel zahari'
+p1716
+g2
+((lp1717
+g58
+ag191
+atp1718
+Rp1719
+sS'jack robinson'
 p1720
-aVColeman Young
-p1721
-asS'Ben Thomas'
-p1722
-(lp1723
-VThomas Delaney
+g2
+((lp1721
+g236
+atp1722
+Rp1723
+sS'fred gebelle'
 p1724
-asS'James Jackson'
-p1725
-(lp1726
-VWayne B. Salisbury
-p1727
-aVBereniece Baldwin
+g2
+((lp1725
+g58
+atp1726
+Rp1727
+sS'lawrence ross'
 p1728
-asS'Naomi Robeson'
-p1729
-(lp1730
-VOwen Vinson
-p1731
-asS'Shirley Bollin'
+g2
+((lp1729
+g28
+ag42
+atp1730
+Rp1731
+sS'felix miller'
 p1732
-(lp1733
-VBereniece Baldwin
-p1734
-aVMrs. Cliff Bollin
-p1735
-asS'Vera Harris'
+g2
+((lp1733
+g172
+ag5
+atp1734
+Rp1735
+sS'sarah levine'
 p1736
-(lp1737
-VHarold Ashe
-p1738
-aVMildred Ashe
-p1739
-aVElizabeth Wilson
+g2
+((lp1737
+g151
+atp1738
+Rp1739
+sS'max weiss'
 p1740
-asS'Julius Dassin'
-p1741
-(lp1742
-VEdward Dmytryk
-p1743
-aVFrank Tuttle
+g2
+((lp1741
+g192
+atp1742
+Rp1743
+sS'nina klowden'
 p1744
-asS'Nina Klowden'
-p1745
-(lp1746
-VPaul Marion
-p1747
-aVOwen Vinson
+g2
+((lp1745
+g236
+ag237
+atp1746
+Rp1747
+sS'jesse parrish'
 p1748
-asS'Wilma Shore'
-p1749
-(lp1750
-VRoy Huggins
-p1751
-asS'Percy Solotoy'
+g2
+((lp1749
+g4
+ag5
+atp1750
+Rp1751
+sS'samuel m kaplan'
 p1752
-(lp1753
-VHarold Ashe
-p1754
-aVMildred Ashe
-p1755
-aVCharles Daggett
+g2
+((lp1753
+g121
+atp1754
+Rp1755
+sS'leonard cohen'
 p1756
-asS'Joe Balsis'
-p1757
-(lp1758
-VAlcide T. Kratz
-p1759
-asS'Oscar Rhodes'
+g2
+((lp1757
+g58
+atp1758
+Rp1759
+sS'william chandler'
 p1760
-(lp1761
-VBereniece Baldwin
-p1762
-asS'Jim Frazier'
-p1763
-(lp1764
-VWayne B. Salisbury
-p1765
-asS'Meta Reis Writer'
-p1766
-(lp1767
-VEdward Dmytryk
+g2
+((lp1761
+g58
+atp1762
+Rp1763
+sS'henry winston'
+p1764
+g2
+((lp1765
+g4
+atp1766
+Rp1767
+sS'charles walters'
 p1768
-aVBudd Schulberg
-p1769
-aVFrank Tuttle
-p1770
-aVAnne Ray Frank
-p1771
-aVHarold Ashe
+g2
+((lp1769
+g58
+atp1770
+Rp1771
+sS'sylvia. marrow'
 p1772
-aVLeo Townsend
-p1773
-aVWilliam Blowitz
-p1774
-aVElizabeth Wilson
-p1775
-aVDavid Raksin
+g2
+((lp1773
+g1528
+atp1774
+Rp1775
+sS'elinor maki'
 p1776
-aVIsobel Lennart
-p1777
-aVStanley Roberts
-p1778
-aVBernard Schoenfeld
-p1779
-asS'Joy Pepper'
+g2
+((lp1777
+g854
+ag58
+atp1778
+Rp1779
+sS'john nowak'
 p1780
-(lp1781
-VLeo Townsend
-p1782
-asS'Dolph Winebrenner'
-p1783
-(lp1784
-VCharles Daggett
-p1785
-aVCharles Judson
-p1786
-aVAlice Bennett
-p1787
-aVUrcel Daniel
+g2
+((lp1781
+g58
+atp1782
+Rp1783
+sS'walter kempler'
+p1784
+g2
+((lp1785
+g1784
+atp1786
+Rp1787
+sS'ambur salt'
 p1788
-asS'Dave Mates'
-p1789
-(lp1790
-VBereniece Baldwin
-p1791
-asS'Jeff Corey'
+g2
+((lp1789
+g284
+atp1790
+Rp1791
+sS'seymour mandell'
 p1792
-(lp1793
-VMarc Lawrence
-p1794
-aVPaul Marion
-p1795
-asS'Larry Davis'
+g2
+((lp1793
+g34
+ag35
+ag116
+atp1794
+Rp1795
+sS'harold koppelman'
 p1796
-(lp1797
-VBereniece Baldwin
-p1798
-asS'John Stapp'
-p1799
-(lp1800
-VReis Rosenberg
-p1801
-aVFrank Tuttle
-p1802
-aVLeo Townsend
-p1803
-aVWilliam Blowitz
+g2
+((lp1797
+g1796
+atp1798
+Rp1799
+sS'phil raymond'
+p1800
+g2
+((lp1801
+g4
+ag58
+atp1802
+Rp1803
+sS'norris wood'
 p1804
-aVElizabeth Wilson
-p1805
-aVPaul Marion
-p1806
-aVOwen Vinson
-p1807
-aVIsobel Lennart
+g2
+((lp1805
+g121
+atp1806
+Rp1807
+sS'yield kramer'
 p1808
-asS'Jonathan Eddy'
-p1809
-(lp1810
-VCharles Daggett
-p1811
-asS'Alfred Wagenknecht'
+g2
+((lp1809
+g210
+atp1810
+Rp1811
+sS'harry glassgold'
 p1812
-(lp1813
-VLee Lundgren
-p1814
-asS'Walter McElroy'
-p1815
-(lp1816
-VMildred Ashe
-p1817
-asS'Elmer Hanoff'
-p1818
-(lp1819
-VMildred Ashe
+g2
+((lp1813
+g5
+atp1814
+Rp1815
+sS'jimmy allen'
+p1816
+g2
+((lp1817
+g28
+ag42
+atp1818
+Rp1819
+sS'ruth beeman'
 p1820
-aVHarold Ashe
-p1821
-asS'Stephanie Allan'
-p1822
-(lp1823
-VBereniece Baldwin
+g2
+((lp1821
+g28
+ag42
+atp1822
+Rp1823
+sS'alvin hammer'
 p1824
-aVMrs. William Allan
-p1825
-asS'Harold Fisher'
-p1826
-(lp1827
-VDonald O. Spencer
+g2
+((lp1825
+g236
+atp1826
+Rp1827
+sS'roy hudson'
 p1828
-asS'Mary Morrison'
-p1829
-(lp1830
-VBereniece Baldwin
-p1831
-aVMrs. Eliot Maraniss
+g2
+((lp1829
+g4
+atp1830
+Rp1831
+sS'leola cones'
 p1832
-asS'William Glenn'
-p1833
-(lp1834
-VWayne B. Salisbury
-p1835
-asS'Dorothy Parker'
+g2
+((lp1833
+g4
+atp1834
+Rp1835
+sS'timothy shay'
 p1836
-(lp1837
-VMrs. Alan Campbell
-p1838
-asS'Bob Klonsky'
-p1839
-(lp1840
-VThomas Delaney
-p1841
-asS'Robert Purdy'
-p1842
-(lp1843
-VBereniece Baldwin
+g2
+((lp1837
+g172
+ag1117
+ag5
+atp1838
+Rp1839
+sS'saul grossman'
+p1840
+g2
+((lp1841
+g58
+atp1842
+Rp1843
+sS'hilliard chamblis'
 p1844
-asS'Donald Tiegland'
-p1845
-(lp1846
-VDonald O. Spencer
-p1847
-asS'Philip Connelly'
+g2
+((lp1845
+g58
+atp1846
+Rp1847
+sS'leo gallagher'
 p1848
-(lp1849
-VCharles Judson
-p1850
-aVAlice Bennett
-p1851
-aVUrcel Daniel
-p1852
-aVE. O. Harold Ashe
-p1853
-asS'Leo T. Orsage'
-p1854
-(lp1855
-VBereniece Baldwin
-p1856
-aVShelton Tappes
-p1857
-asS'Max Weiss'
-p1858
-(lp1859
-VLee Lundgren
-p1860
-asS'Pat Toohey'
-p1861
-(lp1862
-VRichard F. O'Hair
+g2
+((lp1849
+g35
+atp1850
+Rp1851
+sg34
+g2
+((lp1852
+g115
+ag35
+ag116
+atp1853
+Rp1854
+sS'joe bernstein'
+p1855
+g2
+((lp1856
+g172
+ag151
+ag58
+ag5
+atp1857
+Rp1858
+sS'joseph aidlin'
+p1859
+g2
+((lp1860
+g28
+ag332
+atp1861
+Rp1862
+sS'terry clark'
 p1863
-aVWalter Scott Dunn
-p1864
-aVWayne B. Salisbury
-p1865
-asS'Delaney testified Mr'
-p1866
-(lp1867
-VLauren Taylor
-p1868
-aVHarold Allen
+g2
+((lp1864
+g5
+atp1865
+Rp1866
+sS'julian shapiro'
+p1867
+g2
+((lp1868
+g35
+aS'john sanford'
 p1869
-aVSamuel J. DiMaria
-p1870
-aVMr. DiMaria
-p1871
-aVPhil Bart
+atp1870
+Rp1871
+sS'samuel ornitz'
 p1872
-aVPhil Bart
-p1873
-aVJoe Kuzma
-p1874
-aVPhil Bart
-p1875
-aVRuss Nixon
+g2
+((lp1873
+g15
+ag284
+ag502
+atp1874
+Rp1875
+sS'florence hall'
 p1876
-aVJoe Kuzma
-p1877
-aVJack Mondress
-p1878
-aVMr. DiMaria
-p1879
-asS'George Hallgren'
+g2
+((lp1877
+g190
+ag192
+atp1878
+Rp1879
+sS'maureen ryan'
 p1880
-(lp1881
-VIsobel Lennart
-p1882
-asS'John Watkins'
-p1883
-(lp1884
-VDonald O. Spencer
-p1885
-asS'Edward Huebseh'
+g2
+((lp1881
+g40
+atp1882
+Rp1883
+sS'marguerite. sanford'
+p1884
+g2
+((lp1885
+Vmarguerite roberts
 p1886
-(lp1887
-VFrank Tuttle
-p1888
-aVLee Townsend
+atp1887
+Rp1888
+sS'gay bailey'
 p1889
-aVMelvin Levy
-p1890
-aVStanley Roberts
-p1891
-asS'Willie Newman'
-p1892
-(lp1893
-VRichard F. O'Hair
-p1894
-asS'Maurice Clark'
-p1895
-(lp1896
-VEdward Dmytryk
+g2
+((lp1890
+g5
+atp1891
+Rp1892
+sS'tiba willner'
+p1893
+g2
+((lp1894
+g86
+atp1895
+Rp1896
+sS'leonardo bercovici'
 p1897
-aVFrank Tuttle
-p1898
-asS'Mrs Johnson'
-p1899
-(lp1900
-VHattie Richard F. O'Hair
+g2
+((lp1898
+g284
+ag53
+atp1899
+Rp1900
+sS'ernest scott'
 p1901
-asS'Gordon Kahn'
-p1902
-(lp1903
-VRichard Collins
-p1904
-aVReis Rosenberg
+g2
+((lp1902
+g121
+atp1903
+Rp1904
+sS'marta bogner'
 p1905
-aVMarc Lawrence
-p1906
-aVEdward Dmytryk
-p1907
-aVBudd Schulberg
-p1908
-aVCharles Daggett
+g2
+((lp1906
+g40
+atp1907
+Rp1908
+sS'guy endore'
 p1909
-aVIsobel Lennart
-p1910
-aVStanley Roberts
-p1911
-aVAnne Ray Frank
-p1912
-asS'Betty Bennett Gannett'
+g2
+((lp1910
+g76
+atp1911
+Rp1912
+sS'shirley bollin'
 p1913
-(lp1914
-VHarold Ashe
-p1915
-aVMildred Ashe
-p1916
-asS'Fred Dutner'
+g2
+((lp1914
+g628
+ag58
+atp1915
+Rp1916
+sS'booker white'
 p1917
-(lp1918
-VLee Lundgren
-p1919
-asS'Emily Gordon'
-p1920
-(lp1921
-VMrs. Julian Gordon
-p1922
-aVEmily Gordon
-p1923
-asS'Edward Biberman'
-p1924
-(lp1925
-VReis Rosenberg
-p1926
-aVFrank Tuttle
-p1927
-aVStanley Roberts
-p1928
-asS'Lewis Leverett'
+g2
+((lp1918
+g210
+atp1919
+Rp1920
+sVmrs. ronald mcintosh
+p1921
+g2
+((lp1922
+g4
+atp1923
+Rp1924
+sS'dorothy pezinan'
+p1925
+g2
+((lp1926
+g40
+atp1927
+Rp1928
+sS'george kristalsky'
 p1929
-(lp1930
-VElia Kazan
-p1931
-aVClifford Odets
-p1932
-asS'Tom Nabried'
+g2
+((lp1930
+g181
+ag4
+atp1931
+Rp1932
+sS'jane wilson'
 p1933
-(lp1934
-VThomas Delaney
-p1935
-aVSamuel DiMaria
-p1936
-asS'Walter Christie'
+g2
+((lp1934
+g28
+atp1935
+Rp1936
+sS'sylvia jarrico'
 p1937
-(lp1938
-VBereniece Baldwin
-p1939
-asS'Claude Lightfoot'
-p1940
-(lp1941
-VLee Lundgren
-p1942
-asS'Harry Carlisle'
-p1943
-(lp1944
-VBudd Schulberg
+g2
+((lp1938
+g15
+ag1937
+ag18
+atp1939
+Rp1940
+sVpauline lauber finn
+p1941
+g2
+((lp1942
+g1455
+atp1943
+Rp1944
+sS'henry jansen'
 p1945
-asS'Nina Parris'
-p1946
-(lp1947
-VThomas Delaney
-p1948
-asS'Milt Krantzler'
+g2
+((lp1946
+g58
+atp1947
+Rp1948
+sS'frank stepanchenko'
 p1949
-(lp1950
-VIrving Krane
-p1951
-asS'Lionel Stander'
-p1952
-(lp1953
-VMarc Lawrence
-p1954
-aVHarold Ashe
-p1955
-aVMildred Ashe
-p1956
-asS'Irving Riskin'
+g2
+((lp1950
+g191
+atp1951
+Rp1952
+sS'james anderson'
+p1953
+g2
+((lp1954
+g172
+ag5
+atp1955
+Rp1956
+sS'frederick reynolds'
 p1957
-(lp1958
-VRichard F. O'Hair
-p1959
-aVWalter Scott Dunn
-p1960
-aVRichard F. O'Hair
+g2
+((lp1958
+g219
+atp1959
+Rp1960
+sS'larry davis'
 p1961
-aVMrs. Irving Riskin
-p1962
-asS'Betty Arden'
-p1963
-(lp1964
-VMildred Ashe
+g2
+((lp1962
+g58
+atp1963
+Rp1964
+sS'mabel wilson'
 p1965
-asS'Ruth Dombrowski'
-p1966
-(lp1967
-VWayne B. Salisbury
-p1968
-aVMrs. Tom Dombrowski
-p1969
-asS'Mills Sampy'
-p1970
-(lp1971
-VRichard F. OHair
+g2
+((lp1966
+g151
+ag87
+atp1967
+Rp1968
+sg28
+g2
+((lp1969
+g151
+ag121
+ag58
+atp1970
+Rp1971
+sS'helen tenney'
 p1972
-asS'Emma Williams'
-p1973
-(lp1974
-VBereniece Baldwin
-p1975
-asS'Mary Bray'
+g2
+((lp1973
+g1345
+atp1974
+Rp1975
+sS'bernyce p fleury'
 p1976
-(lp1977
-VWalter Scott Dunn
+g2
+((lp1977
+Vmrs. eugene
 p1978
-aVBereniece Baldwin
-p1979
-asS'Louise Losey'
-p1980
-(lp1981
-VLeo Townsend
-p1982
-aVMrs. Joseph Losey
-p1983
-asS'Ann Vartainian Boatin'
-p1984
-(lp1985
-VBereniece Baldwin
-p1986
-aVMrs. Paul Boatin
-p1987
-asS'Harold Robertson'
-p1988
-(lp1989
-VBereniece Baldwin
-p1990
-asS'Ben Polin'
-p1991
-(lp1992
-VPaul Marion
+atp1979
+Rp1980
+sS'lucy stander'
+p1981
+g2
+((lp1982
+g28
+ag332
+ag42
+atp1983
+Rp1984
+sS'leo bigelman'
+p1985
+g2
+((lp1986
+g219
+atp1987
+Rp1988
+sS'herbert blache'
+p1989
+g2
+((lp1990
+g284
+atp1991
+Rp1992
+sS'ann r richards'
 p1993
-asS'Maurice Murphy'
-p1994
-(lp1995
-VElizabeth Wilson
-p1996
-aVIsobel Lennart
+g2
+((lp1994
+g76
+atp1995
+Rp1996
+sS'elinor l cook'
 p1997
-asS'Bill Daley'
-p1998
-(lp1999
-VWayne B. Salisbury
-p2000
-asS'Lou Harris'
+g2
+((lp1998
+g172
+ag1776
+ag5
+atp1999
+Rp2000
+sS'mr. dillard'
 p2001
-(lp2002
-VHarold Ashe
-p2003
-aVMildred Ashe
-p2004
-aVElizabeth Wilson
-p2005
-asS'Ralph Glick'
-p2006
-(lp2007
-VSamuel DiMaria
-p2008
-aVThomas Delaney
-p2009
-asS'John Kelly Ellis'
-p2010
-(lp2011
-VJohn Joseph Ellis
-p2012
-asS'Roy Narancich'
-p2013
-(lp2014
-VDave Averill
+g2
+((lp2002
+g5
+atp2003
+Rp2004
+sg1106
+g2
+((lp2005
+g1104
+atp2006
+Rp2007
+sg1186
+g2
+((lp2008
+g279
+atp2009
+Rp2010
+sS'norman ross'
+p2011
+g2
+((lp2012
+g4
+atp2013
+Rp2014
+sS'philip frankfeld'
 p2015
-aVNerich Bereniece Baldwin
-p2016
-asS'Harry Glassgold'
-p2017
-(lp2018
-VRichard F. O'Hair
+g2
+((lp2016
+g121
+atp2017
+Rp2018
+sS'gerald liefchild'
 p2019
-asS'Ralph Smith'
-p2020
-(lp2021
-VHarold Ashe
-p2022
-asS'Glen Showerman'
+g2
+((lp2020
+g40
+atp2021
+Rp2022
+sS'tom defazio'
 p2023
-(lp2024
-VWayne B. Salisbury
-p2025
-asS'Alvin Frisbie'
-p2026
-(lp2027
-VJohn Edward Cooke
-p2028
-asS'Betty Ireland'
-p2029
-(lp2030
-VRichard F. O'Hair
+g2
+((lp2024
+g121
+ag201
+atp2025
+Rp2026
+sS'charles lassiter'
+p2027
+g2
+((lp2028
+g210
+atp2029
+Rp2030
+sS'waldo salt'
 p2031
-aVWalter Scott Dunn
-p2032
-asS'Dr Sperling'
-p2033
-(lp2034
-VSam Louise Light Silver
+g2
+((lp2032
+g284
+ag18
+ag88
+ag90
+ag859
+ag502
+atp2033
+Rp2034
+sS'madelaine ruthven'
 p2035
-aVDr. Sam Reznick
-p2036
-asS'Mike Gates'
+g2
+((lp2036
+Velizaltetb wilson
 p2037
-(lp2038
-VSamuel DiMaria
-p2039
-asS'Delaware Jersey'
+ag86
+ag88
+ag91
+ag284
+ag502
+atp2038
+Rp2039
+sS'tommy dennis'
 p2040
-(lp2041
-VMr. Delaney
-p2042
-aVMr. Delaney
-p2043
-aVMr. Delaney
+g2
+((lp2041
+g4
+atp2042
+Rp2043
+sS'lem harris'
 p2044
-aVJoe Kuzma
-p2045
-asS'Al Bigford'
-p2046
-(lp2047
-VWayne B. Salisbury
+g2
+((lp2045
+g15
+ag28
+ag42
+ag192
+atp2046
+Rp2047
+sS'jean johnson'
 p2048
-asS'Joe Brandt'
-p2049
-(lp2050
-VWayne B. Salisbury
-p2051
-aVBereuiece Baldwin
+g2
+((lp2049
+g5
+atp2050
+Rp2051
+sS'matt savola'
 p2052
-asS'Carl Turner'
-p2053
-(lp2054
-VWalter Scott Dunn
-p2055
-asS'Verna McAllister'
+g2
+((lp2053
+g4
+ag58
+ag5
+atp2054
+Rp2055
+sS'max helfand'
 p2056
-(lp2057
-VBereniece Baldwin
-p2058
-asS'Rose Banks'
-p2059
-(lp2060
-VWayne B. Salisbury
-p2061
-asS'Elinor Maki'
-p2062
-(lp2063
-VMrs. William
-p2064
-aVRoy Bereniece Baldwin
-p2065
-asS'LeRoy Tribbite'
-p2066
-(lp2067
-VAlcide T. Kratz
-p2068
-asS'Lynn Whitney'
-p2069
-(lp2070
-VPaul Marion
+g2
+((lp2057
+g121
+atp2058
+Rp2059
+sS'rose rosenberg'
+p2060
+g2
+((lp2061
+g40
+ag34
+atp2062
+Rp2063
+sg763
+g2
+((lp2064
+g58
+atp2065
+Rp2066
+sS'jean erickson'
+p2067
+g2
+((lp2068
+g142
+atp2069
+Rp2070
+sS'george hallgren'
 p2071
-asS'John Hell'
-p2072
-(lp2073
-VWayne B. Salisbury
-p2074
-asS'Katherine Foreman'
+g2
+((lp2072
+g86
+atp2073
+Rp2074
+sS'jesse perez'
 p2075
-(lp2076
-VAlice Bennett
-p2077
-asS'Pat Killoran'
-p2078
-(lp2079
-VCharles Judson
-p2080
-aVAlice Bennett
+g2
+((lp2076
+g48
+atp2077
+Rp2078
+sS'virginia schulberg'
+p2079
+g2
+((lp2080
+g15
+aVmrs. peter martin
 p2081
-aVUrcel Daniel
-p2082
-asS'Jack Mondress'
-p2083
-(lp2084
-VSamuel DiMaria
-p2085
-asS'Mortimer William Pomerance'
-p2086
-(lp2087
-VEugene Fleury
+atp2082
+Rp2083
+sS'john little'
+p2084
+g2
+((lp2085
+g4
+atp2086
+Rp2087
+sS'michael gordon'
 p2088
-asS'Irwin Lieberman'
-p2089
-(lp2090
-VStanley Roberts
-p2091
-asS'Jessie Sehneiderinan'
+g2
+((lp2089
+g91
+atp2090
+Rp2091
+sS'matt snyder'
 p2092
-(lp2093
-VSamuel DiMaria
-p2094
-asS'Mary Mclntyre'
-p2095
-(lp2096
-VBereniece Baldwin
-p2097
-aVMrs. Harold Franklin
-p2098
-aVAnn Arbor
-p2099
-asS'Philip Saba'
+g2
+((lp2093
+g121
+atp2094
+Rp2095
+sS'leo simon'
+p2096
+g2
+((lp2097
+g40
+ag332
+ag41
+atp2098
+Rp2099
+sS'beatrice buchman'
 p2100
-(lp2101
-VThomas Delaney
+g2
+((lp2101
+Vmrs. sidney buch
 p2102
-asS'John Leech'
-p2103
-(lp2104
-VHarold Ashe
+atp2103
+Rp2104
+sS'chris alston'
 p2105
-aVMildred Ashe
-p2106
-asS'Andy Barrigan'
-p2107
-(lp2108
-VUrcel Daniel
+g2
+((lp2106
+g58
+ag5
+atp2107
+Rp2108
+sS'nick baltic'
 p2109
-asS'John McGrew'
-p2110
-(lp2111
-VEugene Fleury
-p2112
-asS'Irving Goff'
+g2
+((lp2110
+g58
+atp2111
+Rp2112
+sS'ray blossom'
 p2113
-(lp2114
-VThomas Delaney
-p2115
-asS'Fay Gingold Grossman'
-p2116
-(lp2117
-VMrs. Saul Bereniece Baldwin
-p2118
-asS'Harold Franklin'
-p2119
-(lp2120
-VBereniece Baldwin
+g2
+((lp2114
+g4
+ag58
+atp2115
+Rp2116
+sS'helen winter'
+p2117
+g2
+((lp2118
+g172
+ag4
+ag58
+ag5
+atp2119
+Rp2120
+sS'frank allen'
 p2121
-asS'Minna Klein'
-p2122
-(lp2123
-VHarold Ashe
-p2124
-aVMildred Ashe
+g2
+((lp2122
+g48
+ag192
+atp2123
+Rp2124
+sS'phil schatz'
 p2125
-aVCharles Daggett
-p2126
-aVCharles Judson
-p2127
-aVAlice Bennett
-p2128
-aVUrcel Daniel
+g2
+((lp2126
+g4
+ag58
+atp2127
+Rp2128
+sS'harry fainaru'
 p2129
-asS'Adam Smith'
-p2130
-(lp2131
-VLee Lundgren
-p2132
-asS'Pauline Epstein'
+g2
+((lp2130
+g4
+atp2131
+Rp2132
+sS'ethel spiller'
 p2133
-(lp2134
-VDavid Aaron
-p2135
-aVWilliam G. Israel
-p2136
-aVMarburg Yerkes
+g2
+((lp2134
+g121
+atp2135
+Rp2136
+sS'pat amato'
 p2137
-asS'Miriam Solomon'
-p2138
-(lp2139
-VAlice Bennett
-p2140
-asS'Bella Lewitzky Reynolds'
+g2
+((lp2138
+g190
+ag192
+atp2139
+Rp2140
+sS'john lymber'
 p2141
-(lp2142
-VMrs. Reyn
-p2143
-asS'Henry Winston'
-p2144
-(lp2145
-VWayne B. Salisbury
-p2146
-asS'Abe Burrows'
-p2147
-(lp2148
-VOwen Vinson
+g2
+((lp2142
+g5
+atp2143
+Rp2144
+sS'ned gorgolinski'
+p2145
+g2
+((lp2146
+g190
+ag192
+atp2147
+Rp2148
+sS'sidney buchman'
 p2149
-asS'Phil Schatz'
-p2150
-(lp2151
-VWayne B. Salisbury
-p2152
-aVBereniece Baldwin
+g2
+((lp2150
+g2149
+atp2151
+Rp2152
+sS'katherine lynch'
 p2153
-asS'John Cherveny'
-p2154
-(lp2155
-VBereniece Baldwin
-p2156
-asS'Isaac Folkoff'
+g2
+((lp2154
+g5
+atp2155
+Rp2156
+sS'john k ellis'
 p2157
-(lp2158
-VSterling Hayden
+g2
+((lp2158
+Vjohn joseph ellis
 p2159
-asS'Nettie Rubenstein'
-p2160
-(lp2161
-VRobert Louis Stevenson School
+atp2160
+Rp2161
+sS'jonathan eddy'
 p2162
-asS'Fred M. Snider'
-p2163
-(lp2164
-VDavid Aaron
-p2165
-asS'Helen Allison'
+g2
+((lp2163
+g332
+atp2164
+Rp2165
+sS'steve simmons'
 p2166
-(lp2167
-VHelen Alli
-p2168
-asS'Fred Davey'
-p2169
-(lp2170
-VWayne B. Salisbury
-p2171
-asS'Don R. Healy'
+g2
+((lp2167
+g58
+atp2168
+Rp2169
+sS'david hilberman'
+p2170
+g2
+((lp2171
+g1481
+aVmrs. david hilber
 p2172
-(lp2173
-VHarold Ashe
-p2174
-asS'James Avery'
+atp2173
+Rp2174
+sS'mary casaro'
 p2175
-(lp2176
-VRoy Thompson
-p2177
-asS'Clyde Champion'
-p2178
-(lp2179
-VHarold Ashe
-p2180
-asS'Pettis Perry'
-p2181
-(lp2182
-VMildred Ashe
+g2
+((lp2176
+g151
+atp2177
+Rp2178
+sS'thomas anderson'
+p2179
+g2
+((lp2180
+g172
+ag5
+atp2181
+Rp2182
+sS'symanthia washington'
 p2183
-aVCharles Judson
-p2184
-aVAlice Bennett
-p2185
-asS'Hugo Beiswenger'
-p2186
-(lp2187
-VRichard F. O'Hair
-p2188
-aVDetroit Walter Scott Dunn
-p2189
-aVWayne B. Salisbury
-p2190
-asS'Frank Martin'
+g2
+((lp2184
+g48
+atp2185
+Rp2186
+sS'stanley adamski'
+p2187
+g2
+((lp2188
+g4
+ag58
+atp2189
+Rp2190
+sS'james cutno'
 p2191
-(lp2192
-VBereniece Baldwin
-p2193
-asS'Melvyn Letzman'
-p2194
-(lp2195
-VHarold Ashe
-p2196
-asS'Marie Rinaldo'
-p2197
-(lp2198
-VLeo Townsend
+g2
+((lp2192
+g48
+atp2193
+Rp2194
+sS'harry freed'
+p2195
+g2
+((lp2196
+g192
+atp2197
+Rp2198
+sS'nina parris'
 p2199
-aVW. L. Martin
-p2200
-asS'John Gallo'
-p2201
-(lp2202
-VWalter Scott Dunn
+g2
+((lp2200
+g121
+atp2201
+Rp2202
+sS'ike greenberg'
 p2203
-aVBereniece Baldwin
-p2204
-aVDave Averill
-p2205
-asS'Lem Harris'
-p2206
-(lp2207
-VLee Lundgren
-p2208
-asS'Mary Casaro'
-p2209
-(lp2210
-VDonald O. Spencer
+g2
+((lp2204
+g4
+atp2205
+Rp2206
+sS'sam hammersmark'
+p2207
+g2
+((lp2208
+g192
+atp2209
+Rp2210
+sS'joe dennis'
 p2211
-asS'Huso Beiswenger'
-p2212
-(lp2213
-VWayne B. Salisbury
-p2214
-asS'Ben Kocel'
+g2
+((lp2212
+g48
+atp2213
+Rp2214
+sS'russell a nixon'
 p2215
-(lp2216
-VBereniece Baldwin
-p2217
-aVGlos Ludowy
-p2218
-asS'Jack Birch'
+g2
+((lp2216
+g201
+atp2217
+Rp2218
+sS'paul henley'
 p2219
-(lp2220
-VLee Lundgren
-p2221
-asS'Gilbert Green'
-p2222
-(lp2223
-VSamuel DiMaria
-p2224
-asS'Hetty Vorhaus'
-p2225
-(lp2226
-VBernard Schoenfeld
+g2
+((lp2220
+g4
+ag58
+ag5
+atp2221
+Rp2222
+sS'hazel gray'
+p2223
+g2
+((lp2224
+g210
+atp2225
+Rp2226
+sS'bob cummins'
 p2227
-asS'Dr Perry'
-p2228
-(lp2229
-VThomas L. Louise Light Silver
-p2230
-asS'Dorothy Connelly'
+g2
+((lp2228
+g58
+atp2229
+Rp2230
+sS'irwin lieberman'
 p2231
-(lp2232
-VDorothy Healy
-p2233
-asS'Dr Feder'
-p2234
-(lp2235
-VDr. Sam Reznick
-p2236
-asS'Matt Snyder'
-p2237
-(lp2238
-VThomas Delaney
+g2
+((lp2232
+g85
+atp2233
+Rp2234
+sS'sidney barclay'
+p2235
+g2
+((lp2236
+g58
+atp2237
+Rp2238
+sS'fred graff'
 p2239
-asS'Jean Butler'
-p2240
-(lp2241
-VStanley Roberts
-p2242
-asS'Paul Henley'
-p2243
-(lp2244
-VRichard F. O'Hair
-p2245
-aVWayne B. Salisbury
-p2246
-aVBereniece Baldwin
-p2247
-asS'Lee Barrie'
+g2
+((lp2240
+Vmr. graff
+p2241
+atp2242
+Rp2243
+sS'john watkins'
+p2244
+g2
+((lp2245
+g151
+atp2246
+Rp2247
+sS'spencer austrian'
 p2248
-(lp2249
-VOwen Vinson
-p2250
-asS'Sidney Burke'
-p2251
-(lp2252
-VHarold Ashe
-p2253
-asS'Milt Kashner'
-p2254
-(lp2255
-VAlice Bennett
-p2256
-asS'Kurt Davis'
-p2257
-(lp2258
-VBereniece Baldwin
+g2
+((lp2249
+g28
+ag42
+atp2250
+Rp2251
+sg1312
+g2
+((lp2252
+g5
+atp2253
+Rp2254
+sS'helen palmquist'
+p2255
+g2
+((lp2256
+g919
+ag58
+atp2257
+Rp2258
+sS'leo turner'
 p2259
-asS'Ben Bengal'
-p2260
-(lp2261
-VLeo Townsend
-p2262
-asS'Jane Wilson'
+g2
+((lp2260
+g192
+atp2261
+Rp2262
+sS'mike karpa'
 p2263
-(lp2264
-VHarold Ashe
-p2265
-asS'Herbert BlaeheVMrs'
-p2266
-(lp2267
-VRichard Collins
-p2268
-asS'George Mogill'
-p2269
-(lp2270
-VBereniece Baldwin
+g2
+((lp2264
+g192
+atp2265
+Rp2266
+sS'james ford'
+p2267
+g2
+((lp2268
+g4
+atp2269
+Rp2270
+sS'john gustafson'
 p2271
-aVA. Bereniece Baldwin
-p2272
-asS'John Cohee'
-p2273
-(lp2274
-VCharles Judson
-p2275
-aVAlice Bennett
-p2276
-aVUrcel Daniel
-p2277
-asS'Betty Selden'
+g2
+((lp2272
+g58
+atp2273
+Rp2274
+sg110
+g2
+((lp2275
+g192
+atp2276
+Rp2277
+sS'william m. samuels'
 p2278
-(lp2279
-VAlice Bennett
-p2280
-asS'Fred Williams'
-p2281
-(lp2282
-VWayne B. Salisbury
-p2283
-aVBrass Bereniece Baldwin
-p2284
-asS'Fred Fische'
-p2285
-(lp2286
-VBereniece Baldwin
-p2287
-asS'Milton S. Tyre'
-p2288
-(lp2289
-VDavid Aaron
+g2
+((lp2279
+g35
+atp2280
+Rp2281
+sS'matilda mcintosh'
+p2282
+g2
+((lp2283
+g1921
+ag4
+atp2284
+Rp2285
+sS'william a. rodgers'
+p2286
+g2
+((lp2287
+g5
+atp2288
+Rp2289
+sS'helen demarco'
 p2290
-aVAlbert Herzig
-p2291
-aVWm. G. Israel
-p2292
-asS'Joe Poskonka'
-p2293
-(lp2294
-VRoy Thompson
-p2295
-asS'Steve Simmons'
-p2296
-(lp2297
-VBereniece Baldwin
+g2
+((lp2291
+g1149
+ag121
+ag201
+atp2292
+Rp2293
+sS'walter christie'
+p2294
+g2
+((lp2295
+g58
+atp2296
+Rp2297
+sS'grant oakes'
 p2298
-asS'John Milkovitch'
-p2299
-(lp2300
-VDonald O. Spencer
-p2301
-asS'Walter Rogalski'
+g2
+((lp2299
+g151
+atp2300
+Rp2301
+sS'betty selden'
 p2302
-(lp2303
-VLee Lundgren
-p2304
-aVIrving Krane
-p2305
-asS'Eric Dearnley'
+g2
+((lp2303
+g40
+atp2304
+Rp2305
+sS'john cherveny'
 p2306
-(lp2307
-VBereniece Baldwin
-p2308
-aVDon Bereniece Baldwin
-p2309
-asS'Matt Savola'
+g2
+((lp2307
+g40
+ag41
+ag43
+ag58
+atp2308
+Rp2309
+sS'fred m. snider'
 p2310
-(lp2311
-VRichard F. O'Hair
-p2312
-aVSmelter Wayne B. Salisbury
-p2313
-aVBereniece Baldwin
+g2
+((lp2311
+g35
+atp2312
+Rp2313
+sS'jeff kibre'
 p2314
-asS'Thomas Anderson'
-p2315
-(lp2316
-VRichard F. O'Hair
-p2317
-aVWalter Scott Dunn
+g2
+((lp2315
+g28
+ag42
+atp2316
+Rp2317
+sS'herman waldman'
 p2318
-asS'Lilith James'
-p2319
-(lp2320
-VRoy Huggins
-p2321
-asS'Reva Redstone'
+g2
+((lp2319
+g236
+ag237
+atp2320
+Rp2321
+sS'raphael haskell'
 p2322
-(lp2323
-VWalter Scott Dunn
-p2324
-aVRichard F. O'Hair
-p2325
-asS'John Sobczak'
+g2
+((lp2323
+g58
+atp2324
+Rp2325
+sS'tony kraber'
 p2326
-(lp2327
-VBereniece Baldwin
-p2328
-asS'Paul Boatin'
-p2329
-(lp2330
-VWalter Scott Dunn
-p2331
-aVWayne B. Salisbury
-p2332
-aVBereniece Baldwin
+g2
+((lp2327
+g737
+ag738
+atp2328
+Rp2329
+sg345
+g2
+((lp2330
+g172
+ag4
+ag58
+ag191
+atp2331
+Rp2332
+sS'frank iglesias'
 p2333
-aVDave Averill
-p2334
-asS'William L. Patterson'
-p2335
-(lp2336
-VLee Lundgren
+g2
+((lp2334
+g5
+atp2335
+Rp2336
+sS'joseph kuzma'
 p2337
-aVJohn Edward Cooke
-p2338
-aVRoy Thompson
-p2339
-asS'Dr Marcus'
-p2340
-(lp2341
-VSimson Louise Light Silver
-p2342
-aVDr. Sam Reznick
-p2343
-asS'Joseph Kuzma'
-p2344
-(lp2345
-VThomas Delaney
-p2346
-aVSamuel DiMaria
-p2347
-asS'Florence Kniep'
-p2348
-(lp2349
-VWayne B. Salisbury
-p2350
-asS'Dr Bigelman'
-p2351
-(lp2352
-VLeo Dr. Sam Reznick
+g2
+((lp2338
+g121
+ag201
+atp2339
+Rp2340
+sS'eva shafran'
+p2341
+g2
+((lp2342
+g91
+ag28
+atp2343
+Rp2344
+sS'edwin m max'
+p2345
+g2
+((lp2346
+g236
+ag237
+atp2347
+Rp2348
+sS'jack white'
+p2349
+g2
+((lp2350
+g4
+ag58
+ag5
+atp2351
+Rp2352
+sS'bernard vorhaus'
 p2353
-asS'John Saari'
-p2354
-(lp2355
-VDave Averill
-p2356
-asS'Glass Glassgold'
+g2
+((lp2354
+g91
+atp2355
+Rp2356
+sS'jules abercauph'
 p2357
-(lp2358
-VRichard F. O'Hair
-p2359
-asS'Roy Wilson'
-p2360
-(lp2361
-VShelton Tappes
-p2362
-asS'Leo Turner'
-p2363
-(lp2364
-VLee Lundgren
+g2
+((lp2358
+g201
+atp2359
+Rp2360
+sS'joy pepper'
+p2361
+g2
+((lp2362
+g18
+atp2363
+Rp2364
+sS'lane thomas'
 p2365
-asS'Edwin Miller Max'
-p2366
-(lp2367
-VPaul Marion
-p2368
-aVOwen Vinson
+g2
+((lp2366
+g121
+ag48
+atp2367
+Rp2368
+sS'jack palmquist'
 p2369
-asS'Hope Smith'
-p2370
-(lp2371
-VBereniece Baldwin
-p2372
-asS'Paul Geiselman'
+g2
+((lp2370
+g919
+ag58
+atp2371
+Rp2372
+sS'jack raskin'
 p2373
-(lp2374
-VSamuel DiMaria
-p2375
-asS'Art Rhodes'
-p2376
-(lp2377
-VLee Lundgren
-p2378
-asS'Ruth Poison'
-p2379
-(lp2380
-VBereniece Baldwin
+g2
+((lp2374
+g4
+ag58
+atp2375
+Rp2376
+sS'dalton trumbo'
+p2377
+g2
+((lp2378
+g91
+ag332
+ag89
+ag85
+ag87
+atp2379
+Rp2380
+sS'alice cohee'
 p2381
-asS'Mike Fersick'
-p2382
-(lp2383
-VSamuel DiMaria
-p2384
-asS'Carl Foreman'
+g2
+((lp2382
+g40
+ag41
+ag43
+atp2383
+Rp2384
+sS'james tracy'
 p2385
-(lp2386
-VMelvin Levy
-p2387
-aVStanley Roberts
-p2388
-asS'Edward Turner'
+g2
+((lp2386
+g28
+atp2387
+Rp2388
+sS'fred dutner'
 p2389
-(lp2390
-VRichard F. O'Hair
-p2391
-aVEdward N. Turner
-p2392
-aVEdith Bereniece Baldwin
+g2
+((lp2390
+g192
+atp2391
+Rp2392
+sS'tom miller'
 p2393
-asS'Ellenore Abowitz'
-p2394
-(lp2395
-VMrs. Murray Abo
-p2396
-aVDr. Mendell M. Krieger
+g2
+((lp2394
+g28
+atp2395
+Rp2396
+sS'james avery'
 p2397
-aVRoy Huggins
-p2398
-asS'Mary Page'
-p2399
-(lp2400
-VRichard F. O'Hair
+g2
+((lp2398
+g48
+atp2399
+Rp2400
+sS'peter hassen'
 p2401
-aVBereniece Baldwin
-p2402
-aVMary Reed
-p2403
-aVFred Elesio
-p2404
-asS'Hank Ripken'
+g2
+((lp2402
+g142
+atp2403
+Rp2404
+sS'ed robbins'
 p2405
-(lp2406
-VBereniece Baldwin
-p2407
-asS'John Gray'
-p2408
-(lp2409
-VLee Lundgren
-p2410
-asS'Gail Knappen'
-p2411
-(lp2412
-VAlice Bennett
+g2
+((lp2406
+g40
+ag332
+ag41
+ag43
+atp2407
+Rp2408
+sS'glen showerman'
+p2409
+g2
+((lp2410
+g4
+atp2411
+Rp2412
+sS'irving white'
 p2413
-asS'Mildred Pollock'
-p2414
-(lp2415
-VBereniece Baldwin
-p2416
-asS'Archie Acciacca'
+g2
+((lp2414
+g236
+atp2415
+Rp2416
+sS'lynn whitney'
 p2417
-(lp2418
-VBereniece Baldwin
-p2419
-aVDave Averill
-p2420
-asS'George Willner'
+g2
+((lp2418
+g236
+atp2419
+Rp2420
+sS'william glenn'
 p2421
-(lp2422
-VReis Rosenberg
-p2423
-aVMelvin Levy
-p2424
-aVIsobel Lennart
+g2
+((lp2422
+g4
+atp2423
+Rp2424
+sS'maurice clark'
 p2425
-asS'Symanthia Washington'
-p2426
-(lp2427
-VMrs. Roy Thompson
-p2428
-asS'Bill Lifsee'
+g2
+((lp2426
+g91
+ag53
+atp2427
+Rp2428
+sS'roy wilson'
 p2429
-(lp2430
-VRichard F. O'Hair
-p2431
-asS'John T. Bernard'
-p2432
-(lp2433
-VLee Lundgren
-p2434
-asS'Abraham Lincoln Polonsky'
-p2435
-(lp2436
-VRichard Collins
+g2
+((lp2430
+g279
+ag172
+atp2431
+Rp2432
+sS'stanley waxman'
+p2433
+g2
+((lp2434
+g236
+ag237
+atp2435
+Rp2436
+sS'ruth dombrowski'
 p2437
-aVMeta Reis Rosenberg
-p2438
-aVLeo Townsend
+g2
+((lp2438
+S'tom. dombrowski'
 p2439
-aVCharles Daggett
-p2440
-aVStanley Roberts
-p2441
-asS'Michael Uris'
+ag4
+atp2440
+Rp2441
+sS'shirley ross'
 p2442
-(lp2443
-VReis Rosenberg
-p2444
-aVEdward Dmytryk
-p2445
-aVFrank Tuttle
+g2
+((lp2443
+g4
+atp2444
+Rp2445
+sS'sam sperling'
 p2446
-asS'Leonardo Bercovici'
-p2447
-(lp2448
-VRichard Collins
-p2449
-aVEdward Dmytryk
+g2
+((lp2447
+g219
+atp2448
+Rp2449
+sS'gerald j boyd'
 p2450
-asS'Carleton Moss'
-p2451
-(lp2452
-VReis Rosenberg
-p2453
-asS'Hannah Schwartz Donath'
+g2
+((lp2451
+g4
+ag5
+atp2452
+Rp2453
+sS'ed strong'
 p2454
-(lp2455
-VMrs. Donath
-p2456
-aVMrs Ludwig Donath
-p2457
-asS'Elizabeth Faragoh'
+g2
+((lp2455
+g121
+atp2456
+Rp2457
+sS'walter rogalski'
 p2458
-(lp2459
-VMrs. Francis Edward Dniytryk
-p2460
-asS'Olaf Leddel'
-p2461
-(lp2462
-VDonald O. Spencer
-p2463
-asS'Elliott Grennard'
-p2464
-(lp2465
-VRoy Huggins
-p2466
-asS'Julia Gudinas'
-p2467
-(lp2468
-VLee Lundgren
+g2
+((lp2459
+g190
+ag192
+atp2460
+Rp2461
+sS'louise losey'
+p2462
+g2
+((lp2463
+g352
+ag18
+atp2464
+Rp2465
+sg1869
+g2
+((lp2466
+g15
+atp2467
+Rp2468
+sS'pauline l finn'
 p2469
-aVIrving Krane
-p2470
-asS'Elizabeth Leech Glenn'
-p2471
-(lp2472
-VMrs. Charles Glenn
+g2
+((lp2470
+g1941
+ag284
+atp2471
+Rp2472
+sS'phoebe brand'
 p2473
-aVElizabeth Leech
-p2474
-asS'Florence Hall'
-p2475
-(lp2476
-VLee Lundgren
+g2
+((lp2474
+g737
+ag738
+ag18
+atp2475
+Rp2476
+sS'tillie lerner'
 p2477
-aVIrving Krane
-p2478
-asS'Mrs Biberman'
-p2479
-(lp2480
-VSonja Dahl
+g2
+((lp2478
+g90
+atp2479
+Rp2480
+sS'clyde champion'
 p2481
-asS'Flo Goodman'
-p2482
-(lp2483
-VRichard F. O'Hair
-p2484
-asS'Mrs Furay'
+g2
+((lp2482
+g28
+atp2483
+Rp2484
+sS'freda marcus'
 p2485
-(lp2486
-VMort Bereniece Baldwin
-p2487
-asS'Dr Hickox'
-p2488
-(lp2489
-VAlbert Harold Ashe
-p2490
-asS'Mrs Franklin'
-p2491
-(lp2492
-VMary Mclntyre
+g2
+((lp2486
+g40
+atp2487
+Rp2488
+sS'art rhodes'
+p2489
+g2
+((lp2490
+g58
+ag192
+atp2491
+Rp2492
+sS'louise seidel'
 p2493
-asS'John Wilson'
-p2494
-(lp2495
-VDonald O. Spencer
-p2496
-a(lp2497
-VHarold Ashe
-p2498
-aVMildred Ashe
-p2499
-aVCharles Daggett
-p2500
-aasS'Robert Brown'
+g2
+((lp2494
+g15
+atp2495
+Rp2496
+sS'william ingham'
+p2497
+g2
+((lp2498
+g40
+ag28
+atp2499
+Rp2500
+sS'hilliard ellis'
 p2501
-(lp2502
-VBereniece Baldwin
-p2503
-asS'Sterling Rochester'
-p2504
-(lp2505
-VSamuel DiMaria
-p2506
-asS'Russell Arthur Nixon'
-p2507
-(lp2508
-VSamuel DiMaria
+g2
+((lp2502
+g192
+atp2503
+Rp2504
+sS'noum light'
+p2505
+g2
+((lp2506
+g35
+atp2507
+Rp2508
+sS'sam rizzo'
 p2509
-asS'Daniel Zahari'
-p2510
-(lp2511
-VDave Averill
-p2512
-aVBereniece Baldwin
+g2
+((lp2510
+g279
+atp2511
+Rp2512
+sS'murray levine'
 p2513
-asS'Grace Zarniack'
-p2514
-(lp2515
-VAlcide T. Kratz
-p2516
-asS'William M. Samuels'
+g2
+((lp2514
+g151
+atp2515
+Rp2516
+sS'john mcgrew'
 p2517
-(lp2518
-VDavid Aaron
-p2519
-asS'Waldo Salt'
-p2520
-(lp2521
-VRichard Collins
-p2522
-aVReis Rosenberg
-p2523
-aVBudd Schulberg
-p2524
-aVFrank W. Tuttle
+g2
+((lp2518
+g1481
+atp2519
+Rp2520
+sS'harry carlisle'
+p2521
+g2
+((lp2522
+g90
+atp2523
+Rp2524
+sS'gilbert green'
 p2525
-aVLeo Townsend
-p2526
-aVDavid Raksin
-p2527
-asS'Joseph Pentacost'
-p2528
-(lp2529
-VJohn Edward Cooke
-p2530
-asS'Bernice Eraser'
-p2531
-(lp2532
-VDavid Raksin
+g2
+((lp2526
+g201
+atp2527
+Rp2528
+sS'otty heller'
+p2529
+g2
+((lp2530
+g201
+atp2531
+Rp2532
+sS'joseph reams'
 p2533
-asS'Tom Dombrowski'
-p2534
-(lp2535
-VRichard F. O'Hair
-p2536
-aVWalter Scott Dunn
+g2
+((lp2534
+g121
+ag4
+atp2535
+Rp2536
+sS'max chait'
 p2537
-aVWayne B. Salisbury
-p2538
-asS'Virginia Schulberg'
-p2539
-(lp2540
-VMrs. Peter Martin
+g2
+((lp2538
+g279
+ag58
+atp2539
+Rp2540
+sS'van brook'
 p2541
-aVElizabeth Wilson
-p2542
-asS'Dr Abowitz'
-p2543
-(lp2544
-VDr. Mendell M. Krieger
+g2
+((lp2542
+g58
+atp2543
+Rp2544
+sS'jim keller'
 p2545
-aVRoy Huggins
-p2546
-asS'Oscar Barnes'
-p2547
-(lp2548
-VWalter Scott Dunn
+g2
+((lp2546
+g48
+atp2547
+Rp2548
+sS'eddie pietrowski'
 p2549
-asS'Louis Perry'
-p2550
-(lp2551
-VRichard F. O'Hair
-p2552
-asS'Louis L. Kaplan'
+g2
+((lp2550
+g58
+atp2551
+Rp2552
+sS'mrs. strasberg'
 p2553
-(lp2554
-VThomas Delaney
+g2
+((lp2554
+S'paula miller'
 p2555
-asS'Cea Geiselman'
-p2556
-(lp2557
-VSamuel DiMaria
+atp2556
+Rp2557
+sS'benjamin lieberman'
 p2558
-aVMrs. Joe Kres
-p2559
-asS'Harold Buchman'
-p2560
-(lp2561
-VLeo Townsend
+g2
+((lp2559
+g681
+atp2560
+Rp2561
+sS'adeline cole'
 p2562
-aVElizabeth Wilson
-p2563
-aVAnne Ray Frank
-p2564
-asS'Marvin Gladstone'
-p2565
-(lp2566
-VBereniece Baldwin
-p2567
-aVMrs. Harry
-p2568
-asS'Roy Cones'
-p2569
-(lp2570
-VWayne B. Salisbury
-p2571
-asS'Lane Thomas'
-p2572
-(lp2573
-VRoy Thompson
+g2
+((lp2563
+g4
+atp2564
+Rp2565
+sS'john hell'
+p2566
+g2
+((lp2567
+g172
+ag284
+ag4
+ag58
+ag191
+atp2568
+Rp2569
+sS'paul geiselman'
+p2570
+g2
+((lp2571
+g201
+atp2572
+Rp2573
+sS'pauline hopkins'
 p2574
-asS'Leo Ploetchl'
-p2575
-(lp2576
-VBereniece Baldwin
-p2577
-asS'Robert Rossen'
+g2
+((lp2575
+g236
+atp2576
+Rp2577
+sS'melvyn letzman'
 p2578
-(lp2579
-VRichard Collins
-p2580
-aVReis Rosenberg
-p2581
-aVLeo Townsend
-p2582
-aVAnne Ray Frank
-p2583
-asS'Joseph Bezenhoffer'
-p2584
-(lp2585
-VJoe Roy Thompson
-p2586
-asS'Sue Showerman'
-p2587
-(lp2588
-VBereniece Baldwin
+g2
+((lp2579
+g28
+atp2580
+Rp2581
+sg696
+g2
+((lp2582
+g48
+atp2583
+Rp2584
+sS'mary v farmer'
+p2585
+g2
+((lp2586
+g42
+atp2587
+Rp2588
+sS'leon katzen'
 p2589
-asS'Booker White'
-p2590
-(lp2591
-VJohn Edward Cooke
-p2592
-asS'Byron Edwards'
+g2
+((lp2590
+g192
+atp2591
+Rp2592
+sS'joe. marlovits'
 p2593
-(lp2594
-VShelton Tappes
-p2595
-aVWayne B. Salisbury
-p2596
-asS'Mary Robinson'
+g2
+((lp2594
+g696
+atp2595
+Rp2596
+sS'darr smith'
 p2597
-(lp2598
-VPaul Marion
-p2599
-aVOwen Vinson
-p2600
-asS'Tom Patterson'
+g2
+((lp2598
+g737
+ag738
+ag41
+ag192
+ag40
+ag43
+atp2599
+Rp2600
+sS'pasco soso'
 p2601
-(lp2602
-VHarold Ashe
-p2603
-asS'Mischa Altman'
-p2604
-(lp2605
-VDavid Raksin
-p2606
-asS'Eli Jacobson'
-p2607
-(lp2608
-VGeorge Bassman
+g2
+((lp2602
+g192
+atp2603
+Rp2604
+sS'naomi. robeson'
+p2605
+g2
+((lp2606
+g237
+atp2607
+Rp2608
+sS'jeff corey'
 p2609
-asS'Leonard Lauderdale'
-p2610
-(lp2611
-VBereniece Baldwin
-p2612
-asS'Ina LaMaux'
+g2
+((lp2610
+g236
+ag358
+atp2611
+Rp2612
+sS'bay teeple'
 p2613
-(lp2614
-VLee Lundgren
-p2615
-asS'Tony Kraber'
-p2616
-(lp2617
-VElia Kazan
-p2618
-aVClifford Odets
-p2619
-asS'Agnes Grigg'
-p2620
-(lp2621
-VBereniece Baldwin
-p2622
-asS'Clem Dalton'
-p2623
-(lp2624
-VBereniece Baldwin
+g2
+((lp2614
+g151
+atp2615
+Rp2616
+sS'milton schleicher'
+p2617
+g2
+((lp2618
+g58
+atp2619
+Rp2620
+sS'mercier reese'
+p2621
+g2
+((lp2622
+g40
+atp2623
+Rp2624
+sS'alice smith'
 p2625
-asS'Sam Parks'
-p2626
-(lp2627
-VRoy Thompson
-p2628
-asS'Dick Jones'
+g2
+((lp2626
+g190
+ag192
+atp2627
+Rp2628
+sS'jack gore'
 p2629
-(lp2630
-VWayne B. Salisbury
-p2631
-asS'Nick Daniels'
-p2632
-(lp2633
-VBereniece Baldwin
-p2634
-asS'Sidney Benson'
-p2635
-(lp2636
-VTed Leo Townsend
-p2637
-aVElia Kazan
-p2638
-aVClifford Odets
-p2639
-asS'Nicholas Bela'
+g2
+((lp2630
+g28
+ag4
+ag58
+atp2631
+Rp2632
+sg1240
+g2
+((lp2633
+g28
+atp2634
+Rp2635
+sS'rachael carter'
+p2636
+g2
+((lp2637
+g210
+ag142
+atp2638
+Rp2639
+sS'hy fireman'
 p2640
-(lp2641
-VLeo Townsend
-p2642
-asS'George Cook'
-p2643
-(lp2644
-VBereniece Baldwin
-p2645
-asS'James Tracy'
-p2646
-(lp2647
-VHarold Ashe
+g2
+((lp2641
+g58
+atp2642
+Rp2643
+sS'verne piazza'
+p2644
+g2
+((lp2645
+g58
+atp2646
+Rp2647
+sS'mills sampy'
 p2648
-asS'Jim Tourney'
-p2649
-(lp2650
-VHarold Ashe
-p2651
-aVMildred Ashe
+g2
+((lp2649
+g5
+atp2650
+Rp2651
+sS'jeannie kudlik'
 p2652
-asS'Marjorie Potts'
-p2653
-(lp2654
-VGregor Manoff
-p2655
-asS'Sam Houston Allen'
+g2
+((lp2653
+g58
+atp2654
+Rp2655
+sS'pat toohey'
 p2656
-(lp2657
-VDavid Aaron
-p2658
-aVWilliam G. Israel
-p2659
-asS'Betty DeCormier'
+g2
+((lp2657
+g172
+ag4
+ag5
+atp2658
+Rp2659
+sS'fay g grossman'
 p2660
-(lp2661
-VRobert DeCormier
-p2662
-asS'Charles Spencer'
-p2663
-(lp2664
-VSamuel DiMaria
-p2665
-asS'Mrs Corey'
-p2666
-(lp2667
-VGeorge Edward Dmytryk
+g2
+((lp2661
+g58
+atp2662
+Rp2663
+sS'harold robertson'
+p2664
+g2
+((lp2665
+g58
+atp2666
+Rp2667
+sS'nick daniels'
 p2668
-asS'Victor Shapiro'
-p2669
-(lp2670
-VGeorge Bassman
-p2671
-asS'Abner Berry'
+g2
+((lp2669
+g58
+atp2670
+Rp2671
+sS'jules yanover'
 p2672
-(lp2673
-VRichard F. O'Hair
+g2
+((lp2673
+Vrichard o'hair
 p2674
-aVWayne B. Salisbury
-p2675
-asS'Ann Roth Morgan'
-p2676
-(lp2677
-VAnn Roth Morgan Richards
-p2678
-asS'Charles Katz'
-p2679
-(lp2680
-VDavid Aaron
+atp2675
+Rp2676
+sS'mike fersick'
+p2677
+g2
+((lp2678
+g201
+atp2679
+Rp2680
+sS'as a condon'
 p2681
-aVAlbert Herzig
-p2682
-aVWilliam G. Israel
+g2
+((lp2682
+Vdr. condon
 p2683
-aVMilton S. Tyre
-p2684
-asS'Dr Reynolds'
-p2685
-(lp2686
-VFrederick G. Louise Light Silver
-p2687
-aVDr. Sam Reznick
-p2688
-asS'Alice Ferris'
-p2689
-(lp2690
-VRichard F. O'Hair
-p2691
-asS'Fred Field'
-p2692
-(lp2693
-VWayne B. Salisbury
+atp2684
+Rp2685
+sS'ann ganley'
+p2686
+g2
+((lp2687
+g172
+ag4
+ag58
+ag5
+atp2688
+Rp2689
+sS'foss baker'
+p2690
+g2
+((lp2691
+g4
+atp2692
+Rp2693
+sS'roy narancich'
 p2694
-asS'James Keller'
-p2695
-(lp2696
-VRichard F. O'Hair
-p2697
-aVWayne B. Salisbury
+g2
+((lp2695
+g58
+ag191
+atp2696
+Rp2697
+sS'jake jacobowitz'
 p2698
-asS'Harold Shapiro'
-p2699
-(lp2700
-VBereniece Baldwin
-p2701
-asS'Abe Sokolov'
+g2
+((lp2699
+g58
+atp2700
+Rp2701
+sS'charles young'
 p2702
-(lp2703
-VSamuel DiMaria
-p2704
-asS'Herman Burt'
-p2705
-(lp2706
-VBereniece Baldwin
-p2707
-asS'Lawrence Ross'
-p2708
-(lp2709
-VHarold Ashe
+g2
+((lp2703
+g42
+atp2704
+Rp2705
+sS'sue lawson'
+p2706
+g2
+((lp2707
+g210
+ag15
+ag92
+ag142
+ag1780
+atp2708
+Rp2709
+sS'walter barry'
 p2710
-aVMildred Ashe
-p2711
-asS'Miriam Bonner'
-p2712
-(lp2713
-VHarold Ashe
+g2
+((lp2711
+g121
+atp2712
+Rp2713
+sS'jean butler'
 p2714
-asS'Marion Young'
-p2715
-(lp2716
-VBereniece Baldwin
-p2717
-asS'Lillian Jones'
+g2
+((lp2715
+g85
+atp2716
+Rp2717
+sS'roland kibbee'
 p2718
-(lp2719
-VHarold Ashe
-p2720
-asS'Flo Atkinson'
-p2721
-(lp2722
-VMrs. Richard Criley
-p2723
-asS'Carl Palmquist'
-p2724
-(lp2725
-VBereniece Baldwin
+g2
+((lp2719
+g86
+atp2720
+Rp2721
+sS'bernice eraser'
+p2722
+g2
+((lp2723
+g88
+atp2724
+Rp2725
+sS'sidney burke'
 p2726
-asS'Harry Fainaru'
-p2727
-(lp2728
-VWayne B. Salisbury
-p2729
-asS'Frank Sykes'
+g2
+((lp2727
+g28
+atp2728
+Rp2729
+sS'esther shandler'
 p2730
-(lp2731
-VWayne B. Salisbury
-p2732
-aVBereniece Baldwin
-p2733
-asS'Spencer Austrian'
+g2
+((lp2731
+g34
+ag116
+atp2732
+Rp2733
+sS'phil hommer'
 p2734
-(lp2735
-VHarold Ashe
-p2736
-aVMildred Ashe
-p2737
-asS'Henry Blankfort'
+g2
+((lp2735
+g58
+atp2736
+Rp2737
+sS'felix maise'
 p2738
-(lp2739
-VEdward Dmytryk
-p2740
-asS'Andy Lancey'
-p2741
-(lp2742
-VWalter Scott Dunn
-p2743
-asS'Margaret Gruen'
-p2744
-(lp2745
-VElizabeth Wilson
+g2
+((lp2739
+g58
+atp2740
+Rp2741
+sS'rex wheelock'
+p2742
+g2
+((lp2743
+g151
+atp2744
+Rp2745
+sS'raphael konigsburg'
 p2746
-aVPaul Marion
-p2747
-asS'Ben Barzman'
-p2748
-(lp2749
-VLeo Townsend
+g2
+((lp2747
+g40
+atp2748
+Rp2749
+sS'florence kniep'
 p2750
-aVCharles Daggett
-p2751
-aVStanley Roberts
-p2752
-aVRoy Huggins
-p2753
-asS'Walter Stempel'
+g2
+((lp2751
+g4
+atp2752
+Rp2753
+sS'matilda maxwell'
 p2754
-(lp2755
-VLee Lundgren
-p2756
-asS'Jim Keller'
-p2757
-(lp2758
-VRoy Thompson
-p2759
-asS'Abe Feinglass'
-p2760
-(lp2761
-VLee Lundgren
+g2
+((lp2755
+g1748
+ag5
+atp2756
+Rp2757
+sS'marvin gladstone'
+p2758
+g2
+((lp2759
+g1590
+ag58
+atp2760
+Rp2761
+sS'pettis perry'
 p2762
-asS'Luther Talley'
-p2763
-(lp2764
-VLee Lundgren
-p2765
-aVLee Lundgren
+g2
+((lp2763
+g40
+ag42
+ag43
+atp2764
+Rp2765
+sS'sterling rochester'
 p2766
-asS'Shirley Ross'
-p2767
-(lp2768
-VWayne B. Salisbury
-p2769
-asS'Celeste Strack'
+g2
+((lp2767
+g201
+atp2768
+Rp2769
+sS'fred williams'
 p2770
-(lp2771
-VRoy Huggins
-p2772
-asS'Royce Kennedy'
-p2773
-(lp2774
-VBereniece Baldwin
-p2775
-asS'Randolph Luke'
-p2776
-(lp2777
-VRoy Thompson
+g2
+((lp2771
+g4
+ag58
+atp2772
+Rp2773
+sS'percy solotoy'
+p2774
+g2
+((lp2775
+g28
+ag332
+ag42
+atp2776
+Rp2777
+sS'gus jurist'
 p2778
-asS'Larry Blyth'
-p2779
-(lp2780
-VWayne B. Salisbury
-p2781
-asS'Herbert Klein'
+g2
+((lp2779
+g58
+atp2780
+Rp2781
+sS'jim tourney'
 p2782
-(lp2783
-VHarold Ashe
-p2784
-asS'Florence Criley'
-p2785
-(lp2786
-VMrs. Richard Criley
-p2787
-aVFlo Atkinson
-p2788
-asS'Allen Matthews'
-p2789
-(lp2790
-VElizabeth Wilson
-p2791
-asS'Sarah Reznick'
-p2792
-(lp2793
-VAlice Bennett
+g2
+((lp2783
+g28
+ag42
+atp2784
+Rp2785
+sS'zina b haskell'
+p2786
+g2
+((lp2787
+g58
+atp2788
+Rp2789
+sS'simon moskalik'
+p2790
+g2
+((lp2791
+g191
+atp2792
+Rp2793
+sS'phillis mcray'
 p2794
-asS'Jess Whipple'
-p2795
-(lp2796
-VWayne B. Salisbury
-p2797
-asS'Warren Batterson'
-p2798
-(lp2799
-VDonald O. Spencer
-p2800
-asS'Harold Allen'
-p2801
-(lp2802
-VThomas Delaney
+g2
+((lp2795
+Vmrs. otis mcray
+p2796
+atp2797
+Rp2798
+sS'jerry fielde'
+p2799
+g2
+((lp2800
+g151
+atp2801
+Rp2802
+sS'robert l. richards'
 p2803
-asS'Richard McMahon'
-p2804
-(lp2805
-VCasimir Rataj
-p2806
-asS'Beatrice Huff'
+g2
+((lp2804
+g76
+atp2805
+Rp2806
+sS'john milkovitch'
 p2807
-(lp2808
-VJohn Edward Cooke
-p2809
-asS'Murray Borad'
-p2810
-(lp2811
-VBereniece Baldwin
-p2812
-asS'Sam Moore'
-p2813
-(lp2814
-VOwen Vinson
+g2
+((lp2808
+g151
+atp2809
+Rp2810
+sS'daniel l james'
+p2811
+g2
+((lp2812
+g18
+atp2813
+Rp2814
+sS'sam mcghee'
 p2815
-asS'John Bright'
-p2816
-(lp2817
-VRichard Collins
-p2818
-aVFrank Tuttle
+g2
+((lp2816
+g5
+atp2817
+Rp2818
+sS'clarence stoecker'
 p2819
-aVElizabeth Wilson
-p2820
-aVBudd Schulberg
-p2821
-asS'Maurice Rapf'
-p2822
-(lp2823
-VLeo Townsend
-p2824
-aVElizabeth Wilson
-p2825
-asS'Sam Kushner'
-p2826
-(lp2827
-VLee Lundgren
-p2828
-aVIrving Krane
+g2
+((lp2820
+g210
+atp2821
+Rp2822
+sS'hetty vorhaus'
+p2823
+g2
+((lp2824
+g87
+atp2825
+Rp2826
+sS'hannah s donath'
+p2827
+g2
+((lp2828
+Vmrs ludwig donath
 p2829
-asS'Raphael Haskell'
+aVmrs. donath
 p2830
-(lp2831
-VBereniece Baldwin
-p2832
-asS'Pfc Searles'
+atp2831
+Rp2832
+sS'ida miller'
 p2833
-(lp2834
-VWayne B. Salisbury
-p2835
-aVShapiro Wayne B. Salisbury
-p2836
-asS'Joe Marlovits'
+g2
+((lp2834
+g2566
+atp2835
+Rp2836
+sS'hazel jones'
 p2837
-(lp2838
-VJoseph Bezenhof
-p2839
-asS'Goldie Bromberg'
-p2840
-(lp2841
-VMrs. J. Edward Frank Tuttle
-p2842
-aVF. Martin
-p2843
-asS'Harmon Alexander'
-p2844
-(lp2845
-VPaul Marion
-p2846
-aVOwen Vinson
-p2847
-asS'John Issacs'
-p2848
-(lp2849
-VRichard F. O'Hair
-p2850
-aVWayne B. Salisbury
-p2851
-asS'Leroy Krawford'
-p2852
-(lp2853
-VRichard F. O'Hair
-p2854
-aVShelton Tappes
-p2855
-asS'Mrs Callahan'
-p2856
-(lp2857
-VHarold Ashe
-p2858
-asS'Charles Lawson'
-p2859
-(lp2860
-VAlcide T. Kratz
+g2
+((lp2838
+g151
+atp2839
+Rp2840
+sS'dr. reznick'
+p2841
+g2
+((lp2842
+g2841
+atp2843
+Rp2844
+sS'reva redstone'
+p2845
+g2
+((lp2846
+g172
+ag5
+atp2847
+Rp2848
+sS'walter mcelroy'
+p2849
+g2
+((lp2850
+g42
+atp2851
+Rp2852
+sS'irving goff'
+p2853
+g2
+((lp2854
+g121
+atp2855
+Rp2856
+sS'gurley walker'
+p2857
+g2
+((lp2858
+g58
+atp2859
+Rp2860
+sS'matt richman'
 p2861
-aVJohn Edward Cooke
-p2862
-asS'Phoebe Brand'
-p2863
-(lp2864
-VLeo Townsend
+g2
+((lp2862
+g33
+ag35
+atp2863
+Rp2864
+sS'sally davis'
 p2865
-aVEliz Kazan
-p2866
-aVClifford Odets
-p2867
-asS'Marta Bogner'
-p2868
-(lp2869
-VAlice Bennett
-p2870
-asS'Bill Ward'
-p2871
-(lp2872
-VHarold Ashe
+g2
+((lp2866
+g58
+atp2867
+Rp2868
+sS'hugo butler'
+p2869
+g2
+((lp2870
+g91
+ag85
+ag87
+atp2871
+Rp2872
+sS'ruth poison'
 p2873
-aVMildred Ashe
-p2874
-asS'Charles Glenn'
-p2875
-(lp2876
-VRichard Collins
+g2
+((lp2874
+g58
+atp2875
+Rp2876
+sS'alvah bessie'
 p2877
-aVFrank Tuttle
-p2878
-aVLeo Townsend
-p2879
-aVPaul Marion
-p2880
-asS'Frank Cestare'
+g2
+((lp2878
+g91
+ag86
+ag92
+ag18
+ag53
+atp2879
+Rp2880
+sS'imogene brantley'
 p2881
-(lp2882
-VThomas Delaney
-p2883
-aVSamuel DiMaria
-p2884
-asS'Louis Terkel'
+g2
+((lp2882
+g2881
+atp2883
+Rp2884
+sVrobert decormier
 p2885
-(lp2886
-VOwen Vinson
-p2887
-asS'Esther Siegel'
-p2888
-(lp2889
-VRichard F. O'Hair
-p2890
-aVBereniece Baldwin
-p2891
-asS'Robert D Katz'
-p2892
-(lp2893
-VDavid Aaron
-p2894
-aVWilliam G. Israel
-p2895
-aVMilton S. Tyre
+g2
+((lp2886
+g2885
+atp2887
+Rp2888
+sS'joe poskonka'
+p2889
+g2
+((lp2890
+g48
+atp2891
+Rp2892
+sg1886
+g2
+((lp2893
+g1869
+atp2894
+Rp2895
+sS'cliff lechrome'
 p2896
-asS'Dave Ellis'
-p2897
-(lp2898
-VOwen Vinson
-p2899
-asS'Morris Carnovsky'
+g2
+((lp2897
+g28
+atp2898
+Rp2899
+sS'frank rogers'
 p2900
-(lp2901
-VMarc Lawrence
-p2902
-aVLeo Townsend
-p2903
-aVCharles Daggett
+g2
+((lp2901
+g142
+atp2902
+Rp2903
+sS'albert hickox'
 p2904
-aVElia Kazan
-p2905
-asS'Andrew Overgaard'
-p2906
-(lp2907
-VElia Kazan
+g2
+((lp2905
+g28
+atp2906
+Rp2907
+sS'john gray'
 p2908
-aVClifford Odets
-p2909
-asS'Henry Meyers'
-p2910
-(lp2911
-VLeo Townsend
+g2
+((lp2909
+g192
+atp2910
+Rp2911
+sS'pope huff'
 p2912
-aVCharles Daggett
-p2913
-asS'Marion Elder Patrick'
-p2914
-(lp2915
-VBereniece Baldwin
+g2
+((lp2913
+g210
+atp2914
+Rp2915
+sS'theo kruse'
 p2916
-aVFred Douglas Club
-p2917
-asS'Barbara Wilson'
-p2918
-(lp2919
-VWalter Scott Dunn
+g2
+((lp2917
+g151
+atp2918
+Rp2919
+sS'sadie ornitz'
 p2920
-asS'Murray Levine'
-p2921
-(lp2922
-VDonald O. Spencer
-p2923
-asS'Sidney Davenport'
-p2924
-(lp2925
-VRoy Thompson
-p2926
-aVPete Roy Thompson
+g2
+((lp2921
+g15
+aVmrs. sam ornitz
+p2922
+atp2923
+Rp2924
+sS'delaware jersey'
+p2925
+g2
+((lp2926
+g121
+aVjoe kuzma
 p2927
-asS'Robert Lees'
-p2928
-(lp2929
-VFrank Tuttle
+atp2928
+Rp2929
+sS'mr. mcallister'
 p2930
-aVLeo Townsend
-p2931
-asS'Fred Steinmetz'
-p2932
-(lp2933
-VDavid Aaron
+g2
+((lp2931
+g4
+atp2932
+Rp2933
+sS'hattie johnson'
 p2934
-aVAlbert Herzig
-p2935
-aVMilton S. Tyre
-p2936
-aVWm. G. Israel
-p2937
-aVJ. Max Silver
+g2
+((lp2935
+g5
+atp2936
+Rp2937
+sS'izzy berenson'
 p2938
-asS'Dick Fiske'
-p2939
-(lp2940
-VElizabeth Wilson
-p2941
-asS'Joseph Reams'
+g2
+((lp2939
+g172
+ag5
+atp2940
+Rp2941
+sS'bill oliver'
 p2942
-(lp2943
-VThomas Delaney
-p2944
-aVN. Y.
-p2945
-asS'Arthur McPhaul'
+g2
+((lp2943
+g40
+ag41
+atp2944
+Rp2945
+sS'dave silverberg'
 p2946
-(lp2947
-VRichard F. O'Hair
-p2948
-aVWalter Scott Dunn
-p2949
-aVWayne B. Salisbury
+g2
+((lp2947
+g5
+atp2948
+Rp2949
+sS'adrian scott'
 p2950
-aVBereniece Baldwin
-p2951
-aVShelton Tappes
-p2952
-aVben Shelton Tappes
-p2953
-asS'Hy Fireman'
+g2
+((lp2951
+g53
+atp2952
+Rp2953
+sS'edward huebseh'
 p2954
-(lp2955
-VBereniece Baldwin
-p2956
-asS'Aubrey Finn'
-p2957
-(lp2958
-VDavid Aaron
-p2959
-aVMilton S. Tyre
+g2
+((lp2955
+g91
+ag85
+ag805
+ag18
+atp2956
+Rp2957
+sS'fred franchi'
+p2958
+g2
+((lp2959
+g34
+ag43
+ag33
+ag40
+aVj. allen louise light silver
 p2960
-asS'George Pepper'
-p2961
-(lp2962
-VEdward Dmytryk
+ag35
+atp2961
+Rp2962
+sS'bettv verri'
 p2963
-asS'Katherine Ripken'
-p2964
-(lp2965
-VWalter Scott Dunn
-p2966
-asS'Gale Biberman'
+g2
+((lp2964
+g192
+atp2965
+Rp2966
+sS'reuben ship'
 p2967
-(lp2968
-VGale Sondergaard
-p2969
-asS'Arthur Stern'
-p2970
-(lp2971
-VRichard F. O'Hair
-p2972
-asS'Dorothy Brinich'
-p2973
-(lp2974
-VBereniece Baldwin
+g2
+((lp2968
+g236
+atp2969
+Rp2970
+sS'aaron bindman'
+p2971
+g2
+((lp2972
+g192
+atp2973
+Rp2974
+sS'branislaus zukas'
 p2975
-asS'Mrs Rogers'
-p2976
-(lp2977
-VAndrew Alcide T. Kratz
-p2978
-asS'Mrs Alexander'
+g2
+((lp2976
+g40
+atp2977
+Rp2978
+sS'olga zenchuck'
 p2979
-(lp2980
-VAnnie Roy Thompson
-p2981
-asS'Matt Pellman'
-p2982
-(lp2983
-VMike Martin
-p2984
-aVMax Appleinan
-p2985
-aVMax Silver
-p2986
-asS'Jane Grodzins'
+g2
+((lp2980
+g58
+atp2981
+Rp2982
+sS'sam parks'
+p2983
+g2
+((lp2984
+g48
+atp2985
+Rp2986
+sS'percy llewelyn'
 p2987
-(lp2988
-VDavid Aaron
-p2989
-asS'Gus Anderson'
-p2990
-(lp2991
-VRichard F. O'Hair
-p2992
-asS'John Porter'
-p2993
-(lp2994
-VDavid Aaron
-p2995
-aVWilliam G. Israel
-p2996
-aVAlbert Herzig
-p2997
-aVMilton S. Tyre
+g2
+((lp2988
+g172
+ag58
+atp2989
+Rp2990
+sg1674
+g2
+((lp2991
+g5
+atp2992
+Rp2993
+sS'john wilson'
+p2994
+g2
+((lp2995
+g151
+atp2996
+Rp2997
+sS'francis faragoh'
 p2998
-asS'Eleanor Price'
-p2999
-(lp3000
-VEleanor Thomas Delaney
-p3001
-asS'Dorothy Healy'
+g2
+((lp2999
+g502
+ag53
+atp3000
+Rp3001
+sS'marion e patrick'
 p3002
-(lp3003
-VDorothy Albert Herzig
+g2
+((lp3003
+Vfred douglas club
 p3004
-aVCharles Judson
-p3005
-aVAlice Bennett
-p3006
-aVUrcel Daniel
+ag58
+atp3005
+Rp3006
+sS'will geer'
 p3007
-asS'Mary Morrison Maraniss'
-p3008
-(lp3009
-VMary Morrison
-p3010
-asS'Fred Fine'
+g2
+((lp3008
+g28
+atp3009
+Rp3010
+sS'charley hayes'
 p3011
-(lp3012
-VLee Lundgren
-p3013
-aVIrving Krane
-p3014
-asS'Tommy Dennis'
+g2
+((lp3012
+g48
+atp3013
+Rp3014
+sS'joseph starobin'
 p3015
-(lp3016
-VWayne B. Salisbury
-p3017
-asS'Joe Stern'
-p3018
-(lp3019
-VDonald O. Spencer
-p3020
-asS'Eva Pitcher'
-p3021
-(lp3022
-VWayne B. Salisbury
+g2
+((lp3016
+g192
+atp3017
+Rp3018
+sS'elizabeth faragoh'
+p3019
+g2
+((lp3020
+g53
+atp3021
+Rp3022
+sS'willie howell'
 p3023
-asS'Mitchell Lindeman'
-p3024
-(lp3025
-VPaul Marion
-p3026
-aVOwen Vinson
+g2
+((lp3024
+g48
+atp3025
+Rp3026
+sS'robert purdy'
 p3027
-asS'Zina Brandi Haskell'
-p3028
-(lp3029
-VMrs. Ray Bereniece Baldwin
-p3030
-asS'William McKie'
+g2
+((lp3028
+g58
+atp3029
+Rp3030
+sS'william allan'
 p3031
-(lp3032
-VWayne B. Salisbury
-p3033
-aVShelton Tappes
-p3034
-asS'Floyd McDonnell'
+g2
+((lp3032
+g172
+ag279
+ag4
+ag58
+ag5
+atp3033
+Rp3034
+sS'maurice rapf'
 p3035
-(lp3036
-VWayne B. Salisbury
-p3037
-asS'Alice Cohee'
-p3038
-(lp3039
-VCharles Judson
-p3040
-aVAlice Bennett
-p3041
-aVUrcel Daniel
-p3042
-asS'Dr Goodlaw'
+g2
+((lp3036
+g15
+ag18
+atp3037
+Rp3038
+sS'george altman'
+p3039
+g2
+((lp3040
+g35
+ag116
+atp3041
+Rp3042
+sS'sally pietrowski'
 p3043
-(lp3044
-VEdward Isiah
-p3045
-aVDr. Goodlaw Optometrist
-p3046
-asS'Ernest Scott'
+g2
+((lp3044
+g2549
+ag4
+atp3045
+Rp3046
+sS'mary morrell'
 p3047
-(lp3048
-VThomas Delaney
+g2
+((lp3048
+g121
+aVmrs. robert morrell
 p3049
-asS'Bill Gardner'
-p3050
-(lp3051
-VDonald O. Spencer
+ag201
+atp3050
+Rp3051
+sS'arthur storey'
 p3052
-asS'Dr Druckman'
-p3053
-(lp3054
-VJacob S. Louise Light Silver
-p3055
-aVSam Reznick
+g2
+((lp3053
+g121
+ag5
+atp3054
+Rp3055
+sS'victor kaplan'
 p3056
-a(lp3057
-VDr. Druck
-p3058
-aasS'Sarah Levine'
-p3059
-(lp3060
-VDonald O. Spencer
-p3061
-asS'Max Bogner'
-p3062
-(lp3063
-VAlice Bennett
+g2
+((lp3057
+g115
+ag34
+ag35
+ag116
+atp3058
+Rp3059
+sS'lou amster'
+p3060
+g2
+((lp3061
+g41
+atp3062
+Rp3063
+sS'glass glassgold'
 p3064
-asS'Ruth Yanover'
-p3065
-(lp3066
-VRichard F. CTHair
-p3067
-asS'Dr Rosenblum'
+g2
+((lp3065
+g5
+atp3066
+Rp3067
+sS'rose bush'
 p3068
-(lp3069
-VGordon Dr. Mendell M. Krieger
-p3070
-asS'Joseph Losey'
-p3071
-(lp3072
-VLeo Townsend
-p3073
-asS'Rose Bush'
-p3074
-(lp3075
-VMildred Ashe
+g2
+((lp3069
+g42
+atp3070
+Rp3071
+sS'henry meihs'
+p3072
+g2
+((lp3073
+g192
+atp3074
+Rp3075
+sS'frances price'
 p3076
-asS'Sally Pietrowski'
-p3077
-(lp3078
-VWayne B. Salisbury
-p3079
-aVMrs. Eddie Pietrowski
+g2
+((lp3077
+g58
+atp3078
+Rp3079
+sS'richard mcmahon'
 p3080
-asS'Janet Stephenson'
-p3081
-(lp3082
-VJanet George Glass
-p3083
-asS'William J. Sheehan'
+g2
+((lp3081
+g181
+atp3082
+Rp3083
+sS'olaf leddel'
 p3084
-(lp3085
-VLee Lundgren
-p3086
-asS'Marjorie Manoff'
-p3087
-(lp3088
-VLeo Townsond
-p3089
-aVMrs. Arnold Manoff
-p3090
-aVElizabeth Wilson
-p3091
-aVMarjorie Potts
+g2
+((lp3085
+g151
+atp3086
+Rp3087
+sS'jesus gonzales'
+p3088
+g2
+((lp3089
+g58
+atp3090
+Rp3091
+sS'esther shapiro'
 p3092
-asS'Helen DeMarco'
-p3093
-(lp3094
-VThomas Delaney
-p3095
-aVDavid Davis
+g2
+((lp3093
+g28
+ag236
+ag58
+atp3094
+Rp3095
+sS'esther siegel'
 p3096
-aVSamuel DiMaria
-p3097
-asS'Tom Cullen'
-p3098
-(lp3099
-VAlice Bennett
+g2
+((lp3097
+g58
+ag5
+atp3098
+Rp3099
+sS'flo goodman'
 p3100
-aVUrcel Daniel
-p3101
-asS'Hilliard Ellis'
-p3102
-(lp3103
-VLee Lundgren
+g2
+((lp3101
+g5
+atp3102
+Rp3103
+sS'john stapp'
 p3104
-asS'Marguerite Roberts'
-p3105
-(lp3106
-VMrs. Jobn Sanford
-p3107
-asS'Alice Kocel'
+g2
+((lp3105
+g237
+ag15
+ag86
+ag18
+ag91
+ag236
+ag502
+ag92
+atp3106
+Rp3107
+sS'william schneiderman'
 p3108
-(lp3109
-VBereniece Baldwin
-p3110
-asS'Dr Kempler'
-p3111
-(lp3112
-VDr. Kempler
-p3113
-asS'Max Ireland'
-p3114
-(lp3115
-VWalter Scott Dunn
+g2
+((lp3109
+g284
+atp3110
+Rp3111
+sS'edward biberman'
+p3112
+g2
+((lp3113
+g91
+ag85
+ag502
+atp3114
+Rp3115
+sS'john schmies'
 p3116
-asS'Jan Jeffries'
-p3117
-(lp3118
-VHenry Blankfort
-p3119
-aVHenry Blankfort
+g2
+((lp3117
+g151
+ag142
+atp3118
+Rp3119
+sS'lloyd gough'
 p3120
-aVV. J. Sterling Hayden
-p3121
-aVRichard Collins
-p3122
-aVBudd Schulberg
-p3123
-aVFrank Tuttle
+g2
+((lp3121
+g236
+ag85
+atp3122
+Rp3123
+sS'james jackson'
 p3124
-aVHarold Ashe
-p3125
-aVElia Kazan
-p3126
-aVClifford Odets
-p3127
-asS'Adrian Scott'
+g2
+((lp3125
+g4
+ag58
+atp3126
+Rp3127
+sS'george manning'
 p3128
-(lp3129
-VEdward Dmytryk
-p3130
-asS'Annette Horn'
-p3131
-(lp3132
-VAlcide T. Kratz
-p3133
-asS'Mrs Katz'
-p3134
-(lp3135
-VDr. Mendell M. Krieger
+g2
+((lp3129
+g48
+atp3130
+Rp3131
+sS'sylvia m polonsky'
+p3132
+g2
+((lp3133
+g1528
+ag18
+atp3134
+Rp3135
+sS'leslie dolman'
 p3136
-asS'Ann Kelly'
-p3137
-(lp3138
-VRichard F. O'Hair
-p3139
-aVWalter Scott Dunn
+g2
+((lp3137
+g4
+atp3138
+Rp3139
+sS'calvin goodman'
 p3140
-asS'James Widmark'
-p3141
-(lp3142
-VWayne B. Salisbury
-p3143
-asS'Roy Hudson'
+g2
+((lp3141
+g5
+atp3142
+Rp3143
+sS'hoke higdon'
 p3144
-(lp3145
-VWayne B. Salisbury
-p3146
-asS'Fred Moore'
-p3147
-(lp3148
-VJohn Edward Cooke
-p3149
-asS'Joseph Schlicht'
-p3150
-(lp3151
-VBereniece Baldwin
-p3152
-asS'Carneller Foreman'
+g2
+((lp3145
+g4
+atp3146
+Rp3147
+sS'carl winter'
+p3148
+g2
+((lp3149
+g4
+ag58
+ag5
+atp3150
+Rp3151
+sg2555
+g2
+((lp3152
+g737
+ag42
+ag2555
+aVmr. kazan
 p3153
-(lp3154
-VRichard F. O'Hair
-p3155
-aVBereniece Baldwin
-p3156
-asS'Leo Cottrell'
+aVsee lee
+p3154
+atp3155
+Rp3156
+sS'louis terkel'
 p3157
-(lp3158
-VBereniece Baldwin
-p3159
-asS'Bernard Vorhaus'
-p3160
-(lp3161
-VFrank Tuttle
-p3162
-asS'Stanley Nowak'
-p3163
-(lp3164
-VCasimir Rataj
+g2
+((lp3158
+g237
+atp3159
+Rp3160
+sS'ben barzman'
+p3161
+g2
+((lp3162
+g332
+ag76
+ag85
+ag18
+atp3163
+Rp3164
+sS'frank cestare'
 p3165
-asS'Louise Todd'
-p3166
-(lp3167
-VHarold Ashe
-p3168
-aVMildred Ashe
+g2
+((lp3166
+g121
+ag201
+atp3167
+Rp3168
+sS'mattie l woodson'
 p3169
-asS'Calvin Goodman'
-p3170
-(lp3171
-VRichard F. O'Hair
-p3172
-asS'Joseph Aidlin'
+g2
+((lp3170
+g4
+ag5
+atp3171
+Rp3172
+sS'robert d katz'
 p3173
-(lp3174
-VHarold Ashe
-p3175
-aVJharles Daggett
-p3176
-asS'Frances Price'
+g2
+((lp3174
+g34
+ag35
+ag116
+atp3175
+Rp3176
+sS'melvin krantzler'
 p3177
-(lp3178
-VBereniece Baldwin
-p3179
-asS'Jane Wallace'
-p3180
-(lp3181
-VHarold Ashe
-p3182
-asS'James Walker'
-p3183
-(lp3184
-VBereniece Baldwin
+g2
+((lp3178
+g192
+atp3179
+Rp3180
+sS'john porter'
+p3181
+g2
+((lp3182
+g115
+ag34
+ag35
+ag116
+atp3183
+Rp3184
+sS'philip e stevenson'
 p3185
-asS'Mary Virginia Farmer'
-p3186
-(lp3187
-VMildred Ashe
-p3188
-asS'Howard Fast'
+g2
+((lp3186
+g76
+atp3187
+Rp3188
+sS'jack stachel'
 p3189
-(lp3190
-VThomas Delaney
-p3191
-aVThomas Delaney
-p3192
-asS'Terry Clark'
+g2
+((lp3190
+g121
+ag4
+atp3191
+Rp3192
+sS'ellenore abowitz'
 p3193
-(lp3194
-VRichard F. O'Hair
+g2
+((lp3194
+g76
+aVmrs. murray abo
 p3195
-asS'Richard L. Rykoff'
-p3196
-(lp3197
-VDavid Aaron
+ag579
+atp3196
+Rp3197
+sS'prokop j prokop'
 p3198
-asS'Dewey Garrett'
-p3199
-(lp3200
-VRichard F. O'Hair
-p3201
-asS'Laura Kelly'
-p3202
-(lp3203
-VWavne B. Salisbury
-p3204
-asS'Fred Graff'
-p3205
-(lp3206
-VMr. Graff
+g2
+((lp3199
+Vmr. prokop
+p3200
+atp3201
+Rp3202
+sS'carl rogers'
+p3203
+g2
+((lp3204
+g172
+atp3205
+Rp3206
+sS'george newsorne'
 p3207
-asS'John Anderson'
-p3208
-(lp3209
-VRichard F. O'Hair
+g2
+((lp3208
+Vmr. novak
+p3209
+aVfrank novak
 p3210
-aVUnited Wayne B. Salisbury
-p3211
-asS'Jack Gore'
-p3212
-(lp3213
-VWayne B. Salisbury
-p3214
-aVChrysler Bereniece Baldwin
-p3215
-asS'Hodges Mason'
-p3216
-(lp3217
-VBereniece Baldwin
-p3218
-asS'Ann Roth Richards'
-p3219
-(lp3220
-VRoy Huggins
+ag4
+ag5
+atp3211
+Rp3212
+sS'william wolff'
+p3213
+g2
+((lp3214
+g236
+ag237
+atp3215
+Rp3216
+sS'john bright'
+p3217
+g2
+((lp3218
+g91
+ag15
+ag284
+ag90
+atp3219
+Rp3220
+sS'celia edwards'
 p3221
-asS'Kenneth Roach'
-p3222
-(lp3223
-VBereniece Baldwin
-p3224
-asS'Norman Ross'
+g2
+((lp3222
+g58
+atp3223
+Rp3224
+sS'morton grant'
 p3225
-(lp3226
-VWayne B. Salisbury
-p3227
-asS'Harry Boskey'
-p3228
-(lp3229
-VWayne B. Salisbury
-p3230
-aVChrysler Bereniece Baldwin
-p3231
-asS'Charles Killinger'
-p3232
-(lp3233
-VAlcide T. Kratz
-p3234
-asS'Samuel Sillen'
-p3235
-(lp3236
-VPaul Marion
-p3237
-as.
+g2
+((lp3226
+g15
+ag92
+atp3227
+Rp3228
+sS'midge asslin'
+p3229
+g2
+((lp3230
+g172
+ag5
+atp3231
+Rp3232
+sS'katherine foreman'
+p3233
+g2
+((lp3234
+g40
+atp3235
+Rp3236
+sg2439
+g2
+((lp3237
+g172
+ag4
+ag5
+atp3238
+Rp3239
+sS'wilma shore'
+p3240
+g2
+((lp3241
+g76
+atp3242
+Rp3243
+sS'leslie edgley'
+p3244
+g2
+((lp3245
+g76
+atp3246
+Rp3247
+sS'leo cefkin'
+p3248
+g2
+((lp3249
+g579
+atp3250
+Rp3251
+sS'roy cones'
+p3252
+g2
+((lp3253
+g4
+atp3254
+Rp3255
+sS'sam witczak'
+p3256
+g2
+((lp3257
+g579
+atp3258
+Rp3259
+sS'tom cullen'
+p3260
+g2
+((lp3261
+g40
+ag41
+atp3262
+Rp3263
+sS'kay bassman'
+p3264
+g2
+((lp3265
+g1156
+ag410
+atp3266
+Rp3267
+sS'abe burrows'
+p3268
+g2
+((lp3269
+g237
+atp3270
+Rp3271
+sS'luther talley'
+p3272
+g2
+((lp3273
+g192
+atp3274
+Rp3275
+sS'dave ellis'
+p3276
+g2
+((lp3277
+g237
+atp3278
+Rp3279
+sS'jack birch'
+p3280
+g2
+((lp3281
+g192
+atp3282
+Rp3283
+sS'mort furay'
+p3284
+g2
+((lp3285
+g58
+atp3286
+Rp3287
+sS'gail knappen'
+p3288
+g2
+((lp3289
+g40
+atp3290
+Rp3291
+sS'william esterman'
+p3292
+g2
+((lp3293
+g34
+ag35
+ag116
+atp3294
+Rp3295
+sS'davida franchi'
+p3296
+g2
+((lp3297
+g40
+ag43
+atp3298
+Rp3299
+sS'henrietta pally'
+p3300
+g2
+((lp3301
+g40
+atp3302
+Rp3303
+sS'faye mcdonnell'
+p3304
+g2
+((lp3305
+g388
+ag4
+atp3306
+Rp3307
+sS'ann kelly'
+p3308
+g2
+((lp3309
+g172
+ag4
+ag5
+atp3310
+Rp3311
+sS'bill gardner'
+p3312
+g2
+((lp3313
+g151
+ag28
+ag42
+atp3314
+Rp3315
+sS'philip connelly'
+p3316
+g2
+((lp3317
+g40
+ag28
+ag41
+ag43
+atp3318
+Rp3319
+sS'sis cunningham'
+p3320
+g2
+((lp3321
+g1312
+aS'hy gordon'
+p3322
+ag5
+atp3323
+Rp3324
+sS'willie gale'
+p3325
+g2
+((lp3326
+g5
+atp3327
+Rp3328
+sg1173
+g2
+((lp3329
+g58
+atp3330
+Rp3331
+sg859
+g2
+((lp3332
+g574
+ag192
+ag237
+ag1708
+ag28
+ag236
+ag222
+ag58
+atp3333
+Rp3334
+s.

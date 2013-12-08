@@ -11,19 +11,30 @@ def clean_whitespace(name):
     return " ".join(name.split())
 
 def nametrans(name):
+    # strip titles, crudely.
+    titles = ["Mr. ", "mr ", "mr. ", "Mr ", "Mrs. ", "mrs ", "Mrs ", "Dr. ", "Dr ", "Dr. ", "dr "]
+    for title in titles:
+        newname = name.replace(title, "")
+        if not newname == name:
+            print name, " -> ", newname
+            name = newname
+            break
+
     curname = name.split(",")
     if len(curname) < 2:
-        print "  Period?"
         curname = name.split(".")
-    print curname
-    last, first = curname[0], curname[1]
+#    print curname
+    try:
+        last, first = curname[0], curname[1]
+    except:
+        return ""
     current_name = first + " " + last
     current_name = clean_whitespace(current_name)
     return current_name
 
 def who_named_whom(filepath):
     namedict = {}
-    named_regex = re.compile("(^(\s)?[A-Z]\w+[,|\.]\s*[A-Z]\w+(?:\s*[A-Z]\.)?([\s+]\w+)?)(\s*\((.*)\))?",
+    named_regex = re.compile("(^(\s)?[A-Z]\w+[,|\.]\s*[A-Z]\w+(?:\s[A-Z])?(?:\.)?([\s+]\w+)?)(\s*\((.*)\))?",
                              re.MULTILINE)
     not_all_caps_regex = re.compile("([a-z])")
     testimony_identifying_regex = re.compile("Testimony identifying")
@@ -41,7 +52,15 @@ def who_named_whom(filepath):
         if not matches:
             continue
         orig_name = matches[0][0]
+
         current_name = nametrans(orig_name) # normal First Last format
+        # if it returns nothing, it's a bad name (no comma)
+        if not current_name:
+            continue
+
+        # we also don't care if the transformed name isn't two tokens
+        if not len(current_name) > 1:
+            continue
 
         # # sometimes the regex confused locations for people
         # # the name is separated by a comma/period. NER works well for names
@@ -55,8 +74,6 @@ def who_named_whom(filepath):
         # entities = tagger.get_entities(current_name)
         # if entities.has_key('LOCATION'):
         #     continue
-
-        print "named: ", current_name
 
         current_line = current_line.replace(orig_name, "")
 
@@ -80,9 +97,10 @@ def who_named_whom(filepath):
 
         named_lines = current_line + named_lines # add the rest of the first line
         
-
         named_lines = named_lines.replace("\n", "")
-        print "named lines for ", current_name, "are:\n", named_lines
+#        print "named lines for ", current_name, "are:\n", named_lines
+
+        # dealing with NER server errors
         got_result = None
         while got_result == None:
             try:
@@ -92,7 +110,6 @@ def who_named_whom(filepath):
                 pass
                 
         # get the names!
-        print entities
         if not entities.has_key('PERSON'):
             continue
         names = entities['PERSON']
@@ -104,9 +121,7 @@ def who_named_whom(filepath):
         # if this key doesn't have any real names associated with it, skip.
         if not names:
             continue
-
-        print "names extracted: ", names
-        print "----------------------------"
+        print "named: ", current_name
 
         if namedict.has_key(current_name):
             namedict[current_name].append(names)
@@ -116,6 +131,10 @@ def who_named_whom(filepath):
 
 
 def name_distribution_with_tokens(names):
+    """
+    creates a distribution based on the occurrences of names in the given
+    'who-named-whom' graph.
+    """
     import itertools
     dist = defaultdict(lambda: 0)
     all_names = []
@@ -135,6 +154,10 @@ def name_distribution_with_tokens(names):
     return dist
 
 def most_likely_name(name, dist):
+    """
+    Computes the most likely *correct* name from the given `name`, using 
+    the distribution `dist`
+    """
     def close(n1, n2):
         return (namedist.fuzzy_substring(n1.lower(), n2.lower()) < 3) or \
             (namedist.fuzzy_substring(n2.lower(), n1.lower()) < 3)
@@ -142,12 +165,30 @@ def most_likely_name(name, dist):
     best = max(maybes.items(), key=lambda p: p[1])
     return best[0]
 
+def fix_graph(graph):
+    """
+    Fixes mispelled names in the graph using name chunking and the
+    name occurrence distribution.
+    """
+    distribution = name_distribution_with_tokens(graph)
+    new_graph = {}
+    for name in graph.keys():
+        print(name)
+        mln = most_likely_name(name, distribution)
 
-def test_ner():
-    a = range(1, 30)
-    tagger = ner.HttpNER(host='localhost', port=8080)
-    for num in a:
-        entities = tagger.get_entities(str(num))
-        print "entities", entities
-        print "call number: ", num
-        time.sleep(.5)
+        # I treat `informers` as a set because from looking at the
+        # data, it seems that multiple occurrences is usually an
+        # error.
+        informers = set()
+        for informer in graph[name]:
+            if not isinstance(informer, basestring):
+                continue
+            informer_mln = most_likely_name(informer, distribution)
+            informers.add(informer_mln)
+
+        if new_graph.has_key(mln):
+            new_graph[mln].update(informers)
+        else:
+            new_graph[mln] = informers
+
+    return new_graph
