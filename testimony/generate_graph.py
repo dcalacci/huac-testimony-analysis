@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 import re
-import time
 import ner
-import namedist
-from collections import defaultdict
+import nameutils
 
 #d2 = dict((k, map(lambda n: " ".join(n.split()), v)) for (k,v) in d2.items())
 
@@ -129,52 +127,16 @@ def who_named_whom(filepath):
             namedict[current_name] = names
     return namedict
 
-
-def name_distribution_with_tokens(names):
-    """
-    creates a distribution based on the occurrences of names in the given
-    'who-named-whom' graph.
-    """
-    import itertools
-    dist = defaultdict(lambda: 0)
-    all_names = []
-    for k, v in names.items():
-        all_names.append(k)
-        
-        # flattening lists of strings
-        v1 = [([x] if isinstance(x,basestring) else x) for x in v]
-        v = list(itertools.chain(*v1))
-        all_names.extend(v)
-
-    for name in all_names:
-        dist[name.lower()] += 1
-
-    for name, val in dist.items():
-        dist[name] = float(val)/len(dist.keys())
-    return dist
-
-def most_likely_name(name, dist):
-    """
-    Computes the most likely *correct* name from the given `name`, using 
-    the distribution `dist`
-    """
-    def close(n1, n2):
-        return (namedist.fuzzy_substring(n1.lower(), n2.lower()) < 3) or \
-            (namedist.fuzzy_substring(n2.lower(), n1.lower()) < 3)
-    maybes = dict((k, v) for k, v in dist.items() if close(name, k))
-    best = max(maybes.items(), key=lambda p: p[1])
-    return best[0]
-
 def fix_graph(graph):
     """
     Fixes mispelled names in the graph using name chunking and the
     name occurrence distribution.
     """
-    distribution = name_distribution_with_tokens(graph)
+    distribution = nameutils.name_distribution_with_tokens(graph)
     new_graph = {}
     for name in graph.keys():
         print(name)
-        mln = most_likely_name(name, distribution)
+        mln = nameutils.most_likely_name(name, distribution)
 
         # I treat `informers` as a set because from looking at the
         # data, it seems that multiple occurrences is usually an
@@ -183,7 +145,7 @@ def fix_graph(graph):
         for informer in graph[name]:
             if not isinstance(informer, basestring):
                 continue
-            informer_mln = most_likely_name(informer, distribution)
+            informer_mln = nameutils.most_likely_name(informer, distribution)
             informers.add(informer_mln)
 
         if new_graph.has_key(mln):

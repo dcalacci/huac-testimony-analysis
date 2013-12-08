@@ -5,7 +5,6 @@ import itertools
 import networkx as nx
 from config import graphs_dir
 
-
 # class NamedGraph:
 #     def __init__(self):
         
@@ -41,18 +40,21 @@ def find_all_paths(graph, start, end, path=[]):
     return paths
 
 
-# simple named graph 
-p1953= pickle.load(open(os.path.join(graphs_dir, "1953.p"), "rb"))
-for k,v in p1953.items():
-    newv = [([x] if isinstance(x,basestring) else x) for x in v]
-    v = list(itertools.chain(*newv))
-    p1953[k] = v
+def get_named_graph(year):
+    p = pickle.load(open(os.path.join(graphs_dir, year+".p"), "rb"))
+    for k,v in p.items():
+        newv = [([x] if isinstance(x,basestring) else x) for x in v]
+        v = list(itertools.chain(*newv))
+        p[k] = v
+    
+    named_graph = nx.DiGraph()
+    for start, ends in p.items():
+        for end in ends:
+            named_graph.add_edge(start, end)
 
+    return named_graph
+    
 
-named_graph = nx.DiGraph()
-for start, ends in p1953.items():
-    for end in ends:
-        named_graph.add_edge(start, end)
+#    pos = nx.spring_layout(named_graph)
 
-pos = nx.spring_layout(named_graph)
-nx.draw_networkx(named_graph, pos)
+    #nx.draw_networkx(named_graph, pos)
