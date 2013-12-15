@@ -1,25 +1,52 @@
 #!/usr/bin/env python
 import re
 import os
-import namedist
+import nameutils
 import ner
 from collections import defaultdict
 from preprocessing import cleanFile
 from config import transcript_dir
 
 
+staff_names = ['frank s. tavenner', 'thomas w. beale', 'william a. wheeler', 'raphael i. nixon']
+
 class Transcripts:
     def __init__(self):
         self.names = [f.replace(".txt", "") for f in os.listdir(transcript_dir)]
-        self.speechacts = self.get_all_speech_acts()
+        self.speechacts = self.__get_all_speech_acts()
         self.tagger = ner.SocketNER(host='localhost', port=8080)
         #self.names = dict((k, self.get_entities(v)) for k, v in self.speechacts.items())
 
 
-    def get_all_speech_acts(self):
+    def get_speech_acts_by_speaker_and_phrase(self, speaker, phrase):
+        """
+        speech acts, in general, that are spoken by speaker that mention
+        the given phrase. Can be used to find speechacts with mentions
+        of particular entities, too.
+        """
+        speechacts_with_mention = []
+        speechacts = self.__get_speechacts_by_speaker(speaker)
+        for speechact in speechacts:
+            if nameutils.fuzzy_substring(phrase, speechact) < 3:
+                speechacts_with_mention.append(speechact)
+        return speechacts_with_mention
+
+    def __get_speechacts_by_speaker(self, speaker):
+        "uses fuzzy matching"
+        # get the most likely matching name from the transcripts
+        maybes = []
+        for name in self.keys():
+            if nameutils.are_close_tokens(name, speaker):
+                maybes.append(name)
+        best = min(maybes, key=lambda n: min([nameutils.fuzzy_substring(name, speaker), 
+                                              nameutils.fuzzy_substring(speaker, name)]))
+        return self.speechacts[best]
+
+    def __get_all_speech_acts(self):
         """
         produces a dict of name -> list of speech acts for every speaker
         in all testimonies
+        TODO: make this full name, not last name.
         """
         def merge(dicts):
             "merges every dict in dicts. assumes that vals are lists"
@@ -42,21 +69,22 @@ class Transcripts:
             if len(key) < 3:
                 del speechacts[key]
 
-        dist = namedist.name_distribution_from_dict(speechacts)
+        dist = nameutils.name_distribution_from_dict(speechacts)
 
-        for (k, v) in speechacts.items():
-            likely_name = namedist.find_likely_name(k, dist)
-            if not dist[likely_name] < .00001:
-                speechacts[likely_name] += v
-            if not likely_name == k:
-                del speechacts[k]
+        # for (k, v) in speechacts.items():
+        #     likely_name = nameutils.find_likely_name(k, dist)
+        #     if not dist[likely_name] < .00001:
+        #         print k, "->", likely_name
+        #         speechacts[likely_name] += v
+        #     if not likely_name == k:
+        #         del speechacts[k]
 
         return speechacts
 
     def get_entities(self, speechacts):
         print "Getting entities..."
         def get_entities_from_string(text):
-            print text
+#            print text
             orig_ents = self.tagger.get_entities(text)
 
             # just a simple list of all the entities
@@ -73,9 +101,19 @@ class Transcripts:
         return self._get_speech_acts_from_file(os.path.join(transcript_dir, 
                                                             name+".txt"))
 
+    def _get_full_name_from_last(self, last):
+        # problem here is duplicate last names
+        # or just simply names that are similar.
+        for name in self.names:
+            if last.lower() in name:
+                return name.replace("-", " ").replace(".txt", "")
+        return last
+
     def _get_speech_acts_from_file(self, filepath):
         "returns a hash of name -> list of speech acts for a particular file."
         cleanFile(filepath)
+        
+        name = os.path.basename(filepath).replace("-", " ").replace(".txt", "")
         str = ""
         with open(filepath, 'r+') as f:
             import mmap
@@ -87,16 +125,24 @@ class Transcripts:
         matches = regex.findall(str)
 
         # name distribution to guess likely names from mispellings
-        dist = namedist.name_distribution_from_matches(matches)
+        dist = nameutils.name_distribution_from_matches(matches)
+        # all last names
         speechacts = {}
         for match in matches:
-            likely_name = namedist.find_likely_name(match[0], dist).lower()
-            # if the likely name doesn't have a low occurrence rate:
+            likely_name = nameutils.find_likely_name(match[0].lower(), dist).lower()
             if not dist[likely_name] < .01:
-                if speechacts.has_key(likely_name):
-                    speechacts[likely_name].append(match[1])
+                if likely_name.lower() in name:
+                    # print match[0].lower(), "->", name
+                    realname = name
                 else:
-                    speechacts[likely_name] = [match[1]]
+                    realname = self._get_full_name_from_last(likely_name)
+
+                # if the likely name doesn't have a low occurrence rate:
+
+                if speechacts.has_key(realname):
+                    speechacts[realname].append(match[1])
+                else:
+                    speechacts[realname] = [match[1]]
         return speechacts
 
 #    def is_actor(name):
@@ -105,4 +151,3 @@ class Transcripts:
 
 #def is_actor():
 #def get_speech_acts_by_speaker(speaker):
-    

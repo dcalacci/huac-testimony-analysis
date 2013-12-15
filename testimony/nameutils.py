@@ -141,9 +141,7 @@ def name_distribution_from_dict(d):
 
 def find_likely_name(name, dist):
     "returns the most likely name given the a distribution of names"
-    maybes = dict((k, v) for k, v in dist.items() if are_close(name.lower(), 
-                                                               k.lower()))
+    maybes = dict((k, v) for k, v in dist.items() if are_close_tokens(name.lower(), 
+                                                                      k.lower()))
     best = max(maybes.items(), key=lambda p: p[1])
     return best[0]
-
-
