@@ -18,6 +18,13 @@ class Transcripts:
         #self.names = dict((k, self.get_entities(v)) for k, v in self.speechacts.items())
 
 
+    def has_name(self, name):
+        "returns true if there's a fuzzy match on name in the list of names"
+        for informer in self.speechacts.keys():
+            if nameutils.are_close_tokens(name, informer):
+                return True
+        return False
+
     def get_speech_acts_by_speaker_and_phrase(self, speaker, phrase):
         """
         speech acts, in general, that are spoken by speaker that mention
@@ -27,7 +34,8 @@ class Transcripts:
         speechacts_with_mention = []
         speechacts = self.__get_speechacts_by_speaker(speaker)
         for speechact in speechacts:
-            if nameutils.fuzzy_substring(phrase, speechact) < 3:
+            last = phrase.split()[-1]
+            if nameutils.fuzzy_substring(phrase.lower(), speechact.lower()) < 5: # seems to be the magic number
                 speechacts_with_mention.append(speechact)
         return speechacts_with_mention
 
