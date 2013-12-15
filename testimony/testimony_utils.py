@@ -3,6 +3,7 @@ import re
 import os
 import nameutils
 import ner
+import Levenshtein
 from collections import defaultdict
 from preprocessing import cleanFile
 from config import transcript_dir
@@ -35,7 +36,8 @@ class Transcripts:
         speechacts = self.__get_speechacts_by_speaker(speaker)
         for speechact in speechacts:
             last = phrase.split()[-1]
-            if nameutils.fuzzy_substring(phrase.lower(), speechact.lower()) < 5: # seems to be the magic number
+            # needs to be fixed. this is too loose.
+            if nameutils.fuzzy_substring(last.lower(), speechact.lower()) < 3: # seems to be the magic number
                 speechacts_with_mention.append(speechact)
         return speechacts_with_mention
 
@@ -44,13 +46,27 @@ class Transcripts:
         # get the most likely matching name from the transcripts
         maybes = []
         for name in self.speechacts.keys():
-            if nameutils.are_close_tokens(name, speaker):
+            if not isinstance(name, basestring):
+                print "name not a string: ", type(name)
+            if not isinstance(speaker, basestring):
+                print "name: ", type(speaker)
+            print "speaker: ", speaker, " | name: ", name
+            
+            if Levenshtein.ratio(name.lower(), speaker.lower()) > 0.8:
+                print "close: ", name, " / ", speaker
                 maybes.append(name)
         if not maybes:
             return []
-        best = min(maybes, key=lambda n: min([nameutils.fuzzy_substring(name, speaker), 
-                                              nameutils.fuzzy_substring(speaker, name)]))
+        best = max(maybes, key=lambda n: Levenshtein.ratio(n, speaker))
+        print speaker, " -> ", best
         return self.speechacts[best]
+        # best = min(maybes, key=lambda n: min([nameutils.fuzzy_substring(name, speaker), 
+        #                                       nameutils.fuzzy_substring(speaker, name)]))
+        #best = min(maybes, key=lambda n: min(Levenshtein.ratio(name, speaker)))
+        #if not Levenshtein.ratio(speaker, best) < 0.6:
+        #if not nameutils.are_close_tokens(speaker, best): return []
+        # print speaker, " -> ", best
+        # return self.speechacts[best]
 
     def __get_all_speech_acts(self):
         """
