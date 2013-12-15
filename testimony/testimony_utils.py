@@ -35,9 +35,11 @@ class Transcripts:
         "uses fuzzy matching"
         # get the most likely matching name from the transcripts
         maybes = []
-        for name in self.keys():
+        for name in self.speechacts.keys():
             if nameutils.are_close_tokens(name, speaker):
                 maybes.append(name)
+        if not maybes:
+            return []
         best = min(maybes, key=lambda n: min([nameutils.fuzzy_substring(name, speaker), 
                                               nameutils.fuzzy_substring(speaker, name)]))
         return self.speechacts[best]
