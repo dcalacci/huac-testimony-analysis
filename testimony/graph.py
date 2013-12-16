@@ -39,7 +39,16 @@ def find_all_paths(graph, start, end, path=[]):
                 paths.append(newpath)
     return paths
 
-
+def get_intersection_graph(d, transcripts):
+    graph = []
+    for informer, nameds in d.items():
+        datum = {}
+        close_name = transcripts.get_closest_name(informer)
+        if close_name:
+            datum["name"] = close_name
+            datum["named"] = nameds
+            graph.append(datum)
+    return graph
 
 def get_named_speechacts(d, transcripts):
     "dict of who named whom, transcripts is a transcripts object."

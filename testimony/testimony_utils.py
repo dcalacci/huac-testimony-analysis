@@ -26,6 +26,30 @@ class Transcripts:
                 return True
         return False
 
+    def get_closest_name(self, n1):
+        """
+        Returns the speaker that is most similar to n1.
+        If there aren't any that are close enough, return [].
+        """
+        maybes = []
+        for name in self.speechacts.keys():
+            # if not isinstance(name, basestring):
+            #     print "name not a string: ", type(name)
+            # if not isinstance(speaker, basestring):
+            #     print "name: ", type(speaker)
+            # print "speaker: ", speaker, " | name: ", name
+            try: 
+                if Levenshtein.ratio(name.lower(), n1.lower()) > 0.8:
+                    print "close: ", name, " / ", n1
+                    maybes.append(name)
+            except:
+                break #still want to have prev. matches.
+        if not maybes:
+            return []
+        best = max(maybes, key=lambda n: Levenshtein.ratio(n, n1))
+        print n1, " -> ", best
+        return best
+
     def get_speech_acts_by_speaker_and_phrase(self, speaker, phrase):
         """
         speech acts, in general, that are spoken by speaker that mention
@@ -36,30 +60,19 @@ class Transcripts:
         speechacts = self.__get_speechacts_by_speaker(speaker)
         for speechact in speechacts:
             last = phrase.split()[-1]
-            # needs to be fixed. this is too loose.
+            # WAY too loose. 
             if nameutils.fuzzy_substring(last.lower(), speechact.lower()) < 3: # seems to be the magic number
                 speechacts_with_mention.append(speechact)
         return speechacts_with_mention
 
     def __get_speechacts_by_speaker(self, speaker):
         "uses fuzzy matching"
-        # get the most likely matching name from the transcripts
-        maybes = []
-        for name in self.speechacts.keys():
-            if not isinstance(name, basestring):
-                print "name not a string: ", type(name)
-            if not isinstance(speaker, basestring):
-                print "name: ", type(speaker)
-            print "speaker: ", speaker, " | name: ", name
-            
-            if Levenshtein.ratio(name.lower(), speaker.lower()) > 0.8:
-                print "close: ", name, " / ", speaker
-                maybes.append(name)
-        if not maybes:
+        name = self.get_closest_name(speaker)
+        if name:
             return []
-        best = max(maybes, key=lambda n: Levenshtein.ratio(n, speaker))
-        print speaker, " -> ", best
-        return self.speechacts[best]
+        else:
+            return self.speechacts[name]
+
         # best = min(maybes, key=lambda n: min([nameutils.fuzzy_substring(name, speaker), 
         #                                       nameutils.fuzzy_substring(speaker, name)]))
         #best = min(maybes, key=lambda n: min(Levenshtein.ratio(name, speaker)))
@@ -72,7 +85,6 @@ class Transcripts:
         """
         produces a dict of name -> list of speech acts for every speaker
         in all testimonies
-        TODO: make this full name, not last name.
         """
         def merge(dicts):
             "merges every dict in dicts. assumes that vals are lists"
@@ -95,7 +107,8 @@ class Transcripts:
             if len(key) < 3:
                 del speechacts[key]
 
-        dist = nameutils.name_distribution_from_dict(speechacts)
+        # the distribution shouldn't be needed at the top level
+#        dist = nameutils.name_distribution_from_dict(speechacts)
 
         # for (k, v) in speechacts.items():
         #     likely_name = nameutils.find_likely_name(k, dist)
