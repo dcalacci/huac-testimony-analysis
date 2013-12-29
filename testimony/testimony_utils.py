@@ -11,6 +11,16 @@ from config import transcript_dir
 
 staff_names = ['frank s. tavenner', 'thomas w. beale', 'william a. wheeler', 'raphael i. nixon']
 
+def switch_dict(d):
+    newdict = {}
+    for key, vals in d.items():
+        for val in vals:
+            if val in newdict.keys():
+                newdict[val] += [key]
+            else:
+                newdict[val] = [key]
+    return newdict
+
 class Transcripts:
     def __init__(self):
         self.names = [f.replace(".txt", "") for f in os.listdir(transcript_dir)]
@@ -31,6 +41,7 @@ class Transcripts:
         Returns the speaker that is most similar to n1.
         If there aren't any that are close enough, return [].
         """
+        print "looking at: ", n1
         maybes = []
         for name in self.speechacts.keys():
             # if not isinstance(name, basestring):
@@ -38,16 +49,25 @@ class Transcripts:
             # if not isinstance(speaker, basestring):
             #     print "name: ", type(speaker)
             # print "speaker: ", speaker, " | name: ", name
+            # had some type issues
+            # print type(unicode(n1).lower())
+            # print type(unicode(name).lower())
+            # print Levenshtein.ratio(unicode(name).lower(), unicode(n1).lower())
             try: 
-                if Levenshtein.ratio(name.lower(), n1.lower()) > 0.8:
+#                print ">>>", name
+                if Levenshtein.ratio(unicode(name).lower(), unicode(n1).lower()) > 0.8:
                     print "close: ", name, " / ", n1
                     maybes.append(name)
             except:
+                print "no maybes"
                 break #still want to have prev. matches.
+        print "maybes: ", maybes
         if not maybes:
+            print "uh"
             return []
-        best = max(maybes, key=lambda n: Levenshtein.ratio(n, n1))
+        best = max(maybes, key=lambda n: Levenshtein.ratio(unicode(n), unicode(n1)))
         print n1, " -> ", best
+        print "hu"
         return best
 
     def get_speech_acts_by_speaker_and_phrase(self, speaker, phrase):
@@ -56,11 +76,13 @@ class Transcripts:
         the given phrase. Can be used to find speechacts with mentions
         of particular entities, too.
         """
+        print "speaker: ", speaker, "; phrase: ", phrase
         speechacts_with_mention = []
         speechacts = self.__get_speechacts_by_speaker(speaker)
+        print "any speechacts? : ", len(speechacts)
         for speechact in speechacts:
             last = phrase.split()[-1]
-            # WAY too loose. 
+            # WAY too loose, but still gives almost NO results.
             if nameutils.fuzzy_substring(last.lower(), speechact.lower()) < 3: # seems to be the magic number
                 speechacts_with_mention.append(speechact)
         return speechacts_with_mention
@@ -68,7 +90,8 @@ class Transcripts:
     def __get_speechacts_by_speaker(self, speaker):
         "uses fuzzy matching"
         name = self.get_closest_name(speaker)
-        if name:
+        print speaker," ->> ", name
+        if not name:
             return []
         else:
             return self.speechacts[name]

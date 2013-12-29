@@ -13,6 +13,8 @@ from config import graphs_dir
 #         for p in os.listdir(graphs_dir):
 #             self.graphs.append(pickle.load(open(p, "rb")))
 
+#def clean_graph(d)
+
 def find_path(graph, start, end, path=[]):
     path = path + [start]
     if start == end:
@@ -44,11 +46,29 @@ def get_intersection_graph(d, transcripts):
     for informer, nameds in d.items():
         datum = {}
         close_name = transcripts.get_closest_name(informer)
+        print "informer: ", informer
         if close_name:
             datum["name"] = close_name
             datum["named"] = nameds
             graph.append(datum)
     return graph
+
+
+def get_named_speechacts_list(datum, transcripts):
+    named_data = []
+    for data in datum:
+        informer = data["name"]
+        nameds = data["named"]
+        print "examining : ", informer
+        for name in nameds:
+            speechacts = transcripts.get_speech_acts_by_speaker_and_phrase(informer, name)
+            if speechacts:
+                data = {}
+                data['informer'] = informer
+                data['named'] = name
+                data['speechacts'] = speechacts
+                named_data.append(data)
+    return named_data
 
 def get_named_speechacts(d, transcripts):
     "dict of who named whom, transcripts is a transcripts object."
@@ -64,7 +84,6 @@ def get_named_speechacts(d, transcripts):
                 data['speechacts'] = speechacts
                 named_data.append(data)
     return named_data
-
 
 def __get_pickle(year):
     return pickle.load(open(os.path.join(graphs_dir, year+".p"), "rb"))
@@ -93,3 +112,19 @@ def keep2(last, full):
         if word == last:
             return True
     return False
+
+def merge_dicts(d1, d2):
+    new = {}
+    for key, val in d1.items():
+        newval = list(val)
+        if key in d2.keys():
+            newval.extend(d2[key])
+#            print newval
+            d2.pop(key, None) # remove it from d2
+        newval = list(set(newval)) # remove dupes
+        new[key] = newval
+
+    for key, val in d2.items():
+        new[key] = val
+
+    return new
