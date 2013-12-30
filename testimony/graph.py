@@ -85,21 +85,17 @@ def get_named_speechacts(d, transcripts):
                 named_data.append(data)
     return named_data
 
-def __get_pickle(year):
-    return pickle.load(open(os.path.join(graphs_dir, year+".p"), "rb"))
+def __get_pickle(name):
+    return pickle.load(open(os.path.join(graphs_dir, name+".p"), "rb"))
 
-def get_named_graph(year):
+def get_named_graph(pickle_name):
     "makes unweighted, directed graph of naming"
-    p = __get_pickle(year)
-    for k,v in p.items():
-        newv = [([x] if isinstance(x,basestring) else x) for x in v]
-        v = list(itertools.chain(*newv))
-        p[k] = v
+    p = __get_pickle(pickle_name)
     
     named_graph = nx.DiGraph() # directed graph
-    for start, ends in p.items():
-        for end in ends:
-            named_graph.add_edge(start, end)
+    for d in p:
+        for named in d['named']:
+            named_graph.add_edge(d['name'], named)
 
     return named_graph
 
@@ -107,6 +103,7 @@ def get_named_graph(year):
 
     #nx.draw_networkx(named_graph, pos)
 
+# misc. utils. scratch, really.
 def keep2(last, full):
     for word in full.split():
         if word == last:
