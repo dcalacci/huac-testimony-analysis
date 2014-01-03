@@ -70,6 +70,10 @@ class Transcripts:
         print "hu"
         return best
 
+    # get speechacts by a particular speaker that mention any entities.
+    # return a dict of entity -> speechacts that reference that entity.
+    # then can use fuzzy matching to find entities.
+
     def get_speech_acts_by_speaker_and_phrase(self, speaker, phrase):
         """
         speech acts, in general, that are spoken by speaker that mention
