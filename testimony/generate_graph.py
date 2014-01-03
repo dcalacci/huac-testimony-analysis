@@ -31,6 +31,7 @@ def nametrans(name):
     return current_name
 
 def who_named_whom(filepath):
+    "give it the filepath for the annual reports."
     namedict = {}
     named_regex = re.compile("(^(\s)?[A-Z]\w+[,|\.]\s*[A-Z]\w+(?:\s[A-Z])?(?:\.)?([\s+]\w+)?)(\s*\((.*)\))?",
                              re.MULTILINE)
