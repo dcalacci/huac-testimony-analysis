@@ -28,7 +28,6 @@ class Transcripts:
         self.tagger = ner.SocketNER(host='localhost', port=8080)
         #self.names = dict((k, self.get_entities(v)) for k, v in self.speechacts.items())
 
-
     def has_name(self, name):
         "returns true if there's a fuzzy match on name in the list of names"
         for informer in self.speechacts.keys():
@@ -44,35 +43,45 @@ class Transcripts:
         print "looking at: ", n1
         maybes = []
         for name in self.speechacts.keys():
-            # if not isinstance(name, basestring):
-            #     print "name not a string: ", type(name)
-            # if not isinstance(speaker, basestring):
-            #     print "name: ", type(speaker)
-            # print "speaker: ", speaker, " | name: ", name
-            # had some type issues
-            # print type(unicode(n1).lower())
-            # print type(unicode(name).lower())
-            # print Levenshtein.ratio(unicode(name).lower(), unicode(n1).lower())
             try: 
 #                print ">>>", name
                 if Levenshtein.ratio(unicode(name).lower(), unicode(n1).lower()) > 0.8:
                     print "close: ", name, " / ", n1
                     maybes.append(name)
             except:
-                print "no maybes"
                 break #still want to have prev. matches.
-        print "maybes: ", maybes
         if not maybes:
-            print "uh"
             return []
         best = max(maybes, key=lambda n: Levenshtein.ratio(unicode(n), unicode(n1)))
         print n1, " -> ", best
-        print "hu"
         return best
 
-    # get speechacts by a particular speaker that mention any entities.
+    # get speechacts by a particular speaker that mention ANY entities.
     # return a dict of entity -> speechacts that reference that entity.
     # then can use fuzzy matching to find entities.
+
+    def get_speech_acts_by_speaker_and_mention(self, speaker, entity):
+        speechacts = self.__get_speech_acts_by_speaker_with_any_mention(speaker)
+        filtered = []
+        for mentioned in speechacts.keys():
+            if nameutils.are_close_tokens(mentioned, entity):
+                filtered.extend(speechacts[mentioned])
+        return filtered
+    
+    def __get_speech_acts_by_speaker_with_any_mention(self, speaker):
+        "gets all speech acts by speaker that mention an entity"
+        mention_speechacts = {}
+        speechacts = self.__get_speechacts_by_speaker(speaker)
+        for speechact in speechacts:
+            ents = self.tagger.get_entities(speechact)
+            print ents
+            entities = [v[0] for k, v in ents.items()]
+            for entity in entities:
+                if mention_speechacts.has_key(entity):
+                    mention_speechacts[entity] += speechact
+                else:
+                    mention_speechacts[entity] = [speechact]
+        return mention_speechacts
 
     def get_speech_acts_by_speaker_and_phrase(self, speaker, phrase):
         """
