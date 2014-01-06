@@ -61,26 +61,29 @@ class Transcripts:
     # then can use fuzzy matching to find entities.
 
     def get_speech_acts_by_speaker_and_mention(self, speaker, entity):
-        speechacts = self.__get_speech_acts_by_speaker_with_any_mention(speaker)
+        speechacts = self.get_speech_acts_by_speaker_with_any_mention(speaker)
         filtered = []
         for mentioned in speechacts.keys():
             if nameutils.are_close_tokens(mentioned, entity):
                 filtered.extend(speechacts[mentioned])
         return filtered
     
-    def __get_speech_acts_by_speaker_with_any_mention(self, speaker):
+    def get_speech_acts_by_speaker_with_any_mention(self, speaker):
         "gets all speech acts by speaker that mention an entity"
         mention_speechacts = {}
         speechacts = self.__get_speechacts_by_speaker(speaker)
         for speechact in speechacts:
             ents = self.tagger.get_entities(speechact)
             print ents
-            entities = [v[0] for k, v in ents.items()]
-            for entity in entities:
-                if mention_speechacts.has_key(entity):
-                    mention_speechacts[entity] += speechact
+            print '---'
+            mentioned_people = []
+            if 'PERSON' in ents.keys():
+                mentioned_people = ents['PERSON']
+            for person in mentioned_people:
+                if mention_speechacts.has_key(person):
+                    mention_speechacts[person] += [speechact]
                 else:
-                    mention_speechacts[entity] = [speechact]
+                    mention_speechacts[person] = [speechact]
         return mention_speechacts
 
     def get_speech_acts_by_speaker_and_phrase(self, speaker, phrase):

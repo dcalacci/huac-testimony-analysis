@@ -11,7 +11,7 @@ def cleanFile(filepath):
         """
         import mmap
         str = ""
-        with open(filepath, 'r+') as f:
+        with open(filepath, 'r+b') as f:
 
             data = mmap.mmap(f.fileno(), 0)
             for regex, replace in regexes:
