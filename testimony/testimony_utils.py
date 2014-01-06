@@ -63,9 +63,10 @@ class Transcripts:
     def get_speech_acts_by_speaker_and_mention(self, speaker, entity):
         speechacts = self.get_speech_acts_by_speaker_with_any_mention(speaker)
         filtered = []
-        for mentioned in speechacts.keys():
-            if nameutils.are_close_tokens(mentioned, entity):
-                filtered.extend(speechacts[mentioned])
+        for mentioned, speech in speechacts.items():
+            for name in mentioned:
+                if nameutils.are_close_tokens(name, entity):
+                    filtered.extend(speech)
         return filtered
     
     def get_speech_acts_by_speaker_with_any_mention(self, speaker):
@@ -85,7 +86,7 @@ class Transcripts:
                     mention_speechacts[person] = [speechact]
         mention_speechacts = dict((k, v) for k, v in mention_speechacts.items() if len(k) > 3)
         similar_names = self.chunk_names(mention_speechacts.keys())
-        print similar_names
+        #print similar_names
 
         for i in range(len(similar_names)):
             similar_ids[i] = similar_names[i]
@@ -117,9 +118,9 @@ class Transcripts:
             if i in blacklist: 
                 continue
             similar = find_similar(names[i], names)
-            print ">>", names[i]
+            #print ">>", names[i]
             blacklist.append(i)
-            print "blacklist: ", blacklist
+            #print "blacklist: ", blacklist
             similar_names += [similar]
         return similar_names
 
