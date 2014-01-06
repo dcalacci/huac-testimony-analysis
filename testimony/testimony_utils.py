@@ -84,7 +84,30 @@ class Transcripts:
                     mention_speechacts[person] += [speechact]
                 else:
                     mention_speechacts[person] = [speechact]
+        mention_speechacts = dict((k, v) for k, v in mention_speechacts.items() if len(k) > 3)
+        similar_names = self.chunk_names(mention_speechacts.keys())
         return mention_speechacts
+
+    def chunk_names(names):
+        "produces a list of lists of similar names, no repeats (means it's rough)"
+        similar_names = []
+        blacklist = []
+
+        def find_similar(name, names):
+            similar = [name]
+            for n2 in names:
+                if names.index(n2) in blacklist or n2 == name:
+                    continue
+                if nameutils.are_close_tokens(name, n2):
+                    similar += [n2]
+            return similar
+
+        for i in range(len(names)):
+            similar = find_similar(names[i], names)
+            blacklist.append(i)
+            similar_names += [similar]
+        return similar_names
+
 
     def get_speech_acts_by_speaker_and_phrase(self, speaker, phrase):
         """
@@ -98,7 +121,6 @@ class Transcripts:
         print "any speechacts? : ", len(speechacts)
         for speechact in speechacts:
             last = phrase.split()[-1]
-            # WAY too loose, but still gives almost NO results.
             if nameutils.fuzzy_substring(last.lower(), speechact.lower()) < 3: # seems to be the magic number
                 speechacts_with_mention.append(speechact)
         return speechacts_with_mention
