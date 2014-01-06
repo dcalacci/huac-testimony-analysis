@@ -71,11 +71,10 @@ class Transcripts:
     def get_speech_acts_by_speaker_with_any_mention(self, speaker):
         "gets all speech acts by speaker that mention an entity"
         mention_speechacts = {}
+        similar_ids = {}
         speechacts = self.__get_speechacts_by_speaker(speaker)
         for speechact in speechacts:
             ents = self.tagger.get_entities(speechact)
-            print ents
-            print '---'
             mentioned_people = []
             if 'PERSON' in ents.keys():
                 mentioned_people = ents['PERSON']
@@ -86,9 +85,20 @@ class Transcripts:
                     mention_speechacts[person] = [speechact]
         mention_speechacts = dict((k, v) for k, v in mention_speechacts.items() if len(k) > 3)
         similar_names = self.chunk_names(mention_speechacts.keys())
+        print similar_names
+
+        for i in range(len(similar_names)):
+            similar_ids[i] = similar_names[i]
+
+        for name in mention_speechacts.keys():
+            for similars in similar_names:
+                if name in similars:
+                    mention_speechacts[tuple(similars)] = mention_speechacts[name]
+        mention_speechacts = dict((k,v) for k, v in mention_speechacts.items() if type(k) == tuple)
+        
         return mention_speechacts
 
-    def chunk_names(names):
+    def chunk_names(self, names):
         "produces a list of lists of similar names, no repeats (means it's rough)"
         similar_names = []
         blacklist = []
@@ -100,11 +110,16 @@ class Transcripts:
                     continue
                 if nameutils.are_close_tokens(name, n2):
                     similar += [n2]
+                    blacklist.append(names.index(n2))
             return similar
 
         for i in range(len(names)):
+            if i in blacklist: 
+                continue
             similar = find_similar(names[i], names)
+            print ">>", names[i]
             blacklist.append(i)
+            print "blacklist: ", blacklist
             similar_names += [similar]
         return similar_names
 
