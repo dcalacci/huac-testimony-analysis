@@ -40,7 +40,7 @@ class Transcripts:
         Returns the speaker that is most similar to n1.
         If there aren't any that are close enough, return [].
         """
-        print "looking at: ", n1
+        #print "looking at: ", n1
         maybes = []
         for name in self.speechacts.keys():
             try: 

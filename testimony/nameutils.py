@@ -46,10 +46,20 @@ def name_distribution_with_tokens(names):
         dist[name] = float(val)/len(dist.keys())
     return dist
 
+close_threshold = 3
+
 def are_close_tokens(a,b):
     "returns true if the two strings are similar using fuzzy matching"
-    return (fuzzy_substring(a.lower(), b.lower()) < 3) or \
-        (fuzzy_substring(b.lower(), a.lower()) < 3)
+    return (fuzzy_substring(a.lower(), b.lower()) < close_threshold) or \
+        (fuzzy_substring(b.lower(), a.lower()) < close_threshold)
+
+def min_fuzzy_substring(a,b):
+    return min(fuzzy_substring(a.lower(), b.lower()), 
+               fuzzy_substring(b.lower(), a.lower()))
+
+def max_fuzzy_substring(a,b):
+    return max(fuzzy_substring(a.lower(), b.lower()), 
+               fuzzy_substring(b.lower(), a.lower()))
 
 # use this to find the distance from one name to another.
 def fuzzy_substring(needle, haystack):
