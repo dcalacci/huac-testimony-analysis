@@ -50,16 +50,16 @@ close_threshold = 3
 
 def are_close_tokens(a,b):
     "returns true if the two strings are similar using fuzzy matching"
-    return (fuzzy_substring(a.lower(), b.lower()) < close_threshold) or \
-        (fuzzy_substring(b.lower(), a.lower()) < close_threshold)
+    return (fuzzy_substring(a.lower(), b.lower())[0] < close_threshold) or \
+        (fuzzy_substring(b.lower(), a.lower())[0] < close_threshold)
 
 def min_fuzzy_substring(a,b):
-    return min(fuzzy_substring(a.lower(), b.lower()), 
-               fuzzy_substring(b.lower(), a.lower()))
+    return min(fuzzy_substring(a.lower(), b.lower())[0], 
+               fuzzy_substring(b.lower(), a.lower())[0])
 
 def max_fuzzy_substring(a,b):
-    return max(fuzzy_substring(a.lower(), b.lower()), 
-               fuzzy_substring(b.lower(), a.lower()))
+    return max(fuzzy_substring(a.lower(), b.lower())[0], 
+               fuzzy_substring(b.lower(), a.lower())[0])
 
 # use this to find the distance from one name to another.
 def fuzzy_substring(needle, haystack):
@@ -69,6 +69,7 @@ def fuzzy_substring(needle, haystack):
     algorithm.
     The function is modified from the levenshtein function
     in the bktree module by Adam Hupp"""
+    matrix = []
     m, n = len(needle), len(haystack)
 
     # base cases
@@ -88,9 +89,31 @@ def fuzzy_substring(needle, haystack):
                                row1[j]+cost) #substitution
                            )
         row1 = row2
-    return min(row1)
+        matrix.append(row1)
+    score = min(matrix[-1])
 
+    # so actually here we want to find the minimum diagonal sum in the
+    # distance matrix
+    
+    min_index, min_item = min(enumerate(diagonal_sums(matrix)), key=lambda thing: thing[1])
+    #print matrix
 
+    match_indices = range(min_index, min_index+len(matrix))
+    
+    fuzzy_match = haystack[match_indices[0]-1:match_indices[-1]]
+
+    #return (score, match_indices, fuzzy_match, matrix)
+    return (score, match_indices[0]-1, fuzzy_match)
+
+def diagonal_sum(matrix, start):
+    "computes the diagonal sum starting at row 'start' in 'matrix'"
+    return sum(row[i+start] for i, row in enumerate(matrix))
+
+def diagonal_sums(matrix):
+    sums = []
+    for col in range(len(matrix[0]) - len(matrix)):
+        sums.append(diagonal_sum(matrix, col))
+    return sums
 
 # code for initial transcripts using levenshtein distance
 

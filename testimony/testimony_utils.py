@@ -67,7 +67,7 @@ class Transcripts:
             for name in mentioned:
                 if nameutils.are_close_tokens(name, entity):
                     filtered.extend(speech)
-        return filtered
+        return set(filtered) # no duplicates
     
     def get_speech_acts_by_speaker_with_any_mention(self, speaker):
         "gets all speech acts by speaker that mention an entity"
@@ -137,7 +137,7 @@ class Transcripts:
         print "any speechacts? : ", len(speechacts)
         for speechact in speechacts:
             last = phrase.split()[-1]
-            if nameutils.fuzzy_substring(last.lower(), speechact.lower()) < 3: # seems to be the magic number
+            if nameutils.fuzzy_substring(last.lower(), speechact.lower())[0] < 3: # seems to be the magic number
                 speechacts_with_mention.append(speechact)
         return speechacts_with_mention
 

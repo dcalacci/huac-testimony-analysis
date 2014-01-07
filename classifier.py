@@ -335,6 +335,9 @@ def pos_neg_classify_sentence(sen):
 #    return posNegVector
     return __normalize(posNegVector, sen.wordcount)
 
+def score_no_ner(sen, phrase):
+    
+
 def score(sen, entity):
     """
     Computes the sentiment score of 'sen' towards 'entity'
@@ -370,7 +373,7 @@ def score(sen, entity):
     score = sum(scores)
     return score
 
-def score_all_entities(sen):
+def __score_all_entities(sen):
     """
     Computes the sentiment score of sen towards every entitity
     in sen.
@@ -389,8 +392,8 @@ def score_all_entities_in_speechact(speechact):
     import nltk.data
     tokenizer = nltk.data.load('tokenizers/punkt/english.pickle')
     sens = map(Sentence, tokenizer.tokenize(speechact))
-    # coreference resolution within speechacts here.
-    scores = (score_all_entities(sen) for sen in sens)
+    # coreference resolution within speechacts should go here.
+    scores = (__score_all_entities(sen) for sen in sens)
     
     combined = defaultdict(lambda: [])
     for s in scores:
