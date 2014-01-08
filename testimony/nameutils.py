@@ -61,14 +61,8 @@ def max_fuzzy_substring(a,b):
     return max(fuzzy_substring(a.lower(), b.lower())[0], 
                fuzzy_substring(b.lower(), a.lower())[0])
 
-# use this to find the distance from one name to another.
-def fuzzy_substring(needle, haystack):
-    "taken from: http://ginstrom.com/scribbles/2007/12/01/fuzzy-substring-matching-with-levenshtein-distance-in-python/"
-    """Calculates the fuzzy match of needle in haystack,
-    using a modified version of the Levenshtein distance
-    algorithm.
-    The function is modified from the levenshtein function
-    in the bktree module by Adam Hupp"""
+def distance_matrix(needle, haystack):
+    print "finding", needle, "in", haystack
     matrix = []
     m, n = len(needle), len(haystack)
 
@@ -90,30 +84,79 @@ def fuzzy_substring(needle, haystack):
                            )
         row1 = row2
         matrix.append(row1)
+
+    return matrix
+
+# use this to find the distance from one name to another.
+def fuzzy_substring(needle, haystack):
+    "taken from: http://ginstrom.com/scribbles/2007/12/01/fuzzy-substring-matching-with-levenshtein-distance-in-python/"
+    """Calculates the fuzzy match of needle in haystack,
+    using a modified version of the Levenshtein distance
+    algorithm.
+    The function is modified from the levenshtein function
+    in the bktree module by Adam Hupp"""
+    print "finding", needle, "in", haystack
+    matrix = distance_matrix(needle, haystack)
     score = min(matrix[-1])
 
+    sums = diagonal_sums(matrix)
     # so actually here we want to find the minimum diagonal sum in the
     # distance matrix
-    
-    min_index, min_item = min(enumerate(diagonal_sums(matrix)), key=lambda thing: thing[1])
+    if not sums: # haystack is too small
+        return (score, None, None)
+
+    #print sums
     #print matrix
-
-    match_indices = range(min_index, min_index+len(matrix))
     
+    min_index, min_item = min(enumerate(sums), key=lambda thing: thing[1])
+    #print matrix
+    match_indices = range(min_index, min_index+len(matrix))
     fuzzy_match = haystack[match_indices[0]-1:match_indices[-1]]
-
     #return (score, match_indices, fuzzy_match, matrix)
     return (score, match_indices[0]-1, fuzzy_match)
+# problem:
+
+# nameutils.fuzzy_substring('larry parks', 'but i like mr. parks')
+# finding larry parks in but i like mr. parks
+# Out[19]: (4, 8, 'ke mr. park')
+
+# solution might be to:
+# 1. create all permutations of the needle string
+# 2. do fuzzy matching for each element
+# 3. add 1 to the score for each word lost in the needle
+# 4. return the match with the maximum score.
+# problem: will it match stuff like "mr." or "mrs." better than actual names?
+
+# check if you can do reverse matching, too. idea: 
+
+# the problem is that fuzzy_substring('larry parks', 'parks') gives a
+# score of 6, which is bad. it should give a score of, like, 1. Could
+# do the 'possible permutations' method, and see if that gives a good score.
+
 
 def diagonal_sum(matrix, start):
     "computes the diagonal sum starting at row 'start' in 'matrix'"
     return sum(row[i+start] for i, row in enumerate(matrix))
 
 def diagonal_sums(matrix):
-    sums = []
+    forward_sums = []
+    backward_sums = []
     for col in range(len(matrix[0]) - len(matrix)):
-        sums.append(diagonal_sum(matrix, col))
-    return sums
+        forward_sums.append(diagonal_sum(matrix, col))
+
+    print matrix
+    print forward_sums
+    print "------"
+
+    backward_matrix = list(matrix)
+    backward_matrix.reverse()
+    [l.reverse() for l in backward_matrix]
+    print backward_matrix
+    for col in range(len(backward_matrix[0]) - len(backward_matrix)):
+        backward_sums.append(diagonal_sum(backward_matrix, col))
+
+    print backward_sums
+    return forward_sums
 
 # code for initial transcripts using levenshtein distance
 
