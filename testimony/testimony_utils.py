@@ -35,25 +35,29 @@ class Transcripts:
                 return True
         return False
 
-    def get_closest_name(self, n1):
+    def get_closest_name(self, n1, files=False):
         """
         Returns the speaker that is most similar to n1.
         If there aren't any that are close enough, return [].
         """
         #print "looking at: ", n1
+        if files:
+            namelist = self.speechacts.keys()
+        else:
+            namelist = [n.replace("-", " ") for n in self.names]
         maybes = []
-        for name in self.speechacts.keys():
+        for name in namelist:#self.speechacts.keys():
             try: 
 #                print ">>>", name
                 if Levenshtein.ratio(unicode(name).lower(), unicode(n1).lower()) > 0.8:
-                    print "close: ", name, " / ", n1
+#                    print "close: ", name, " / ", n1
                     maybes.append(name)
             except:
                 break #still want to have prev. matches.
         if not maybes:
             return []
         best = max(maybes, key=lambda n: Levenshtein.ratio(unicode(n), unicode(n1)))
-        print n1, " -> ", best
+ #       print n1, " -> ", best
         return best
 
     # get speechacts by a particular speaker that mention ANY entities.
@@ -61,19 +65,22 @@ class Transcripts:
     # then can use fuzzy matching to find entities.
 
     def get_speech_acts_by_speaker_and_mention(self, speaker, entity):
-        speechacts = self.get_speech_acts_by_speaker_with_any_mention(speaker)
-        filtered = []
-        for mentioned, speech in speechacts.items():
-            for name in mentioned:
-                if nameutils.are_close_tokens(name, entity):
-                    filtered.extend(speech)
-        return set(filtered) # no duplicates
+        speechacts_with_any_mention = self.get_speech_acts_by_speaker_with_any_mention(speaker)
+        speechacts = []
+        mentions = []
+
+        for mentioned, speech in speechacts_with_any_mention.items():
+            for mention in mentioned:
+                if nameutils.are_close_tokens(mention, entity, 0.4):
+                    speechacts.extend(speech)
+                    mentions.append(mention)
+        return (list(set(speechacts)), list(set(mentions))) # no duplicates
     
     def get_speech_acts_by_speaker_with_any_mention(self, speaker):
         "gets all speech acts by speaker that mention an entity"
         mention_speechacts = {}
         similar_ids = {}
-        speechacts = self.__get_speechacts_by_speaker(speaker)
+        speechacts = self.get_speechacts_by_speaker(speaker)
         for speechact in speechacts:
             ents = self.tagger.get_entities(speechact)
             mentioned_people = []
@@ -133,15 +140,15 @@ class Transcripts:
         """
         print "speaker: ", speaker, "; phrase: ", phrase
         speechacts_with_mention = []
-        speechacts = self.__get_speechacts_by_speaker(speaker)
+        speechacts = self.get_speechacts_by_speaker(speaker)
         print "any speechacts? : ", len(speechacts)
         for speechact in speechacts:
             last = phrase.split()[-1]
-            if nameutils.fuzzy_substring(last.lower(), speechact.lower())[0] < 3: # seems to be the magic number
+            if nameutils.fuzzy_substring(last.lower(), speechact.lower()) < 3: # seems to be the magic number
                 speechacts_with_mention.append(speechact)
         return speechacts_with_mention
 
-    def __get_speechacts_by_speaker(self, speaker):
+    def get_speechacts_by_speaker(self, speaker):
         "uses fuzzy matching"
         name = self.get_closest_name(speaker)
         print speaker," ->> ", name

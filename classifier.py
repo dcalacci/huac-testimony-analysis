@@ -1,6 +1,9 @@
 #!/usr/bin/env python
+import ner
+
 from collections import defaultdict
 import lexicons.lexiconUtils as sentimentUtils
+from testimony import nameutils
 
 sen_dict = sentimentUtils.LiwcDict()
 
@@ -15,13 +18,21 @@ class Sentence:
     then access the new representation of the sentence by accessing the
     'sen' member.
     """
-    def __init__(self, sen=""):
+    def __init__(self, sen="", phrase = ""):
         self.orig_text = sen
+        self.tagger = ner.SocketNER(host='localhost', port=8080)
+        self.entities_dict = self.tagger.get_entities(self.orig_text)
         self.text = self.__prep_text(self.orig_text)
-        self.entities = self.get_entities()
-        self.words = self.parse_sentence_with_entities(self.entities)
         self.wordcount = len(self.orig_text)
-
+        self.phrase = ""
+        self.words = []
+        if not phrase: 
+            self.entities = self.get_entities()
+            self.words = self.parse_sentence_with_entities(self.entities)
+        else:
+            self.phrase = phrase
+            self.words = self.parse_sentence_with_phrase()
+            
     def __prep_text(self, text):
         """
         Removes all periods and commas from a given string,
@@ -38,6 +49,35 @@ class Sentence:
         sen = sen.lower()
         return sen
 
+# write parallel functions for w/o sentiment.
+# will need to compute sentiment on the fly, no 'entities' list.
+
+    def parse_sentence_with_phrase(self):
+        return self.parse_phrase(self.text, self.phrase)
+
+
+    def parse_phrase(self, text, phrase):
+        """
+        does what __parse_entities does, but with anything that is 'similar'
+        to the given phrase.
+        """
+        
+        minscore, start_index, matched_text = nameutils.fuzzy_substring(phrase, text)
+
+        if minscore > 3 or not start_index or not matched_text:
+            return text.split()
+
+        end_index = start_index + len(matched_text)
+
+        a = text[:start_index]
+        b = text[end_index:]
+
+        a = self.parse_phrase(a, phrase)
+        a.append((minscore, matched_text))
+        b = self.parse_phrase(b, phrase)
+
+        return a + b
+        
     def get_entities(self):
         """
         Generates the collections of entities for this sentence.
@@ -50,9 +90,7 @@ class Sentence:
         @rtype:  list of strings
         @return: A list of entities that exist in this sentence.
         """
-        import ner
-        tagger = ner.SocketNER(host='localhost', port=8080)
-        orig_ents = tagger.get_entities(self.orig_text)
+        orig_ents = self.tagger.get_entities(self.orig_text)
 
         for key, val in orig_ents.items():
             orig_ents[key] = map(lambda s: self.__prep_text(s), val)
@@ -62,7 +100,7 @@ class Sentence:
         entities = [v[0] for k, v in orig_ents.items()]
         return entities
 
-    def __parse_entities(self, sen, entities):
+    def parse_entities(self, sen, entities):
         """
         produces a list representation of the given sentence with each entity
         as its' own list element. Example:
@@ -88,7 +126,7 @@ class Sentence:
         entity = entities[0]
         # if it's not in the list, go to the next entity.
         if sen.find(entity) == -1:
-            return self.__parse_entities(sen, entities[1:])
+            return self.parse_entities(sen, entities[1:])
 
         beg_index = sen.find(entity)
         end_index = sen.find(entity) + len(entity)
@@ -96,15 +134,15 @@ class Sentence:
         a = sen[:beg_index] # string up to the entity
         b = sen[end_index:] # string after the entity
 
-        a = self.__parse_entities(a, entities)
+        a = self.parse_entities(a, entities)
         a.append(entity) # add the entity inbetween the two parts
-        b = self.__parse_entities(b, entities)
+        b = self.parse_entities(b, entities)
 
         return a + b
 
     def parse_sentence_with_entities(self, entities):
         "initial call to __parse_entities"
-        return self.__parse_entities(self.text, self.entities)
+        return self.parse_entities(self.text, self.entities)
 
     def distance_from_entity(self, word, entity):
         """
@@ -335,8 +373,6 @@ def pos_neg_classify_sentence(sen):
 #    return posNegVector
     return __normalize(posNegVector, sen.wordcount)
 
-def score_no_ner(sen, phrase):
-    
 
 def score(sen, entity):
     """

@@ -47,7 +47,7 @@ def splitFileByTestimony(filepath):
         persons = {}
         for i, line in enumerate(f.readlines()):
             r = regex.findall(line)
-            if r: # if we found anything
+            if r: # if we found anything3
                 # if the name is already there and this line number is after
                 # the one we found previously, we shouldn't change the hash.
                 name = r[0].replace(' ', '-').lower()
@@ -72,7 +72,7 @@ def splitFileByTestimony(filepath):
                 t = t + ("-1",)
             else:
                 t = t + (persons[index+1][1],)
-                sections.append(t)
+            sections.append(t)
         return sections
 
     def makeSubFile(origFile, start, end, name):

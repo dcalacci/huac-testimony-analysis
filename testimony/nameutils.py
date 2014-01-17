@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from collections import defaultdict
+import itertools
 # some functions to guess likely names from mispellings. works OK.
 
 # TODO here - check if any sequence of starting characters
@@ -28,7 +29,6 @@ def name_distribution_with_tokens(names):
     creates a distribution based on the occurrences of names in the given
     'who-named-whom' graph.
     """
-    import itertools
     dist = defaultdict(lambda: 0)
     all_names = []
     for k, v in names.items():
@@ -48,10 +48,10 @@ def name_distribution_with_tokens(names):
 
 close_threshold = 3
 
-def are_close_tokens(a,b):
+def are_close_tokens(a,b, threshold=close_threshold):
     "returns true if the two strings are similar using fuzzy matching"
-    return (fuzzy_substring(a.lower(), b.lower())[0] < close_threshold) or \
-        (fuzzy_substring(b.lower(), a.lower())[0] < close_threshold)
+    return (fuzzy_substring(a.lower(), b.lower()) < threshold) or \
+        (fuzzy_substring(b.lower(), a.lower()) < threshold)
 
 def min_fuzzy_substring(a,b):
     return min(fuzzy_substring(a.lower(), b.lower())[0], 
@@ -62,8 +62,38 @@ def max_fuzzy_substring(a,b):
                fuzzy_substring(b.lower(), a.lower())[0])
 
 def distance_matrix(needle, haystack):
-    print "finding", needle, "in", haystack
+    # print "finding", needle, "in", haystack
     matrix = []
+    m, n = len(needle), len(haystack)
+
+    # base cases
+    if m == 1:
+        return not needle in haystack
+    if not n:
+        return [m]
+
+    row1 = [0] * (n+1)
+    for i in range(0,m):
+        row2 = [i+1]
+        for j in range(0,n):
+            cost = ( needle[i] != haystack[j] )
+
+            row2.append( min(row1[j+1]+1, # deletion
+                               row2[j]+1, #insertion
+                               row1[j]+cost) #substitution
+                           )
+        row1 = row2
+        matrix.append(row1)
+
+    return matrix
+
+def fuzzy_substring(needle, haystack):
+    "taken from: http://ginstrom.com/scribbles/2007/12/01/fuzzy-substring-matching-with-levenshtein-distance-in-python/"
+    """Calculates the fuzzy match of needle in haystack,
+    using a modified version of the Levenshtein distance
+    algorithm.
+    The function is modified from the levenshtein function
+    in the bktree module by Adam Hupp"""
     m, n = len(needle), len(haystack)
 
     # base cases
@@ -83,12 +113,10 @@ def distance_matrix(needle, haystack):
                                row1[j]+cost) #substitution
                            )
         row1 = row2
-        matrix.append(row1)
-
-    return matrix
+    return min(row1)
 
 # use this to find the distance from one name to another.
-def fuzzy_substring(needle, haystack):
+def fuzzy_substring_1(needle, haystack):
     "taken from: http://ginstrom.com/scribbles/2007/12/01/fuzzy-substring-matching-with-levenshtein-distance-in-python/"
     """Calculates the fuzzy match of needle in haystack,
     using a modified version of the Levenshtein distance
@@ -96,9 +124,18 @@ def fuzzy_substring(needle, haystack):
     The function is modified from the levenshtein function
     in the bktree module by Adam Hupp"""
     print "finding", needle, "in", haystack
-    matrix = distance_matrix(needle, haystack)
-    score = min(matrix[-1])
 
+    #needles = itertools.permutations(needle.split())
+
+    matrix = distance_matrix(needle, haystack)
+    #print matrix
+
+    if len(matrix) == 1: # base case, haystack is empty.
+        print "UH"
+        return(matrix[0], None, None)
+
+    score = min(matrix[-1])
+    
     sums = diagonal_sums(matrix)
     # so actually here we want to find the minimum diagonal sum in the
     # distance matrix
@@ -129,10 +166,10 @@ def fuzzy_substring(needle, haystack):
 
 # check if you can do reverse matching, too. idea: 
 
-# the problem is that fuzzy_substring('larry parks', 'parks') gives a
+# the problem is that fuzzy_sub string('larry parks', 'parks') gives a
 # score of 6, which is bad. it should give a score of, like, 1. Could
 # do the 'possible permutations' method, and see if that gives a good score.
-
+# use this to find the distance from one name to another.
 
 def diagonal_sum(matrix, start):
     "computes the diagonal sum starting at row 'start' in 'matrix'"
@@ -144,27 +181,27 @@ def diagonal_sums(matrix):
     for col in range(len(matrix[0]) - len(matrix)):
         forward_sums.append(diagonal_sum(matrix, col))
 
-    print matrix
-    print forward_sums
-    print "------"
+    # print matrix
+    # print forward_sums
+    # print "------"
 
     backward_matrix = list(matrix)
     backward_matrix.reverse()
     [l.reverse() for l in backward_matrix]
-    print backward_matrix
+    # print backward_matrix
     for col in range(len(backward_matrix[0]) - len(backward_matrix)):
         backward_sums.append(diagonal_sum(backward_matrix, col))
 
-    print backward_sums
+    # print backward_sums
     return forward_sums
 
 # code for initial transcripts using levenshtein distance
 
-def are_close( a, b):
+def are_close( a, b, threshold=0.6):
     "returns true if the levenshtein ratio between a and b is greater than 0.6"
     import Levenshtein
     ratio = Levenshtein.ratio(a.lower(), b.lower())
-    return ratio > 0.6
+    return ratio > threshold
 
 def has_similar(s, names):
     "returns a name of a similar name if it exists. None otherwise."

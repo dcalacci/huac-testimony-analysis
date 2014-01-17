@@ -10,7 +10,7 @@ def clean_whitespace(name):
 
 def nametrans(name):
     # strip titles, crudely.
-    titles = ["Mr. ", "mr ", "mr. ", "Mr ", "Mrs. ", "mrs ", "Mrs ", "Dr. ", "Dr ", "Dr. ", "dr "]
+    titles = ["Mr. ", "mr ", "mr. ", "Mr ", "Mrs. ", "mrs ", "Mrs ", "Dr. ", "Dr "]
     for title in titles:
         newname = name.replace(title, "")
         if not newname == name:
@@ -128,7 +128,7 @@ def who_named_whom(filepath):
             namedict[current_name] = names
     return namedict
 
-def fix_graph(graph):
+def fix_graph(graph, distribution):
     """
     Fixes mispelled names in the graph using name chunking and the
     name occurrence distribution.
