@@ -154,7 +154,6 @@ def windices_of_name(string, sen_dict):
                 matched = True
                 for i, s in enumerate(string.split()[1:]):
                     if sentence['words'][windex+i+1][0] != s:
-                        print sentence['words'][windex+i+1], s
                         matched = False
                 if matched:
                     start_word_index = windex

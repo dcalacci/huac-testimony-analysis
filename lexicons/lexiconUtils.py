@@ -278,6 +278,7 @@ class LiuDict:
         f.close()
 
     def exists(self, word):
+
         return self.isPosWord(word) or self.isNegWord(word)
 
     def isPosWord(self, word):
