@@ -268,9 +268,8 @@ class Transcripts:
                     speechacts[realname] = [match[1]]
         return speechacts
 
-#    def is_actor(name):
-        # get the end of the filename
-        # compare to name given
-
-#def is_actor():
-#def get_speech_acts_by_speaker(speaker):
+    def get_speech_acts_from_file_as_list(self, filepath):
+        """
+        list (in order) of tuples of:
+        (speaker, speechact)
+        """

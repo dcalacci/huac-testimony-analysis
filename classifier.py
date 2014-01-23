@@ -27,7 +27,7 @@ class Sentence:
         self.phrase = ""
         self.words = []
         if not phrase: 
-            self.entities = self.get_entities()
+            self.entities = [v[0] for k, v in self.entities_dict.items()]
             self.words = self.parse_sentence_with_entities(self.entities)
         else:
             self.phrase = phrase
@@ -78,28 +78,6 @@ class Sentence:
 
         return a + b
         
-    def get_entities(self):
-        """
-        Generates the collections of entities for this sentence.
-        populates 'self.original_entities' with the output from
-        the stanford ner server. This dictionary is of the form:
-        TYPE -> [Listof Entities]
-        Also returns a list of all the entities stanford NER recognizes
-        in this sentence, as a list of strings.
-
-        @rtype:  list of strings
-        @return: A list of entities that exist in this sentence.
-        """
-        orig_ents = self.tagger.get_entities(self.orig_text)
-
-        for key, val in orig_ents.items():
-            orig_ents[key] = map(lambda s: self.__prep_text(s), val)
-        self.original_entities = orig_ents
-
-        # just a simple list of all the entities
-        entities = [v[0] for k, v in orig_ents.items()]
-        return entities
-
     def parse_entities(self, sen, entities):
         """
         produces a list representation of the given sentence with each entity
