@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+import jsonrpclib
+from simplejson import loads
+
 def get_named_people_from_sen(sen):
     """
     returns a list of annotated words that correspond to named entities in sen.
@@ -109,6 +112,8 @@ def coreferences_for(string, sen_dict):
     where He -> Dan Calacci, and
           He -> Dan Calacci
     """
+    if not sen_dict.has_key('coref'):
+        return None
     for coref in sen_dict['coref']:
         for ref_pair in coref:
             for ref in ref_pair:
@@ -210,3 +215,30 @@ def windices_of_named_entities_and_references(sen_dict):
         else:
             entity_and_references[name_as_string] = windices_of_name(name_as_string, sen_dict)
     return entity_and_references
+
+def get_corenlp_object(speech, server):
+    if len(speech.split()) > 100:
+        return None
+    try:
+        return loads(server.parse(speech))
+    except:
+        return None
+
+def mention_list_by_sentence(obj):
+    """
+    returns a list of lists of mentions, where the nth index of the list
+    corresponds to the nth sentence in obj:
+    [['Andrea', 'Dan'], ['Shane'], []]
+    """
+    indices_and_mentions =  windices_of_named_entities_and_references(obj)
+    mentions_by_sentence = range(len(obj['sentences']))
+    mentions_by_sentence = map(lambda i: [], mentions_by_sentence)
+    for name, indices in indices_and_mentions.items():
+        for index in indices:
+            sen_index = index[0]
+            mentions_by_sentence[sen_index].append(name)
+            mentions_by_sentence[sen_index] = list(set(mentions_by_sentence[sen_index]))
+    return mentions_by_sentence
+
+def mention_list(obj):
+    return windices_of_named_entities_and_references(obj).keys()
