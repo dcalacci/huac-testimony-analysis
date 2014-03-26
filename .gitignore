@@ -10,3 +10,18 @@ external/pitt*
 external/liu*
 *DS_Store
  
+testimony/hearings
+testimony/hearings-full
+testimony/text/old/
+testimony/transcripts.p
+testimony/text/annual-reports/named-graph.p
+testimony/text/annual-reports/pickles
+testimony.tar.gz
+simple.json
+pickles/
+*gml
+*.p
+graphs/
+*.png
+*.gephi
+.ipynb_checkpoints
