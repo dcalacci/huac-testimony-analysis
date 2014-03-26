@@ -86,7 +86,7 @@ def who_named_whom(filepath):
         named_lines = ""
         # go from current_line forward in the file
         for j in range(i+1, len(lines)):
-            if named_regex.findall(lines[j]): 
+            if named_regex.findall(lines[j]):
                 break
             if not not_all_caps_regex.findall(lines[j]):
                 break

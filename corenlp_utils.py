@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import numpy as np
 import jsonrpclib
 from simplejson import loads
 
@@ -221,14 +221,18 @@ def get_corenlp_object(speech, server):
         return None
     try:
         return loads(server.parse(speech))
+    except (KeyboardInterrupt, SystemExit):
+        raise
     except:
         return None
 
-def mention_list_by_sentence(obj):
+def mention_list_by_sentence_no_anaphora(obj):
     """
     returns a list of lists of mentions, where the nth index of the list
     corresponds to the nth sentence in obj:
     [['Andrea', 'Dan'], ['Shane'], []]
+
+    this does not include mentions via anaphora.
     """
     indices_and_mentions =  windices_of_named_entities_and_references(obj)
     mentions_by_sentence = range(len(obj['sentences']))
@@ -240,5 +244,39 @@ def mention_list_by_sentence(obj):
             mentions_by_sentence[sen_index] = list(set(mentions_by_sentence[sen_index]))
     return mentions_by_sentence
 
-def mention_list(obj):
+def mention_list_by_sentence_with_anaphora(a_obj, prev_obj, server):
+    """
+    returns a list of lists of mentions, where the nth index of the list
+    corresponds to the nth sentence in obj:
+    [['Andrea', 'Dan'], ['Shane'], []]
+
+    this includes mentions via anaphora.
+
+    a_obj is the speechact to retrieve mentions from. prev_obj is the previous
+    speechact.
+    """
+    len_prev = len(prev_obj['sentences'])
+
+    a_text = " ".join([s['text'] for s in a_obj['sentences']])
+    prev_text = " ".join([s['text'] for s in prev_obj['sentences']])
+    
+    combined_obj = get_corenlp_object(prev_text +" "+ a_text, server)
+    if not combined_obj:
+        return np.nan
+
+    entities_and_refs = windices_of_named_entities_and_references(combined_obj)
+
+    mentions_by_sentence = range(len(a_obj['sentences']))
+    mentions_by_sentence = map(lambda i: [], mentions_by_sentence)
+
+    for entity, references in entities_and_refs.items():
+        for ref in references:
+            sen_ref = ref[0]
+            if sen_ref < len_prev: # previous speechat.
+                continue
+            else:
+                mentions_by_sentence[sen_ref - len_prev].append(entity)
+    return mentions_by_sentence
+
+def mention_list_for_speechact_no_anaphora(obj):
     return windices_of_named_entities_and_references(obj).keys()
