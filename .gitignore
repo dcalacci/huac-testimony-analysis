@@ -10,8 +10,8 @@ external/pitt*
 external/liu*
 *DS_Store
  
-testimony/hearings
-testimony/hearings-full
+testimony/text/hearings
+testimony/text/hearings-full
 testimony/text/old/
 testimony/transcripts.p
 testimony/text/annual-reports/named-graph.p
